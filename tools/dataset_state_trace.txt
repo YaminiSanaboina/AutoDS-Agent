@@ -1,0 +1,168 @@
+﻿agents\report_agent.py:157: f"Problem Type: <b>{data.get('problem_type', 'N/A')}</b> | Health Score: <b>{data.get('health_score', 'N/A')}/100</b>",
+agents\specialized_agents.py:35: df = get_dataframe()
+agents\specialized_agents.py:65: df = get_dataframe()
+agents\specialized_agents.py:93: df = get_dataframe()
+agents\specialized_agents.py:120: df = get_dataframe()
+agents\supervisor_agent.py:25: df = get_dataframe()
+agents\workflow_agent.py:37: dataset_loaded = has_dataset()
+agents\workflow_agent.py:134: if has_dataset():
+agents\workflow_agent.py:203: if not has_dataset():
+agents\workflow_agent.py:233: dataset_loaded = has_dataset()
+archive\dev_probes\tmp_apptest_file_uploader.py:5: script_path.write_text('import streamlit as st\nst.file_uploader("Upload", type=["csv"])\nst.write("done")\n', encoding='utf-8')
+archive\dev_probes\tmp_file_uploader_test.py:2: st.file_uploader("Upload", type=["csv"])
+tools\complete_flow_trace.py:16: 1. User uploads CSV via st.file_uploader() in _render_home_upload()
+tools\complete_flow_trace.py:21: * st.session_state[SessionKeys.UPLOADED_DF] = df
+tools\complete_flow_trace.py:22: * st.session_state[SessionKeys.DF] = df
+tools\complete_flow_trace.py:23: * st.session_state[SessionKeys.DATASET_LOADED] = True
+tools\complete_flow_trace.py:54: - has_dataset() check works correctly
+tools\complete_flow_trace.py:106: - has_dataset() returns True
+tools\complete_flow_trace.py:157: - Dataset Status should show "Loaded"
+tools\complete_flow_trace.py:158: - Health Score should display correctly
+tools\dataset_state_trace.py:14: r"Dataset Status",
+tools\dataset_state_trace.py:15: r"Health Score",
+tools\dataset_state_trace.py:16: r"dataset_status",
+tools\debug_dataset_state.py:15: print('Loaded Flag:', st.session_state.get(SessionKeys.DATASET_LOADED))
+tools\debug_dataset_state.py:17: print('UPLOADED_DF Exists:', SessionKeys.UPLOADED_DF in st.session_state and st.session_state.get(SessionKeys.UPLOADED_DF) is not None)
+tools\debug_dataset_state.py:18: now = get_dataframe()
+tools\debug_dataset_state.py:20: print('has_dataset():', has_dataset())
+tools\debug_dataset_state.py:22: for k in [SessionKeys.UPLOADED_DF, SessionKeys.DF, 'df', SessionKeys.DATASET_LOADED]:
+tools\e2e_validate.py:56: at.session_state[SessionKeys.UPLOADED_DF] = df
+tools\e2e_validate.py:57: at.session_state[SessionKeys.DF] = df
+tools\e2e_validate.py:59: at.session_state[SessionKeys.DATASET_LOADED] = True
+tools\ui_page_smoke_test.py:31: SessionKeys.DATASET_LOADED: False,
+tools\validate_streamlit_app.py:34: SessionKeys.DATASET_LOADED: False,
+tools\verify_upload_fix.py:47: print("   - Sets SessionKeys.UPLOADED_DF = df")
+tools\verify_upload_fix.py:48: print("   - Sets SessionKeys.DF = df")
+tools\verify_upload_fix.py:49: print("   - Sets SessionKeys.DATASET_LOADED = True")
+tools\verify_upload_fix.py:51: print("5. On rerun, has_dataset() now returns True")
+ui\ai_command_center.py:501: if not has_dataset():
+ui\ai_command_center.py:506: dataset = get_dataframe()
+ui\ai_command_center.py:534: disabled = not has_dataset() or is_running
+ui\ai_command_center.py:643: if has_dataset():
+ui\ai_command_center.py:679: uploaded_file = st.file_uploader(
+ui\ai_command_center.py:711: if processed_name != uploaded_name or not has_dataset():
+ui\ai_command_center.py:720: if has_dataset():
+ui\ai_command_center.py:737: if not has_dataset():
+ui\ai_command_center.py:785: if has_dataset():
+ui\ai_command_center.py:853: dataset_status=ctx["dataset_status"],
+ui\ai_command_center.py:866: dataset_status=ctx["dataset_status"],
+ui\chief_decision_panel.py:350: df = get_dataframe()
+ui\chief_decision_panel.py:456: <span class="chief-stat">Health Score<br><strong>{data['health_score'] if data['health_score'] is not None else 'ù'}/100</strong></span>
+ui\components.py:85: if has_dataset():
+ui\components.py:132: df = get_dataframe()
+ui\components.py:404: dataset_status: str = "Not Loaded",
+ui\components.py:439: dataset_status: str,
+ui\components.py:472: <div class="ads-status-row"><span>Dataset Status</span><span>{dataset_status}</span></div>
+ui\components.py:473: <div class="ads-status-row"><span>Health Score</span><span class="ads-health-pill">{health_score}</span></div>
+ui\dashboard.py:107: df = get_dataframe() if has_dataset() else None
+ui\dashboard.py:263: elif has_dataset():
+ui\dashboard.py:280: chief = build_chief_decision_data(output_data or output, df) if (output_data or has_dataset()) else {}
+ui\dashboard.py:319: "dataset_status": "Loaded" if has_dataset() else "Not Loaded",
+ui\dashboard.py:372: if not lines and has_dataset():
+ui\dashboard.py:503: st.metric("Health Score", f"{health['score']:.0f}/100", health.get("letter_grade", ""))
+ui\dashboard.py:756: df = get_dataframe() if has_dataset() else None
+ui\dashboard.py:846: df = get_dataframe() if has_dataset() else None
+ui\dashboard.py:985: with st.expander("Dataset upload & configuration", expanded=not has_dataset() or not has_autonomous_result()):
+ui\dashboard.py:1013: elif has_dataset():
+ui\image_analysis_demo.py:56: uploaded_file = st.file_uploader(
+ui\interactive_report_center.py:189: "dataset_name": output.get("dataset_name") or get_dataset_name() if has_dataset() else "ù",
+ui\interactive_report_center.py:334: ("Health Score", f"{chief.get('health_score', ctx.get('health_score', 'ù'))}/100", SUCCESS_COLOR),
+ui\interactive_report_center.py:801: df = get_dataframe() if has_dataset() else None
+ui\interactive_report_center.py:822: if not has_dataset() and not has_autonomous_result():
+ui\interactive_report_center.py:827: if not has_dataset() and has_autonomous_result():
+ui\legacy_pages\agent_activity_monitor.py:41: df = get_dataframe()
+ui\legacy_pages\automl.py:22: df = get_dataframe()
+ui\legacy_pages\cleaning_lab.py:19: df = get_dataframe()
+ui\legacy_pages\cleaning_lab.py:72: st.metric("Data Health Score", f"{score}/100")
+ui\legacy_pages\cleaning_lab.py:231: health_after = st.session_state.get(SessionKeys.HEALTH_AFTER) or compute_health_score(get_dataframe())
+ui\legacy_pages\cleaning_lab.py:247: st.dataframe(get_dataframe().head(10), use_container_width=True, hide_index=True)
+ui\legacy_pages\dashboard.py:33: if not has_dataset():
+ui\legacy_pages\dashboard.py:45: df = get_dataframe()
+ui\legacy_pages\dashboard.py:46: health = compute_health_score(df) if has_dataset() else None
+ui\legacy_pages\dashboard.py:50: glass_metric("", "Dataset Status", "Loaded" if has_dataset() else "None")
+ui\legacy_pages\dashboard.py:52: glass_metric("", "Features", str(df.shape[1]) if has_dataset() else "ù")
+ui\legacy_pages\dashboard.py:97: ("Upload Data", has_dataset()),
+ui\legacy_pages\dashboard.py:143: st.subheader("Dataset Status")
+ui\legacy_pages\dashboard.py:144: if not has_dataset():
+ui\legacy_pages\dashboard.py:195: if not has_dataset():
+ui\legacy_pages\dashboard.py:209: if has_dataset() and st.session_state.get(SessionKeys.MODEL_TRAINED):
+ui\legacy_pages\data_hub.py:36: uploaded_file = st.file_uploader(
+ui\legacy_pages\data_hub.py:57: df = get_dataframe()
+ui\legacy_pages\data_hub.py:398: df = get_dataframe()
+ui\legacy_pages\decision_intelligence.py:97: df = get_dataframe()
+ui\legacy_pages\deployment_center.py:27: df = get_dataframe()
+ui\legacy_pages\documentation_hub.py:45: df = get_dataframe()
+ui\legacy_pages\eda_explorer.py:29: df = get_dataframe()
+ui\legacy_pages\ethics_governance.py:15: df = get_dataframe()
+ui\legacy_pages\prediction_playground.py:71: df = get_dataframe()
+ui\legacy_pages\report_center.py:26: df = get_dataframe()
+ui\legacy_pages\report_center.py:135: st.metric("Health Score", f"{health['score']}/100")
+ui\pages\automl.py:25: df = get_dataframe()
+ui\pages\cleaning.py:19: df = get_dataframe()
+ui\pages\cleaning.py:60: health_after = compute_health_score(get_dataframe())
+ui\pages\cleaning.py:74: get_dataframe().head(10),
+ui\pages\eda.py:23: df = get_dataframe()
+ui\pages\home.py:22: df = get_dataframe()
+ui\pages\home.py:26: metric_card("Dataset Status", "Loaded" if has_dataset() else "None")
+ui\pages\home.py:30: f"{df.shape[0]:,}" if has_dataset() else "ù",
+ui\pages\home.py:35: str(df.shape[1]) if has_dataset() else "ù",
+ui\pages\home.py:38: health = compute_health_score(df) if has_dataset() else {"score": "ù", "grade": "ù"}
+ui\pages\home.py:39: metric_card("Health Score", f"{health['score']}" if has_dataset() else "ù")
+ui\pages\home.py:61: if has_dataset():
+ui\pages\report.py:44: st.metric("Health Score", f"{health['score']}/100 ù {health['grade']}")
+ui\pages\upload.py:15: uploaded_file = st.file_uploader(
+ui\pages\upload.py:56: dataset_loaded_banner(get_dataframe(), get_dataset_name())
+ui\pages\upload.py:57: st.dataframe(get_dataframe().head(10), use_container_width=True, hide_index=True)
+ui\pages\upload.py:59: loaded_df = get_dataframe()
+ui\pages\workspace.py:19: df = get_dataframe()
+ui\pages\xai.py:34: df = get_dataframe() or pd.DataFrame()
+ui\step_detail_panels.py:229: if has_dataset():
+ui\step_detail_panels.py:230: df = get_dataframe()
+ui\step_detail_panels.py:239: {"label": "Health Score", "value": f"{health['score']:.0f}/100"},
+ui\step_detail_panels.py:271: if has_dataset():
+ui\step_detail_panels.py:272: df = get_dataframe()
+ui\step_detail_panels.py:349: if has_dataset():
+ui\step_detail_panels.py:350: df = get_dataframe()
+ui\system_health_dashboard.py:32: df = get_dataframe()
+utils\context_builder.py:33: df = get_dataframe()
+utils\pipeline_bridge.py:276: elif get_dataframe() is not None:
+utils\pipeline_bridge.py:277: persist_dataset_metadata(get_dataframe())
+utils\pipeline_bridge.py:282: basic_analysis = analyze_dataset(get_dataframe()) if get_dataframe() is not None else {}
+utils\pipeline_bridge.py:290: "health": meta.get("health") or (compute_health_score(get_dataframe()) if get_dataframe() is not None else {}),
+utils\pipeline_bridge.py:304: if get_dataframe() is not None:
+utils\pipeline_bridge.py:306: st.session_state[SessionKeys.CLEANING_ISSUES] = detect_data_issues(get_dataframe())
+utils\pipeline_bridge.py:370: if get_dataframe() is not None and best_name and results:
+utils\pipeline_bridge.py:373: get_dataframe(),
+utils\pipeline_bridge.py:406: df_now = get_dataframe()
+utils\pipeline_bridge.py:417: validation_report = execute_post_pipeline_validation(output, get_dataframe())
+utils\report_exports.py:38: "Health Score",
+utils\session_manager.py:120: uploaded = st.session_state.get(SessionKeys.UPLOADED_DF)
+utils\session_manager.py:121: df = uploaded if uploaded is not None else st.session_state.get(SessionKeys.DF)
+utils\session_manager.py:137: st.session_state[SessionKeys.UPLOADED_DF] = resolved
+utils\session_manager.py:138: st.session_state[SessionKeys.DF] = resolved
+utils\session_manager.py:140: st.session_state[SessionKeys.DATASET_LOADED] = (resolved is not None) and (not getattr(resolved, "empty", True))
+utils\session_manager.py:142: def get_dataframe():
+utils\session_manager.py:148: st.session_state[SessionKeys.UPLOADED_DF] = df
+utils\session_manager.py:149: st.session_state[SessionKeys.DF] = df
+utils\session_manager.py:151: st.session_state[SessionKeys.DATASET_LOADED] = df is not None and not df.empty
+utils\session_manager.py:161: def has_dataset():
+utils\session_manager.py:162: df = get_dataframe()
+utils\session_manager.py:298: df = get_dataframe()
+utils\session_manager.py:314: "df": get_dataframe() if has_dataset() else None,
+utils\session_manager.py:315: "dataset_name": get_dataset_name() if has_dataset() else None,
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:154: # Multiple overloads are defined on `file_uploader()` below to represent
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:155: # the different return types of `file_uploader()`.
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:168: def file_uploader(
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:188: def file_uploader(
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:213: def file_uploader(
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:233: def file_uploader(
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:251: def file_uploader(
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:433: >>> uploaded_file = st.file_uploader("Choose a file")
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:456: >>> uploaded_files = st.file_uploader(
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:471: >>> uploaded_files = st.file_uploader(
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:483: return self._file_uploader(
+venv\Lib\site-packages\streamlit\elements\widgets\file_uploader.py:499: def _file_uploader(
+venv\Lib\site-packages\streamlit\testing\v1\app_test.py:745: def file_uploader(self) -> WidgetList[FileUploader]:
+venv\Lib\site-packages\streamlit\testing\v1\app_test.py:754: ``at.file_uploader(key="my_key")`` for a widget with a given key.
+venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:896: ...     uploaded = st.file_uploader("Upload a file")
+venv\Lib\site-packages\streamlit\testing\v1\element_tree.py:2030: def file_uploader(self) -> WidgetList[FileUploader]:

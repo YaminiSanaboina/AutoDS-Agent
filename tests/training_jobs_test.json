@@ -1,0 +1,119 @@
+{
+  "jobs": [
+    {
+      "job_id": "job_509d4418ab9a415586c817ead6e37e38",
+      "project_id": "proj_001",
+      "model_name": "TestModel",
+      "dataset_info": {
+        "dataset_name": "TestSet",
+        "row_count": 1000
+      },
+      "strategy": {
+        "recommended_infrastructure": "Local CPU"
+      },
+      "status": "Cancelled",
+      "created_at": "2026-06-26T11:33:00.861841+00:00",
+      "start_time": "2026-06-26T11:33:00.863836+00:00",
+      "end_time": "2026-06-26T11:33:00.991226+00:00",
+      "logs": [
+        {
+          "timestamp": "2026-06-26T11:33:00.883932+00:00",
+          "message": "Job started."
+        },
+        {
+          "timestamp": "2026-06-26T11:33:00.949986+00:00",
+          "message": "Job completed successfully."
+        },
+        {
+          "timestamp": "2026-06-26T11:33:00.975991+00:00",
+          "message": "Failed: Simulated failure."
+        },
+        {
+          "timestamp": "2026-06-26T11:33:01.007762+00:00",
+          "message": "Cancelled: Test cancellation."
+        }
+      ]
+    }
+  ],
+  "resource_snapshots": [
+    {
+      "timestamp": "2026-06-26T11:33:00.829720+00:00",
+      "snapshot": {
+        "cpu": {
+          "count": 8
+        },
+        "memory": {
+          "total_bytes": 8311836672,
+          "available_bytes": 298405888,
+          "total_gb": 7.74,
+          "available_gb": 0.28
+        },
+        "gpu": {
+          "available": false,
+          "count": 0,
+          "memory_total_gb": null,
+          "details": []
+        },
+        "environment": {
+          "os": "Windows-11-10.0.26200-SP0",
+          "python_version": "3.12.3"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-26T11:33:01.046392+00:00",
+      "snapshot": {
+        "cpu": {
+          "count": 8
+        },
+        "memory": {
+          "total_bytes": 8311836672,
+          "available_bytes": 270573568,
+          "total_gb": 7.74,
+          "available_gb": 0.25
+        },
+        "gpu": {
+          "available": false,
+          "count": 0,
+          "memory_total_gb": null,
+          "details": []
+        },
+        "environment": {
+          "os": "Windows-11-10.0.26200-SP0",
+          "python_version": "3.12.3"
+        }
+      }
+    }
+  ],
+  "optimization_reports": [
+    {
+      "generated_at": "2026-06-26T11:33:01.048389+00:00",
+      "suggestions": [
+        "Use parallel CPU training and batch processing to conserve memory.",
+        "Reduce batch size or use streaming data ingestion to reduce memory usage.",
+        "Use multi-core parallelism for model training and data preprocessing."
+      ],
+      "resource_snapshot": {
+        "cpu": {
+          "count": 8
+        },
+        "memory": {
+          "total_bytes": 8311836672,
+          "available_bytes": 270573568,
+          "total_gb": 7.74,
+          "available_gb": 0.25
+        },
+        "gpu": {
+          "available": false,
+          "count": 0,
+          "memory_total_gb": null,
+          "details": []
+        },
+        "environment": {
+          "os": "Windows-11-10.0.26200-SP0",
+          "python_version": "3.12.3"
+        }
+      }
+    }
+  ]
+}

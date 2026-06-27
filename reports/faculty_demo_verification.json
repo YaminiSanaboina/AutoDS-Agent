@@ -1,0 +1,175 @@
+{
+  "all_ok": true,
+  "datasets": [
+    {
+      "dataset": "Iris",
+      "path": "C:\\AutoDS-Agent\\data\\Iris.csv",
+      "ok": true,
+      "checks": {
+        "stage_count": 12,
+        "stage_keys": [
+          "ai_decision",
+          "ai_ethics_trust",
+          "automl",
+          "data_cleaning",
+          "dataset_intelligence",
+          "deployment_readiness",
+          "eda",
+          "explainability",
+          "feature_engineering",
+          "model_comparison",
+          "pdf_report",
+          "self_improvement"
+        ],
+        "validation_warnings": [],
+        "dataset_report": true,
+        "cleaning_results": true,
+        "eda_results": true,
+        "model_results": true,
+        "explainability_results": true,
+        "ai_trust_results": true,
+        "deployment_readiness": true,
+        "final_report": true,
+        "pdf_path_exists": true,
+        "excel_bytes": true,
+        "stage_errors_count": 0
+      }
+    },
+    {
+      "dataset": "Titanic",
+      "path": "C:\\AutoDS-Agent\\data\\Titanic-Dataset.csv",
+      "ok": true,
+      "checks": {
+        "stage_count": 12,
+        "stage_keys": [
+          "ai_decision",
+          "ai_ethics_trust",
+          "automl",
+          "data_cleaning",
+          "dataset_intelligence",
+          "deployment_readiness",
+          "eda",
+          "explainability",
+          "feature_engineering",
+          "model_comparison",
+          "pdf_report",
+          "self_improvement"
+        ],
+        "validation_warnings": [],
+        "dataset_report": true,
+        "cleaning_results": true,
+        "eda_results": true,
+        "model_results": true,
+        "explainability_results": true,
+        "ai_trust_results": true,
+        "deployment_readiness": true,
+        "final_report": true,
+        "pdf_path_exists": true,
+        "excel_bytes": true,
+        "stage_errors_count": 0
+      }
+    },
+    {
+      "dataset": "Heart Disease",
+      "path": "C:\\AutoDS-Agent\\data\\Heart-Disease.csv",
+      "ok": true,
+      "checks": {
+        "stage_count": 12,
+        "stage_keys": [
+          "ai_decision",
+          "ai_ethics_trust",
+          "automl",
+          "data_cleaning",
+          "dataset_intelligence",
+          "deployment_readiness",
+          "eda",
+          "explainability",
+          "feature_engineering",
+          "model_comparison",
+          "pdf_report",
+          "self_improvement"
+        ],
+        "validation_warnings": [],
+        "dataset_report": true,
+        "cleaning_results": true,
+        "eda_results": true,
+        "model_results": true,
+        "explainability_results": true,
+        "ai_trust_results": true,
+        "deployment_readiness": true,
+        "final_report": true,
+        "pdf_path_exists": true,
+        "excel_bytes": true,
+        "stage_errors_count": 0
+      }
+    },
+    {
+      "dataset": "Housing",
+      "path": "C:\\AutoDS-Agent\\data\\Housing.csv",
+      "ok": true,
+      "checks": {
+        "stage_count": 12,
+        "stage_keys": [
+          "ai_decision",
+          "ai_ethics_trust",
+          "automl",
+          "data_cleaning",
+          "dataset_intelligence",
+          "deployment_readiness",
+          "eda",
+          "explainability",
+          "feature_engineering",
+          "model_comparison",
+          "pdf_report",
+          "self_improvement"
+        ],
+        "validation_warnings": [],
+        "dataset_report": true,
+        "cleaning_results": true,
+        "eda_results": true,
+        "model_results": true,
+        "explainability_results": true,
+        "ai_trust_results": true,
+        "deployment_readiness": true,
+        "final_report": true,
+        "pdf_path_exists": true,
+        "excel_bytes": true,
+        "stage_errors_count": 0
+      }
+    },
+    {
+      "dataset": "Wine Quality",
+      "path": "C:\\AutoDS-Agent\\data\\Wine-Quality.csv",
+      "ok": true,
+      "checks": {
+        "stage_count": 12,
+        "stage_keys": [
+          "ai_decision",
+          "ai_ethics_trust",
+          "automl",
+          "data_cleaning",
+          "dataset_intelligence",
+          "deployment_readiness",
+          "eda",
+          "explainability",
+          "feature_engineering",
+          "model_comparison",
+          "pdf_report",
+          "self_improvement"
+        ],
+        "validation_warnings": [],
+        "dataset_report": true,
+        "cleaning_results": true,
+        "eda_results": true,
+        "model_results": true,
+        "explainability_results": true,
+        "ai_trust_results": true,
+        "deployment_readiness": true,
+        "final_report": true,
+        "pdf_path_exists": true,
+        "excel_bytes": true,
+        "stage_errors_count": 0
+      }
+    }
+  ]
+}

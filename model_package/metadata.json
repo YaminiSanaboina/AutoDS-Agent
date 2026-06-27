@@ -1,0 +1,24 @@
+{
+  "model_name": "Random Forest",
+  "dataset_name": "Iris.csv",
+  "problem_type": "Classification",
+  "feature_list": [
+    "sepal length (cm)",
+    "sepal width (cm)",
+    "petal length (cm)",
+    "petal width (cm)",
+    "target"
+  ],
+  "metrics": {
+    "test_score": 1.0
+  },
+  "hyperparameters": {},
+  "training_info": {
+    "generated_by": "Streamlit Deployment Center"
+  },
+  "intended_usage": "Batch and online prediction for production use.",
+  "limitations": "Model should be validated on fresh data before deployment.",
+  "ethical_considerations": "Use responsibly and monitor for bias or drift.",
+  "packaged_at": "2026-06-14T05:34:19.500461Z",
+  "version": "MODEL_v1.0"
+}

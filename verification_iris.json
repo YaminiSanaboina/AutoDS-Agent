@@ -1,0 +1,1128 @@
+{
+  "start_time": "2026-06-23T08:08:19.817496Z",
+  "dataset_analysis": {
+    "dataset_name": "Iris",
+    "dataset_shape": {
+      "rows": 150,
+      "columns": 5
+    },
+    "domain_analysis": {
+      "domain": "Botanical Science",
+      "confidence": 0.95,
+      "reason": "Recognized as Iris dataset based on column names and filename."
+    },
+    "problem_analysis": {
+      "problem_type": "Multi-Class Classification",
+      "likely_target": "target",
+      "recommended_metrics": [
+        "Precision",
+        "Recall",
+        "F1-Score",
+        "Macro-F1"
+      ],
+      "reason": "Recognized dataset: Multi-Class Classification problem."
+    },
+    "risk_analysis": {
+      "risk_level": "Low",
+      "risk_score": 2.0,
+      "risks": [
+        "Dataset is small. Use cross-validation and regularization carefully."
+      ],
+      "detailed_scores": {
+        "missing_values": 0.0,
+        "duplicates": 0.0,
+        "small_dataset": 2.0,
+        "high_dimensionality": 0.0,
+        "class_imbalance": 0.0,
+        "data_leakage": 0.0,
+        "very_small_dataset": 0.0,
+        "high_dimensional": 0.0
+      }
+    },
+    "model_strategy": {
+      "problem_type": "Multi-Class Classification",
+      "recommendations": [
+        {
+          "model": "Logistic Regression",
+          "reason": "Effective multiclass baseline."
+        },
+        {
+          "model": "Random Forest",
+          "reason": "Naturally handles multiclass, great for botanical data."
+        },
+        {
+          "model": "SVM",
+          "reason": "High performance on multiclass problems."
+        }
+      ],
+      "metric_focus": [
+        "Precision",
+        "Recall",
+        "F1-Score",
+        "Macro-F1"
+      ]
+    },
+    "roadmap": [
+      "Step 1: Address data quality issues (1 issues identified). Impute missing values, remove duplicates.",
+      "Step 2: Analyze patterns specific to Botanical Science domain. Focus on domain-relevant features.",
+      "Step 3: Create new features based on domain knowledge and EDA insights.",
+      "Step 4: Train multiple multi-class classification models using AutoML Studio.",
+      "Step 5: Optimize for Recall/F1-Score and other domain-relevant metrics. Use cross-validation.",
+      "Step 6: Generate SHAP explanations in AI Decision Intelligence. Understand feature impacts.",
+      "Step 7: Validate model on held-out test set. Deploy with monitoring.",
+      "Step 8: Generate AI Research Report with findings and recommendations."
+    ],
+    "intelligence_score": {
+      "score": 69.9,
+      "label": "Needs Attention",
+      "components": {
+        "quality": 24.866666666666667,
+        "size": 5,
+        "balance": 0,
+        "dimensionality": 10
+      }
+    },
+    "executive_summary": "This Botanical Science dataset represents a Multi-Class Classification problem. Dataset contains 150 records and 5 features with low risk. Intelligence Score: 69.9/100 (Needs Attention). Data Quality: 24.9/25 points. Recommended Approach: Start with Logistic Regression, optimize for Precision, Recall. Priority: Low risk dataset requires careful data preparation before modeling."
+  },
+  "dataset_report": {
+    "dataset_name": "Iris",
+    "dataset_shape": {
+      "rows": 150,
+      "columns": 5
+    },
+    "domain_analysis": {
+      "domain": "Botanical Science",
+      "confidence": 0.95,
+      "reason": "Recognized as Iris dataset based on column names and filename."
+    },
+    "problem_analysis": {
+      "problem_type": "Multi-Class Classification",
+      "likely_target": "target",
+      "recommended_metrics": [
+        "Precision",
+        "Recall",
+        "F1-Score",
+        "Macro-F1"
+      ],
+      "reason": "Recognized dataset: Multi-Class Classification problem."
+    },
+    "risk_analysis": {
+      "risk_level": "Low",
+      "risk_score": 2.0,
+      "risks": [
+        "Dataset is small. Use cross-validation and regularization carefully."
+      ],
+      "detailed_scores": {
+        "missing_values": 0.0,
+        "duplicates": 0.0,
+        "small_dataset": 2.0,
+        "high_dimensionality": 0.0,
+        "class_imbalance": 0.0,
+        "data_leakage": 0.0,
+        "very_small_dataset": 0.0,
+        "high_dimensional": 0.0
+      }
+    },
+    "model_strategy": {
+      "problem_type": "Multi-Class Classification",
+      "recommendations": [
+        {
+          "model": "Logistic Regression",
+          "reason": "Effective multiclass baseline."
+        },
+        {
+          "model": "Random Forest",
+          "reason": "Naturally handles multiclass, great for botanical data."
+        },
+        {
+          "model": "SVM",
+          "reason": "High performance on multiclass problems."
+        }
+      ],
+      "metric_focus": [
+        "Precision",
+        "Recall",
+        "F1-Score",
+        "Macro-F1"
+      ]
+    },
+    "roadmap": [
+      "Step 1: Address data quality issues (1 issues identified). Impute missing values, remove duplicates.",
+      "Step 2: Analyze patterns specific to Botanical Science domain. Focus on domain-relevant features.",
+      "Step 3: Create new features based on domain knowledge and EDA insights.",
+      "Step 4: Train multiple multi-class classification models using AutoML Studio.",
+      "Step 5: Optimize for Recall/F1-Score and other domain-relevant metrics. Use cross-validation.",
+      "Step 6: Generate SHAP explanations in AI Decision Intelligence. Understand feature impacts.",
+      "Step 7: Validate model on held-out test set. Deploy with monitoring.",
+      "Step 8: Generate AI Research Report with findings and recommendations."
+    ],
+    "intelligence_score": {
+      "score": 69.9,
+      "label": "Needs Attention",
+      "components": {
+        "quality": 24.866666666666667,
+        "size": 5,
+        "balance": 0,
+        "dimensionality": 10
+      }
+    },
+    "executive_summary": "This Botanical Science dataset represents a Multi-Class Classification problem. Dataset contains 150 records and 5 features with low risk. Intelligence Score: 69.9/100 (Needs Attention). Data Quality: 24.9/25 points. Recommended Approach: Start with Logistic Regression, optimize for Precision, Recall. Priority: Low risk dataset requires careful data preparation before modeling."
+  },
+  "cleaning_results": {
+    "report": [
+      "Removed 1 duplicate rows."
+    ],
+    "shape": [
+      149,
+      5
+    ]
+  },
+  "eda_results": {
+    "summary": "       sepal length (cm)  sepal width (cm)  ...  petal width (cm)      target\ncount         149.000000        149.000000  ...        149.000000  149.000000\nmean            5.843624          3.059732  ...          1.194631    0.993289\nstd             0.830851          0.436342  ...          0.762622    0.817847\nmin             4.300000          2.000000  ...          0.100000    0.000000\n25%             5.100000          2.800000  ...          0.300000    0.000000\n50%             5.800000          3.000000  ...          1.300000    1.000000\n75%             6.400000          3.300000  ...          1.800000    2.000000\nmax             7.900000          4.400000  ...          2.500000    2.000000\n\n[8 rows x 5 columns]",
+    "numerical_columns": [
+      "sepal length (cm)",
+      "sepal width (cm)",
+      "petal length (cm)",
+      "petal width (cm)",
+      "target"
+    ],
+    "categorical_columns": [],
+    "insights": [
+      "**sepal length (cm)** distribution is symmetric.",
+      "**sepal width (cm)** distribution is symmetric and contains ~2.7% outliers.",
+      "**petal length (cm)** distribution is symmetric.",
+      "**petal width (cm)** distribution is symmetric.",
+      "**target** distribution is symmetric."
+    ],
+    "charts": {}
+  },
+  "feature_engineering_results": {
+    "current_features": 5,
+    "recommended_changes": 3,
+    "expected_benefit": "Improved model accuracy and stability",
+    "steps": [
+      "Remove constant and duplicate columns",
+      "Encode categorical variables",
+      "Impute missing values",
+      "Create derived features for dates and ratios",
+      "Scale or normalize numerical features"
+    ]
+  },
+  "model_results": {
+    "best_model": "SVM",
+    "metrics": {
+      "Logistic Regression": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "Extra Trees": 1.0,
+      "Gradient Boosting": 1.0,
+      "AdaBoost": 0.9333333333333333,
+      "KNN": 1.0,
+      "Naive Bayes": 1.0,
+      "SVM": 1.0,
+      "XGBoost": 1.0
+    },
+    "model_readiness_score": 100,
+    "problem_type": "Classification",
+    "training_times": {
+      "Logistic Regression": 12.086,
+      "Decision Tree": 11.712,
+      "Random Forest": 15.378,
+      "Extra Trees": 15.513,
+      "Gradient Boosting": 14.886,
+      "AdaBoost": 13.558,
+      "KNN": 12.412,
+      "Naive Bayes": 12.446,
+      "SVM": 12.494,
+      "XGBoost": 13.006
+    },
+    "detailed_metrics": {
+      "Logistic Regression": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9581196581196582
+      },
+      "Decision Tree": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9412393162393163
+      },
+      "Random Forest": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9581196581196582
+      },
+      "Extra Trees": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9497863247863249
+      },
+      "Gradient Boosting": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9412393162393163
+      },
+      "AdaBoost": {
+        "accuracy": 0.9333333333333333,
+        "precision": 0.9333333333333333,
+        "recall": 0.9333333333333333,
+        "f1": 0.9333333333333333,
+        "roc_auc": 0.9934837092731829,
+        "cv_score": 0.9412393162393163
+      },
+      "KNN": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9581196581196582
+      },
+      "Naive Bayes": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9495726495726494
+      },
+      "SVM": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9664529914529915
+      },
+      "XGBoost": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9329059829059828
+      }
+    },
+    "model_selection_explanation": {
+      "selected_model": "SVM",
+      "problem_type": "Classification",
+      "why_chosen": [
+        "Highest validation accuracy (100.0%) among trained candidates",
+        "Strong F1 score (100.0%) indicating balanced precision and recall",
+        "Competitive ROC-AUC (1.000) for ranking quality",
+        "Stable 3-fold cross-validation accuracy (96.6%)"
+      ],
+      "alternatives": [
+        {
+          "model": "Logistic Regression",
+          "reasons": [
+            "Not selected as the top-performing candidate"
+          ]
+        },
+        {
+          "model": "Decision Tree",
+          "reasons": [
+            "Not selected as the top-performing candidate"
+          ]
+        },
+        {
+          "model": "Random Forest",
+          "reasons": [
+            "Not selected as the top-performing candidate"
+          ]
+        },
+        {
+          "model": "Extra Trees",
+          "reasons": [
+            "Not selected as the top-performing candidate"
+          ]
+        },
+        {
+          "model": "Gradient Boosting",
+          "reasons": [
+            "Not selected as the top-performing candidate"
+          ]
+        },
+        {
+          "model": "KNN",
+          "reasons": [
+            "Not selected as the top-performing candidate"
+          ]
+        },
+        {
+          "model": "Naive Bayes",
+          "reasons": [
+            "Not selected as the top-performing candidate"
+          ]
+        },
+        {
+          "model": "XGBoost",
+          "reasons": [
+            "Not selected as the top-performing candidate"
+          ]
+        }
+      ]
+    },
+    "improved_best_model": "baseline"
+  },
+  "explainability_results": {
+    "shap_values": {},
+    "feature_importance": {
+      "sepal length (cm)": 0.006666666666666672,
+      "sepal width (cm)": 0.01666666666666668,
+      "petal length (cm)": 0.58,
+      "petal width (cm)": 0.13666666666666663
+    },
+    "summary": "SHAP explainability failed; using fallback feature importance."
+  },
+  "xai_results": {
+    "shap_values": {},
+    "feature_importance": {
+      "sepal length (cm)": 0.006666666666666672,
+      "sepal width (cm)": 0.01666666666666668,
+      "petal length (cm)": 0.58,
+      "petal width (cm)": 0.13666666666666663
+    },
+    "summary": "SHAP explainability failed; using fallback feature importance."
+  },
+  "ai_trust_results": {
+    "fairness_score": "Not Evaluated",
+    "bias_analysis": {
+      "bias_risk": "Low",
+      "sensitive_features": [],
+      "issues": [
+        "No sensitive attributes explicitly detected."
+      ],
+      "recommendations": [
+        "Continue monitoring dataset composition."
+      ]
+    },
+    "trust_score": 100
+  },
+  "training_artifacts": {
+    "best_model": "SVC(probability=True, random_state=42)",
+    "best_name": "SVM",
+    "results": {
+      "Logistic Regression": 1.0,
+      "Decision Tree": 1.0,
+      "Random Forest": 1.0,
+      "Extra Trees": 1.0,
+      "Gradient Boosting": 1.0,
+      "AdaBoost": 0.9333333333333333,
+      "KNN": 1.0,
+      "Naive Bayes": 1.0,
+      "SVM": 1.0,
+      "XGBoost": 1.0
+    },
+    "problem_type": "Classification",
+    "target_column": "target",
+    "X_data": "     sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)\n0                  5.1               3.5                1.4               0.2\n1                  4.9               3.0                1.4               0.2\n2                  4.7               3.2                1.3               0.2\n3                  4.6               3.1                1.5               0.2\n4                  5.0               3.6                1.4               0.2\n..                 ...               ...                ...               ...\n145                6.7               3.0                5.2               2.3\n146                6.3               2.5                5.0               1.9\n147                6.5               3.0                5.2               2.0\n148                6.2               3.4                5.4               2.3\n149                5.9               3.0                5.1               1.8\n\n[149 rows x 4 columns]",
+    "y_data": "0      0\n1      0\n2      0\n3      0\n4      0\n      ..\n145    2\n146    2\n147    2\n148    2\n149    2\nName: target, Length: 149, dtype: int64",
+    "target_encoder": null,
+    "extras": {
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          11
+        ]
+      ],
+      "feature_importance": {},
+      "trained_models": {
+        "Logistic Regression": "LogisticRegression(max_iter=500, random_state=42)",
+        "Decision Tree": "DecisionTreeClassifier(random_state=42)",
+        "Random Forest": "RandomForestClassifier(n_estimators=30, random_state=42)",
+        "Extra Trees": "ExtraTreesClassifier(n_estimators=30, random_state=42)",
+        "Gradient Boosting": "GradientBoostingClassifier(random_state=42)",
+        "AdaBoost": "AdaBoostClassifier(random_state=42)",
+        "KNN": "KNeighborsClassifier()",
+        "Naive Bayes": "GaussianNB()",
+        "SVM": "SVC(probability=True, random_state=42)",
+        "XGBoost": "XGBClassifier(base_score=None, booster=None, callbacks=None,\n              colsample_bylevel=None, colsample_bynode=None,\n              colsample_bytree=None, device=None, early_stopping_rounds=None,\n              enable_categorical=False, eval_metric='logloss',\n              feature_types=None, feature_weights=None, gamma=None,\n              grow_policy=None, importance_type=None,\n              interaction_constraints=None, learning_rate=None, max_bin=None,\n              max_cat_threshold=None, max_cat_to_onehot=None,\n              max_delta_step=None, max_depth=None, max_leaves=None,\n              min_child_weight=None, missing=nan, monotone_constraints=None,\n              multi_strategy=None, n_estimators=30, n_jobs=None,\n              num_parallel_tree=None, ...)"
+      },
+      "X_test": "     sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)\n73                 6.1               2.8                4.7               1.2\n18                 5.7               3.8                1.7               0.3\n117                7.7               3.8                6.7               2.2\n78                 6.0               2.9                4.5               1.5\n76                 6.8               2.8                4.8               1.4\n31                 5.4               3.4                1.5               0.4\n64                 5.6               2.9                3.6               1.3\n140                6.7               3.1                5.6               2.4\n68                 6.2               2.2                4.5               1.5\n82                 5.8               2.7                3.9               1.2\n109                7.2               3.6                6.1               2.5\n12                 4.8               3.0                1.4               0.1\n36                 5.5               3.5                1.3               0.2\n9                  4.9               3.1                1.5               0.1\n19                 5.1               3.8                1.5               0.3\n56                 6.3               3.3                4.7               1.6\n136                6.3               3.4                5.6               2.4\n69                 5.6               2.5                3.9               1.1\n55                 5.7               2.8                4.5               1.3\n131                7.9               3.8                6.4               2.0\n29                 4.7               3.2                1.6               0.2\n123                6.3               2.7                4.9               1.8\n26                 5.0               3.4                1.6               0.4\n127                6.1               3.0                4.9               1.8\n128                6.4               2.8                5.6               2.1\n145                6.7               3.0                5.2               2.3\n110                6.5               3.2                5.1               2.0\n101                5.8               2.7                5.1               1.9\n45                 4.8               3.0                1.4               0.3\n30                 4.8               3.1                1.6               0.2",
+      "y_test": "73     1\n18     0\n117    2\n78     1\n76     1\n31     0\n64     1\n140    2\n68     1\n82     1\n109    2\n12     0\n36     0\n9      0\n19     0\n56     1\n136    2\n69     1\n55     1\n131    2\n29     0\n123    2\n26     0\n127    2\n128    2\n145    2\n110    2\n101    2\n45     0\n30     0\nName: target, dtype: int64",
+      "detailed_metrics": {
+        "Logistic Regression": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9581196581196582
+        },
+        "Decision Tree": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9412393162393163
+        },
+        "Random Forest": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9581196581196582
+        },
+        "Extra Trees": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9497863247863249
+        },
+        "Gradient Boosting": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9412393162393163
+        },
+        "AdaBoost": {
+          "accuracy": 0.9333333333333333,
+          "precision": 0.9333333333333333,
+          "recall": 0.9333333333333333,
+          "f1": 0.9333333333333333,
+          "roc_auc": 0.9934837092731829,
+          "cv_score": 0.9412393162393163
+        },
+        "KNN": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9581196581196582
+        },
+        "Naive Bayes": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9495726495726494
+        },
+        "SVM": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9664529914529915
+        },
+        "XGBoost": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9329059829059828
+        }
+      },
+      "training_times": {
+        "Logistic Regression": 12.086,
+        "Decision Tree": 11.712,
+        "Random Forest": 15.378,
+        "Extra Trees": 15.513,
+        "Gradient Boosting": 14.886,
+        "AdaBoost": 13.558,
+        "KNN": 12.412,
+        "Naive Bayes": 12.446,
+        "SVM": 12.494,
+        "XGBoost": 13.006
+      },
+      "model_comparison": [
+        {
+          "model": "SVM",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9664529914529915
+          },
+          "training_time": 12.494
+        },
+        {
+          "model": "Logistic Regression",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9581196581196582
+          },
+          "training_time": 12.086
+        },
+        {
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9581196581196582
+          },
+          "training_time": 15.378
+        },
+        {
+          "model": "KNN",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9581196581196582
+          },
+          "training_time": 12.412
+        },
+        {
+          "model": "Extra Trees",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9497863247863249
+          },
+          "training_time": 15.513
+        },
+        {
+          "model": "Naive Bayes",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9495726495726494
+          },
+          "training_time": 12.446
+        },
+        {
+          "model": "Decision Tree",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9412393162393163
+          },
+          "training_time": 11.712
+        },
+        {
+          "model": "Gradient Boosting",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9412393162393163
+          },
+          "training_time": 14.886
+        },
+        {
+          "model": "XGBoost",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9329059829059828
+          },
+          "training_time": 13.006
+        },
+        {
+          "model": "AdaBoost",
+          "metrics": {
+            "accuracy": 0.9333333333333333,
+            "precision": 0.9333333333333333,
+            "recall": 0.9333333333333333,
+            "f1": 0.9333333333333333,
+            "roc_auc": 0.9934837092731829,
+            "cv_score": 0.9412393162393163
+          },
+          "training_time": 13.558
+        }
+      ],
+      "model_selection_explanation": {
+        "selected_model": "SVM",
+        "problem_type": "Classification",
+        "why_chosen": [
+          "Highest validation accuracy (100.0%) among trained candidates",
+          "Strong F1 score (100.0%) indicating balanced precision and recall",
+          "Competitive ROC-AUC (1.000) for ranking quality",
+          "Stable 3-fold cross-validation accuracy (96.6%)"
+        ],
+        "alternatives": [
+          {
+            "model": "Logistic Regression",
+            "reasons": [
+              "Not selected as the top-performing candidate"
+            ]
+          },
+          {
+            "model": "Decision Tree",
+            "reasons": [
+              "Not selected as the top-performing candidate"
+            ]
+          },
+          {
+            "model": "Random Forest",
+            "reasons": [
+              "Not selected as the top-performing candidate"
+            ]
+          },
+          {
+            "model": "Extra Trees",
+            "reasons": [
+              "Not selected as the top-performing candidate"
+            ]
+          },
+          {
+            "model": "Gradient Boosting",
+            "reasons": [
+              "Not selected as the top-performing candidate"
+            ]
+          },
+          {
+            "model": "KNN",
+            "reasons": [
+              "Not selected as the top-performing candidate"
+            ]
+          },
+          {
+            "model": "Naive Bayes",
+            "reasons": [
+              "Not selected as the top-performing candidate"
+            ]
+          },
+          {
+            "model": "XGBoost",
+            "reasons": [
+              "Not selected as the top-performing candidate"
+            ]
+          }
+        ]
+      }
+    },
+    "cleaned_dataframe": "     sepal length (cm)  sepal width (cm)  ...  petal width (cm)  target\n0                  5.1               3.5  ...               0.2       0\n1                  4.9               3.0  ...               0.2       0\n2                  4.7               3.2  ...               0.2       0\n3                  4.6               3.1  ...               0.2       0\n4                  5.0               3.6  ...               0.2       0\n..                 ...               ...  ...               ...     ...\n145                6.7               3.0  ...               2.3       2\n146                6.3               2.5  ...               1.9       2\n147                6.5               3.0  ...               2.0       2\n148                6.2               3.4  ...               2.3       2\n149                5.9               3.0  ...               1.8       2\n\n[149 rows x 5 columns]"
+  },
+  "model_comparison": [
+    {
+      "version": "baseline",
+      "metrics": {
+        "Logistic Regression": 1.0,
+        "Decision Tree": 1.0,
+        "Random Forest": 1.0,
+        "Extra Trees": 1.0,
+        "Gradient Boosting": 1.0,
+        "AdaBoost": 0.9333333333333333,
+        "KNN": 1.0,
+        "Naive Bayes": 1.0,
+        "SVM": 1.0,
+        "XGBoost": 1.0
+      }
+    },
+    {
+      "version": "iter1_Logistic Regression",
+      "metrics": {
+        "accuracy": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.0
+      },
+      "opt_report": {
+        "best_params": null,
+        "best_score": null
+      }
+    }
+  ],
+  "improvement_history": [
+    {
+      "iteration": 1,
+      "model": "Logistic Regression",
+      "changes": {
+        "hyperparams": {
+          "best_params": null,
+          "best_score": null
+        }
+      }
+    }
+  ],
+  "best_model_version": "baseline",
+  "optimization_report": {
+    "iterations": 1,
+    "artifacts": {
+      "model": "deployment_package\\DEP_20260623081118\\best_model.pkl",
+      "encoder": null
+    }
+  },
+  "validation_results": [
+    {
+      "version": "iter1_Logistic Regression",
+      "validation": {}
+    }
+  ],
+  "model_registry": {
+    "model_id": "MODEL_093",
+    "timestamp": "2026-06-23T08:11:18.177171Z",
+    "version": "MODEL_v46",
+    "model_name": "Logistic Regression",
+    "dataset_name": "Iris",
+    "problem_type": "Classification",
+    "algorithm": "Logistic Regression",
+    "feature_names": [
+      "sepal length (cm)",
+      "sepal width (cm)",
+      "petal length (cm)",
+      "petal width (cm)",
+      "target"
+    ],
+    "metrics": {
+      "test_score": 0.0,
+      "train_score": 0.0
+    },
+    "hyperparameters": {
+      "C": [
+        0.01,
+        0.1,
+        1,
+        10,
+        100
+      ],
+      "penalty": [
+        "l1",
+        "l2"
+      ],
+      "solver": [
+        "liblinear"
+      ]
+    },
+    "training_time": 0.0,
+    "shap_available": true,
+    "deployment_status": "Not Deployed",
+    "artifact_path": "deployment_package\\DEP_20260623081033\\v1\\best_model.pkl",
+    "is_active": true,
+    "extra_metadata": {
+      "encoder_path": "deployment_package\\DEP_20260623081033\\v1\\target_encoder.pkl",
+      "preprocessing_path": "deployment_package\\DEP_20260623081033\\v1\\preprocessing_pipeline.pkl",
+      "feature_schema": "deployment_package\\DEP_20260623081033\\v1\\feature_schema.json"
+    }
+  },
+  "model_versions": [
+    {
+      "version": "v1",
+      "artifact_path": "deployment_package\\DEP_20260623081033\\v1\\best_model.pkl",
+      "encoder_path": "deployment_package\\DEP_20260623081033\\v1\\target_encoder.pkl",
+      "preprocessing_path": "deployment_package\\DEP_20260623081033\\v1\\preprocessing_pipeline.pkl",
+      "feature_schema": "deployment_package\\DEP_20260623081033\\v1\\feature_schema.json",
+      "metadata_path": "deployment_package\\DEP_20260623081033\\v1\\model_metadata.json",
+      "metrics": 1.0
+    }
+  ],
+  "production_model": {
+    "version": "v1",
+    "artifact_path": "deployment_package\\DEP_20260623081033\\v1\\best_model.pkl"
+  },
+  "validation_history": [
+    {
+      "version": "iter1_Logistic Regression",
+      "validation": {}
+    }
+  ],
+  "optimization_iterations": 1,
+  "final_ai_confidence_score": 100,
+  "mlops_results": {
+    "deployment_score": 100,
+    "risk_level": "Low"
+  },
+  "final_scores": {
+    "dataset_score": 69.9,
+    "model_score": 100,
+    "trust_score": 100.0,
+    "mlops_score": 100,
+    "overall_score": 88
+  },
+  "hyperparameter_report": {
+    "algorithm": "Logistic Regression",
+    "problem_type": "Classification",
+    "supported_models": [
+      "Logistic Regression",
+      "Random Forest",
+      "SVM",
+      "Gradient Boosting",
+      "XGBoost"
+    ],
+    "recommended_parameters": {
+      "C": [
+        0.01,
+        0.1,
+        1,
+        10,
+        100
+      ],
+      "penalty": [
+        "l1",
+        "l2"
+      ],
+      "solver": [
+        "liblinear"
+      ]
+    },
+    "notes": "Hyperparameter tuning plan based on model selection and dataset problem type. Use the supported model grid to guide optimization."
+  },
+  "ethics_report": {
+    "executive_summary": "The ethics assessment identifies bias, fairness, and privacy risks in the dataset and model predictions.",
+    "bias_concerns": [
+      "No sensitive attributes explicitly detected."
+    ],
+    "fairness_concerns": [],
+    "privacy_concerns": [],
+    "compliance_recommendations": {
+      "bias": [
+        "Continue regular bias audits and documentation."
+      ],
+      "fairness": [
+        "Monitor fairness metrics during model updates."
+      ],
+      "privacy": [
+        "Maintain minimal data collection and retention practices."
+      ]
+    },
+    "risk_level": "Low"
+  },
+  "memory_updates": {
+    "experiment_id": "EXP_199",
+    "status": "logged"
+  },
+  "deployment_readiness": {
+    "risk_level": "Low",
+    "warnings": [],
+    "recommendations": [
+      "Deploy with monitoring and schedule retraining if performance drifts."
+    ]
+  },
+  "documentation": {
+    "title": "Validate dataset verification_iris.json",
+    "created_at": "2026-06-23T08:11:18.199563+00:00",
+    "sections": {
+      "Business Objective": "Validate dataset verification_iris.json",
+      "Dataset Summary": null,
+      "Data Preprocessing": "Automated cleaning, missing value handling, duplicate review, and encoding were applied where needed.",
+      "Feature Engineering": "Remove constant and duplicate columns; Encode categorical variables; Impute missing values; Create derived features for dates and ratios; Scale or normalize numerical features",
+      "Model Selection": "SVM achieved the highest validation score among evaluated candidates.",
+      "Hyperparameter Optimization": "C=[0.01, 0.1, 1, 10, 100], penalty=['l1', 'l2'], solver=['liblinear']",
+      "Evaluation Metrics": "Logistic Regression: 1.0000, Decision Tree: 1.0000, Random Forest: 1.0000, Extra Trees: 1.0000, Gradient Boosting: 1.0000",
+      "Explainability Summary": "Top drivers: petal length (cm) (0.580), petal width (cm) (0.137), sepal width (cm) (0.017), sepal length (cm) (0.007)",
+      "Deployment Recommendation": "Risk level: Low. Deploy with monitoring and schedule retraining if performance drifts.",
+      "Future Improvements": "Collect more data, monitor drift, and iterate on feature engineering."
+    },
+    "summary": "Validate dataset verification_iris.json analyzed Iris end-to-end: data quality review, EDA, model training, explainability, and deployment readiness. Best model: SVM."
+  },
+  "model_registry_entry": {
+    "model_id": "MODEL_093",
+    "timestamp": "2026-06-23T08:11:18.177171Z",
+    "version": "MODEL_v46",
+    "model_name": "Logistic Regression",
+    "dataset_name": "Iris",
+    "problem_type": "Classification",
+    "algorithm": "Logistic Regression",
+    "feature_names": [
+      "sepal length (cm)",
+      "sepal width (cm)",
+      "petal length (cm)",
+      "petal width (cm)",
+      "target"
+    ],
+    "metrics": {
+      "test_score": 0.0,
+      "train_score": 0.0
+    },
+    "hyperparameters": {
+      "C": [
+        0.01,
+        0.1,
+        1,
+        10,
+        100
+      ],
+      "penalty": [
+        "l1",
+        "l2"
+      ],
+      "solver": [
+        "liblinear"
+      ]
+    },
+    "training_time": 0.0,
+    "shap_available": true,
+    "deployment_status": "Not Deployed",
+    "artifact_path": "deployment_package\\DEP_20260623081033\\v1\\best_model.pkl",
+    "is_active": true,
+    "extra_metadata": {
+      "encoder_path": "deployment_package\\DEP_20260623081033\\v1\\target_encoder.pkl",
+      "preprocessing_path": "deployment_package\\DEP_20260623081033\\v1\\preprocessing_pipeline.pkl",
+      "feature_schema": "deployment_package\\DEP_20260623081033\\v1\\feature_schema.json"
+    }
+  },
+  "final_score": 88,
+  "recommendation": "Ready for deployment",
+  "project_goal": "Validate dataset verification_iris.json",
+  "constraints": {},
+  "dataset_name": "Iris",
+  "stage_durations": {
+    "dataset_analysis": 0.022006988525390625,
+    "feature_engineering": 0.014345884323120117,
+    "data_cleaning": 0.0050013065338134766,
+    "eda": 0.03198957443237305,
+    "ethics": 0.0010025501251220703,
+    "auto_ml": 133.84446239471436,
+    "explainability": 34.87329649925232,
+    "self_improvement": 9.437397003173828
+  },
+  "stage_errors": [
+    {
+      "stage": "explainability",
+      "error": "SHAP explainability timed out after 10 seconds; using fallback feature importance.",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\AutoDS-Agent\\agents\\master_autonomous_pipeline.py\", line 679, in run_pipeline\n    shap_res = fut_shap.result(timeout=explainability_timeout)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 458, in result\n    raise TimeoutError()\nTimeoutError\n",
+      "timestamp": "2026-06-23T08:10:43.962270Z",
+      "recovery": {
+        "recommended_action": "Review the error context and dataset preprocessing to identify the root cause.",
+        "automation_possible": false,
+        "risk_level": "Medium",
+        "explanation": "The issue could not be classified automatically; inspect preprocessing and model inputs."
+      },
+      "user_message": "The issue could not be classified automatically; inspect preprocessing and model inputs."
+    }
+  ],
+  "total_runtime": 178.3404929637909,
+  "final_report": {
+    "path": "reports/AutoDS_Report.pdf",
+    "payload": {
+      "project_name": "Validate dataset verification_iris.json",
+      "project_goal": "Validate dataset verification_iris.json",
+      "executive_summary": "Validate dataset verification_iris.json analyzed Iris end-to-end: data quality review, EDA, model training, explainability, and deployment readiness. Best model: SVM.",
+      "dataset_name": "Iris",
+      "rows": 150,
+      "columns": 5,
+      "health_score": 69.9,
+      "health_grade": "Needs improvement",
+      "health_summary": "Overall pipeline score 88/100 with dataset quality 69.9/100.",
+      "dataset_summary": "",
+      "feature_types": {},
+      "problem_type": "Classification",
+      "best_model": "SVM",
+      "model_selection_rationale": "SVM achieved the highest validation score among evaluated candidates.",
+      "target_column": "target",
+      "confidence": 100,
+      "trust_score": 100,
+      "fairness_score": "Not Evaluated",
+      "deployment_label": "Ready for deployment",
+      "final_score": 88,
+      "feature_importance": {
+        "sepal length (cm)": 0.006666666666666672,
+        "sepal width (cm)": 0.01666666666666668,
+        "petal length (cm)": 0.58,
+        "petal width (cm)": 0.13666666666666663
+      },
+      "explainability_summary": "SHAP explainability failed; using fallback feature importance.",
+      "trust_concerns": [],
+      "model_results": [
+        "Logistic Regression: 1.0000",
+        "Decision Tree: 1.0000",
+        "Random Forest: 1.0000",
+        "Extra Trees: 1.0000",
+        "Gradient Boosting: 1.0000",
+        "AdaBoost: 0.9333",
+        "KNN: 1.0000",
+        "Naive Bayes: 1.0000",
+        "SVM: 1.0000",
+        "XGBoost: 1.0000"
+      ],
+      "ai_insights": [
+        "**sepal length (cm)** distribution is symmetric.",
+        "**sepal width (cm)** distribution is symmetric and contains ~2.7% outliers.",
+        "**petal length (cm)** distribution is symmetric.",
+        "**petal width (cm)** distribution is symmetric.",
+        "**target** distribution is symmetric."
+      ],
+      "eda_findings": [
+        "**sepal length (cm)** distribution is symmetric.",
+        "**sepal width (cm)** distribution is symmetric and contains ~2.7% outliers.",
+        "**petal length (cm)** distribution is symmetric.",
+        "**petal width (cm)** distribution is symmetric.",
+        "**target** distribution is symmetric."
+      ],
+      "cleaning_actions": [],
+      "cleaning_before_rows": 150,
+      "cleaning_after_rows": 149,
+      "recommendations": [
+        "Ready for deployment",
+        "Risk level: Low. Deploy with monitoring and schedule retraining if performance drifts."
+      ],
+      "issues": [
+        {
+          "severity": "medium",
+          "title": "Duplicate Rows",
+          "description": "1 duplicate row(s) found.",
+          "recommendation": "Remove duplicates to prevent biased model training."
+        }
+      ],
+      "shap_ranking": [
+        "petal length (cm): 0.5800",
+        "petal width (cm): 0.1367",
+        "sepal width (cm): 0.0167",
+        "sepal length (cm): 0.0067"
+      ],
+      "deployment_readiness_score": 100,
+      "deployment_risk": "Low",
+      "business_recommendations": "Collect more data, monitor drift, and iterate on feature engineering.",
+      "health_breakdown": {
+        "dataset": 69.9,
+        "model": 100,
+        "trust": 100.0,
+        "mlops": 100
+      },
+      "conclusion": "Ready for deployment",
+      "generated_at": "2026-06-23 08:11 UTC"
+    }
+  }
+}

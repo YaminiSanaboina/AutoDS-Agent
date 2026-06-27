@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Runtime JSON stores (generated at runtime)
+storage/memory/
+storage/registry/
+storage/monitoring/
+storage/logs/
+agent_memory.json
+auto_ds_memory.json
+model_registry.json
+chief_decisions.json
+knowledge_base.json
+pipeline_execution_log.json
+agent_events.json
+cluster_nodes.json
+cluster_failures.json
+deployment_config.json
+system_observability.json
+users.json
+sessions.json
+api_keys.json
+security_audit_log.json
+plugin_registry.json
+training_jobs.json
+project_workspace.json
+sandbox_execution_history.json
+agent_execution_history.json
+ai_control_memory.json
+autonomous_decisions.json
+deployment_history.json
+drift_reference.json
+drift_history.json
+agent_collaboration_history.json
+retraining_history.json
+api/datasets.json
+api/api_jobs.json
+api/projects.json
+api/deployments.json
+
+# Pipeline artifacts and caches
+smart_cache/
+deployment_package/
+autonomous_validation_runs/
+reports/*.pdf
+
+# Temp / scratch scripts at project root
+tmp_*.py
+
+# Logs
+*.log
+
+# OS
+Thumbs.db

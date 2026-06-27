@@ -1,0 +1,1138 @@
+{
+  "start_time": "2026-06-23T08:12:33.148629Z",
+  "dataset_analysis": {
+    "dataset_name": "Wine-Quality",
+    "dataset_shape": {
+      "rows": 178,
+      "columns": 14
+    },
+    "domain_analysis": {
+      "domain": "Food Chemistry",
+      "confidence": 0.95,
+      "reason": "Recognized as Wine dataset based on column names and filename."
+    },
+    "problem_analysis": {
+      "problem_type": "Classification",
+      "likely_target": "target",
+      "recommended_metrics": [
+        "MAE",
+        "RMSE",
+        "R\u00b2",
+        "MAPE"
+      ],
+      "reason": "Recognized dataset: Classification problem."
+    },
+    "risk_analysis": {
+      "risk_level": "Low",
+      "risk_score": 2.0,
+      "risks": [
+        "Dataset is small. Use cross-validation and regularization carefully."
+      ],
+      "detailed_scores": {
+        "missing_values": 0.0,
+        "duplicates": 0.0,
+        "small_dataset": 2.0,
+        "high_dimensionality": 0.0,
+        "class_imbalance": 0.0,
+        "data_leakage": 0.0,
+        "very_small_dataset": 0.0,
+        "high_dimensional": 0.0
+      }
+    },
+    "model_strategy": {
+      "problem_type": "Classification",
+      "recommendations": [
+        {
+          "model": "Random Forest",
+          "reason": "Versatile, works for most problems."
+        },
+        {
+          "model": "XGBoost",
+          "reason": "High performance, feature importance."
+        },
+        {
+          "model": "Neural Network",
+          "reason": "Deep learning for complex patterns."
+        }
+      ],
+      "metric_focus": [
+        "MAE",
+        "RMSE",
+        "R\u00b2",
+        "MAPE"
+      ]
+    },
+    "roadmap": [
+      "Step 1: Address data quality issues (1 issues identified). Impute missing values, remove duplicates.",
+      "Step 2: Analyze patterns specific to Food Chemistry domain. Focus on domain-relevant features.",
+      "Step 3: Create new features based on domain knowledge and EDA insights.",
+      "Step 4: Train multiple classification models using AutoML Studio.",
+      "Step 5: Optimize for Recall/F1-Score and other domain-relevant metrics. Use cross-validation.",
+      "Step 6: Generate SHAP explanations in AI Decision Intelligence. Understand feature impacts.",
+      "Step 7: Validate model on held-out test set. Deploy with monitoring.",
+      "Step 8: Generate AI Research Report with findings and recommendations."
+    ],
+    "intelligence_score": {
+      "score": 70.0,
+      "label": "Good Dataset",
+      "components": {
+        "quality": 25.0,
+        "size": 5,
+        "balance": 0,
+        "dimensionality": 10
+      }
+    },
+    "executive_summary": "This Food Chemistry dataset represents a Classification problem. Dataset contains 178 records and 14 features with low risk. Intelligence Score: 70.0/100 (Good Dataset). Data Quality: 25.0/25 points. Recommended Approach: Start with Random Forest, optimize for MAE, RMSE. Priority: Low risk dataset requires careful data preparation before modeling."
+  },
+  "dataset_report": {
+    "dataset_name": "Wine-Quality",
+    "dataset_shape": {
+      "rows": 178,
+      "columns": 14
+    },
+    "domain_analysis": {
+      "domain": "Food Chemistry",
+      "confidence": 0.95,
+      "reason": "Recognized as Wine dataset based on column names and filename."
+    },
+    "problem_analysis": {
+      "problem_type": "Classification",
+      "likely_target": "target",
+      "recommended_metrics": [
+        "MAE",
+        "RMSE",
+        "R\u00b2",
+        "MAPE"
+      ],
+      "reason": "Recognized dataset: Classification problem."
+    },
+    "risk_analysis": {
+      "risk_level": "Low",
+      "risk_score": 2.0,
+      "risks": [
+        "Dataset is small. Use cross-validation and regularization carefully."
+      ],
+      "detailed_scores": {
+        "missing_values": 0.0,
+        "duplicates": 0.0,
+        "small_dataset": 2.0,
+        "high_dimensionality": 0.0,
+        "class_imbalance": 0.0,
+        "data_leakage": 0.0,
+        "very_small_dataset": 0.0,
+        "high_dimensional": 0.0
+      }
+    },
+    "model_strategy": {
+      "problem_type": "Classification",
+      "recommendations": [
+        {
+          "model": "Random Forest",
+          "reason": "Versatile, works for most problems."
+        },
+        {
+          "model": "XGBoost",
+          "reason": "High performance, feature importance."
+        },
+        {
+          "model": "Neural Network",
+          "reason": "Deep learning for complex patterns."
+        }
+      ],
+      "metric_focus": [
+        "MAE",
+        "RMSE",
+        "R\u00b2",
+        "MAPE"
+      ]
+    },
+    "roadmap": [
+      "Step 1: Address data quality issues (1 issues identified). Impute missing values, remove duplicates.",
+      "Step 2: Analyze patterns specific to Food Chemistry domain. Focus on domain-relevant features.",
+      "Step 3: Create new features based on domain knowledge and EDA insights.",
+      "Step 4: Train multiple classification models using AutoML Studio.",
+      "Step 5: Optimize for Recall/F1-Score and other domain-relevant metrics. Use cross-validation.",
+      "Step 6: Generate SHAP explanations in AI Decision Intelligence. Understand feature impacts.",
+      "Step 7: Validate model on held-out test set. Deploy with monitoring.",
+      "Step 8: Generate AI Research Report with findings and recommendations."
+    ],
+    "intelligence_score": {
+      "score": 70.0,
+      "label": "Good Dataset",
+      "components": {
+        "quality": 25.0,
+        "size": 5,
+        "balance": 0,
+        "dimensionality": 10
+      }
+    },
+    "executive_summary": "This Food Chemistry dataset represents a Classification problem. Dataset contains 178 records and 14 features with low risk. Intelligence Score: 70.0/100 (Good Dataset). Data Quality: 25.0/25 points. Recommended Approach: Start with Random Forest, optimize for MAE, RMSE. Priority: Low risk dataset requires careful data preparation before modeling."
+  },
+  "cleaning_results": {
+    "report": [
+      "Dataset was already clean."
+    ],
+    "shape": [
+      178,
+      14
+    ]
+  },
+  "eda_results": {
+    "summary": "          alcohol  malic_acid  ...      proline      target\ncount  178.000000  178.000000  ...   178.000000  178.000000\nmean    13.000618    2.336348  ...   746.893258    0.938202\nstd      0.811827    1.117146  ...   314.907474    0.775035\nmin     11.030000    0.740000  ...   278.000000    0.000000\n25%     12.362500    1.602500  ...   500.500000    0.000000\n50%     13.050000    1.865000  ...   673.500000    1.000000\n75%     13.677500    3.082500  ...   985.000000    2.000000\nmax     14.830000    5.800000  ...  1680.000000    2.000000\n\n[8 rows x 14 columns]",
+    "numerical_columns": [
+      "alcohol",
+      "malic_acid",
+      "ash",
+      "alcalinity_of_ash",
+      "magnesium",
+      "total_phenols",
+      "flavanoids",
+      "nonflavanoid_phenols",
+      "proanthocyanins",
+      "color_intensity",
+      "hue",
+      "od280/od315_of_diluted_wines",
+      "proline",
+      "target"
+    ],
+    "categorical_columns": [],
+    "insights": [
+      "**alcohol** distribution is symmetric.",
+      "**malic_acid** distribution is right-skewed and contains ~1.7% outliers.",
+      "**ash** distribution is symmetric and contains ~1.7% outliers.",
+      "**alcalinity_of_ash** distribution is symmetric and contains ~2.2% outliers.",
+      "**magnesium** distribution is right-skewed and contains ~2.2% outliers."
+    ],
+    "charts": {}
+  },
+  "feature_engineering_results": {
+    "current_features": 14,
+    "recommended_changes": 1,
+    "expected_benefit": "Improved model accuracy and stability",
+    "steps": [
+      "Remove constant and duplicate columns",
+      "Encode categorical variables",
+      "Impute missing values",
+      "Create derived features for dates and ratios",
+      "Scale or normalize numerical features"
+    ]
+  },
+  "model_results": {
+    "best_model": "Random Forest",
+    "metrics": {
+      "Logistic Regression": 0.9722222222222222,
+      "Decision Tree": 0.9444444444444444,
+      "Random Forest": 1.0,
+      "Extra Trees": 0.9722222222222222,
+      "Gradient Boosting": 0.9444444444444444,
+      "AdaBoost": 0.9444444444444444,
+      "KNN": 0.7222222222222222,
+      "Naive Bayes": 1.0,
+      "SVM": 0.8055555555555556,
+      "XGBoost": 0.9722222222222222
+    },
+    "model_readiness_score": 100,
+    "problem_type": "Classification",
+    "training_times": {
+      "Logistic Regression": 24.93,
+      "Decision Tree": 19.073,
+      "Random Forest": 19.416,
+      "Extra Trees": 19.752,
+      "Gradient Boosting": 24.757,
+      "AdaBoost": 15.877,
+      "KNN": 13.305,
+      "Naive Bayes": 13.084,
+      "SVM": 18.457,
+      "XGBoost": 29.647
+    },
+    "detailed_metrics": {
+      "Logistic Regression": {
+        "accuracy": 0.9722222222222222,
+        "precision": 0.974074074074074,
+        "recall": 0.9722222222222222,
+        "f1": 0.9721867461331064,
+        "roc_auc": 1.0,
+        "cv_score": 0.9296690307328604
+      },
+      "Decision Tree": {
+        "accuracy": 0.9444444444444444,
+        "precision": 0.9462962962962962,
+        "recall": 0.9444444444444444,
+        "f1": 0.9439974457215836,
+        "roc_auc": 0.9545454545454545,
+        "cv_score": 0.9222813238770685
+      },
+      "Random Forest": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9787234042553191
+      },
+      "Extra Trees": {
+        "accuracy": 0.9722222222222222,
+        "precision": 0.974074074074074,
+        "recall": 0.9722222222222222,
+        "f1": 0.9721867461331064,
+        "roc_auc": 1.0,
+        "cv_score": 0.9787234042553191
+      },
+      "Gradient Boosting": {
+        "accuracy": 0.9444444444444444,
+        "precision": 0.9462962962962962,
+        "recall": 0.9444444444444444,
+        "f1": 0.9439974457215836,
+        "roc_auc": 0.9886363636363638,
+        "cv_score": 0.9014479905437351
+      },
+      "AdaBoost": {
+        "accuracy": 0.9444444444444444,
+        "precision": 0.9462962962962962,
+        "recall": 0.9444444444444444,
+        "f1": 0.9439974457215836,
+        "roc_auc": 1.0,
+        "cv_score": 0.9578900709219859
+      },
+      "KNN": {
+        "accuracy": 0.7222222222222222,
+        "precision": 0.7222222222222222,
+        "recall": 0.7222222222222222,
+        "f1": 0.7222222222222222,
+        "roc_auc": 0.8945707070707071,
+        "cv_score": 0.6546985815602837
+      },
+      "Naive Bayes": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "cv_score": 0.9645390070921986
+      },
+      "SVM": {
+        "accuracy": 0.8055555555555556,
+        "precision": 0.801058201058201,
+        "recall": 0.8055555555555556,
+        "f1": 0.80242656449553,
+        "roc_auc": 0.9126082251082251,
+        "cv_score": 0.6552895981087471
+      },
+      "XGBoost": {
+        "accuracy": 0.9722222222222222,
+        "precision": 0.974074074074074,
+        "recall": 0.9722222222222222,
+        "f1": 0.9717752234993614,
+        "roc_auc": 1.0,
+        "cv_score": 0.9574468085106383
+      }
+    },
+    "model_selection_explanation": {
+      "selected_model": "Random Forest",
+      "problem_type": "Classification",
+      "why_chosen": [
+        "Highest validation accuracy (100.0%) among trained candidates",
+        "Strong F1 score (100.0%) indicating balanced precision and recall",
+        "Competitive ROC-AUC (1.000) for ranking quality",
+        "Stable 3-fold cross-validation accuracy (97.9%)"
+      ],
+      "alternatives": [
+        {
+          "model": "Naive Bayes",
+          "reasons": [
+            "Not selected as the top-performing candidate"
+          ]
+        },
+        {
+          "model": "Logistic Regression",
+          "reasons": [
+            "Lower validation accuracy (97.2% vs best 100.0%)"
+          ]
+        },
+        {
+          "model": "Extra Trees",
+          "reasons": [
+            "Lower validation accuracy (97.2% vs best 100.0%)"
+          ]
+        },
+        {
+          "model": "XGBoost",
+          "reasons": [
+            "Lower validation accuracy (97.2% vs best 100.0%)",
+            "Longer training time without compensating score improvement"
+          ]
+        },
+        {
+          "model": "Decision Tree",
+          "reasons": [
+            "Lower validation accuracy (94.4% vs best 100.0%)",
+            "Weaker precision-recall balance (lower F1)"
+          ]
+        },
+        {
+          "model": "Gradient Boosting",
+          "reasons": [
+            "Lower validation accuracy (94.4% vs best 100.0%)",
+            "Weaker precision-recall balance (lower F1)"
+          ]
+        },
+        {
+          "model": "AdaBoost",
+          "reasons": [
+            "Lower validation accuracy (94.4% vs best 100.0%)",
+            "Weaker precision-recall balance (lower F1)"
+          ]
+        },
+        {
+          "model": "SVM",
+          "reasons": [
+            "Lower validation accuracy (80.6% vs best 100.0%)",
+            "Weaker precision-recall balance (lower F1)",
+            "Longer training time on this dataset size"
+          ]
+        }
+      ]
+    }
+  },
+  "explainability_results": {
+    "shap_values": "[[[ 0.08380821 -0.097486    0.01367779]\n  [-0.00162639 -0.0159325   0.01755889]\n  [ 0.0039448  -0.00750823  0.00356343]\n  ...\n  [ 0.04678972 -0.00015047 -0.04663925]\n  [ 0.10182224 -0.00547944 -0.09634279]\n  [ 0.07166147 -0.0582824  -0.01337907]]\n\n [[ 0.08742328 -0.09953537  0.01211209]\n  [-0.00945326 -0.01065376  0.02010702]\n  [ 0.00333396 -0.00526207  0.00192811]\n  ...\n  [-0.00507473 -0.00810519  0.01317992]\n  [ 0.11522997  0.00847829 -0.12370826]\n  [ 0.09475098 -0.07935722 -0.01539376]]\n\n [[ 0.0196167  -0.04490629  0.02528958]\n  [-0.00455614 -0.02477542  0.02933156]\n  [ 0.00217533 -0.02639819  0.02422287]\n  ...\n  [-0.04403574 -0.03419181  0.07822755]\n  [-0.01639487  0.02975538 -0.01336051]\n  [-0.06718483  0.04964665  0.01753818]]\n\n ...\n\n [[ 0.08216225 -0.09289529  0.01073304]\n  [ 0.01714806 -0.00447725 -0.01267081]\n  [ 0.00719172 -0.00797143  0.00077971]\n  ...\n  [ 0.0423255   0.01284558 -0.05517108]\n  [ 0.07449236 -0.00311489 -0.07137747]\n  [ 0.10626907 -0.08792401 -0.01834506]]\n\n [[ 0.07109335 -0.08166215  0.01056879]\n  [ 0.01338845 -0.0015587  -0.01182974]\n  [ 0.00719172 -0.0098945   0.00270278]\n  ...\n  [ 0.03751904  0.02275223 -0.06027127]\n  [ 0.04826277  0.01821657 -0.06647934]\n  [ 0.09769477 -0.08226447 -0.0154303 ]]\n\n [[ 0.08122684 -0.09459672  0.01336988]\n  [ 0.01077378  0.00029929 -0.01107307]\n  [ 0.0016176  -0.00541552  0.00379792]\n  ...\n  [ 0.01965554 -0.00264593 -0.0170096 ]\n  [ 0.08822164  0.00449223 -0.09271386]\n  [ 0.10261628 -0.08705688 -0.0155594 ]]]",
+    "feature_importance": "    Rank                       Feature  Mean |SHAP|\n0      1                    flavanoids     0.104955\n1      2               color_intensity     0.075217\n2      3                       alcohol     0.056641\n3      4                       proline     0.055056\n4      5  od280/od315_of_diluted_wines     0.052097\n5      6                           hue     0.039542\n6      7                     magnesium     0.036070\n7      8                 total_phenols     0.025345\n8      9                    malic_acid     0.014231\n9     10             alcalinity_of_ash     0.013536\n10    11          nonflavanoid_phenols     0.008967\n11    12               proanthocyanins     0.007008\n12    13                           ash     0.006957"
+  },
+  "xai_results": {
+    "shap_values": "[[[ 0.08380821 -0.097486    0.01367779]\n  [-0.00162639 -0.0159325   0.01755889]\n  [ 0.0039448  -0.00750823  0.00356343]\n  ...\n  [ 0.04678972 -0.00015047 -0.04663925]\n  [ 0.10182224 -0.00547944 -0.09634279]\n  [ 0.07166147 -0.0582824  -0.01337907]]\n\n [[ 0.08742328 -0.09953537  0.01211209]\n  [-0.00945326 -0.01065376  0.02010702]\n  [ 0.00333396 -0.00526207  0.00192811]\n  ...\n  [-0.00507473 -0.00810519  0.01317992]\n  [ 0.11522997  0.00847829 -0.12370826]\n  [ 0.09475098 -0.07935722 -0.01539376]]\n\n [[ 0.0196167  -0.04490629  0.02528958]\n  [-0.00455614 -0.02477542  0.02933156]\n  [ 0.00217533 -0.02639819  0.02422287]\n  ...\n  [-0.04403574 -0.03419181  0.07822755]\n  [-0.01639487  0.02975538 -0.01336051]\n  [-0.06718483  0.04964665  0.01753818]]\n\n ...\n\n [[ 0.08216225 -0.09289529  0.01073304]\n  [ 0.01714806 -0.00447725 -0.01267081]\n  [ 0.00719172 -0.00797143  0.00077971]\n  ...\n  [ 0.0423255   0.01284558 -0.05517108]\n  [ 0.07449236 -0.00311489 -0.07137747]\n  [ 0.10626907 -0.08792401 -0.01834506]]\n\n [[ 0.07109335 -0.08166215  0.01056879]\n  [ 0.01338845 -0.0015587  -0.01182974]\n  [ 0.00719172 -0.0098945   0.00270278]\n  ...\n  [ 0.03751904  0.02275223 -0.06027127]\n  [ 0.04826277  0.01821657 -0.06647934]\n  [ 0.09769477 -0.08226447 -0.0154303 ]]\n\n [[ 0.08122684 -0.09459672  0.01336988]\n  [ 0.01077378  0.00029929 -0.01107307]\n  [ 0.0016176  -0.00541552  0.00379792]\n  ...\n  [ 0.01965554 -0.00264593 -0.0170096 ]\n  [ 0.08822164  0.00449223 -0.09271386]\n  [ 0.10261628 -0.08705688 -0.0155594 ]]]",
+    "feature_importance": "    Rank                       Feature  Mean |SHAP|\n0      1                    flavanoids     0.104955\n1      2               color_intensity     0.075217\n2      3                       alcohol     0.056641\n3      4                       proline     0.055056\n4      5  od280/od315_of_diluted_wines     0.052097\n5      6                           hue     0.039542\n6      7                     magnesium     0.036070\n7      8                 total_phenols     0.025345\n8      9                    malic_acid     0.014231\n9     10             alcalinity_of_ash     0.013536\n10    11          nonflavanoid_phenols     0.008967\n11    12               proanthocyanins     0.007008\n12    13                           ash     0.006957"
+  },
+  "ai_trust_results": {
+    "fairness_score": "Not Evaluated",
+    "bias_analysis": {
+      "bias_risk": "Low",
+      "sensitive_features": [],
+      "issues": [
+        "No sensitive attributes explicitly detected."
+      ],
+      "recommendations": [
+        "Continue monitoring dataset composition."
+      ]
+    },
+    "trust_score": 100
+  },
+  "training_artifacts": {
+    "best_model": "RandomForestClassifier(n_estimators=30, random_state=42)",
+    "best_name": "Random Forest",
+    "results": {
+      "Logistic Regression": 0.9722222222222222,
+      "Decision Tree": 0.9444444444444444,
+      "Random Forest": 1.0,
+      "Extra Trees": 0.9722222222222222,
+      "Gradient Boosting": 0.9444444444444444,
+      "AdaBoost": 0.9444444444444444,
+      "KNN": 0.7222222222222222,
+      "Naive Bayes": 1.0,
+      "SVM": 0.8055555555555556,
+      "XGBoost": 0.9722222222222222
+    },
+    "problem_type": "Classification",
+    "target_column": "target",
+    "X_data": "     alcohol  malic_acid   ash  ...   hue  od280/od315_of_diluted_wines  proline\n0      14.23        1.71  2.43  ...  1.04                          3.92   1065.0\n1      13.20        1.78  2.14  ...  1.05                          3.40   1050.0\n2      13.16        2.36  2.67  ...  1.03                          3.17   1185.0\n3      14.37        1.95  2.50  ...  0.86                          3.45   1480.0\n4      13.24        2.59  2.87  ...  1.04                          2.93    735.0\n..       ...         ...   ...  ...   ...                           ...      ...\n173    13.71        5.65  2.45  ...  0.64                          1.74    740.0\n174    13.40        3.91  2.48  ...  0.70                          1.56    750.0\n175    13.27        4.28  2.26  ...  0.59                          1.56    835.0\n176    13.17        2.59  2.37  ...  0.60                          1.62    840.0\n177    14.13        4.10  2.74  ...  0.61                          1.60    560.0\n\n[178 rows x 13 columns]",
+    "y_data": "0      0\n1      0\n2      0\n3      0\n4      0\n      ..\n173    2\n174    2\n175    2\n176    2\n177    2\nName: target, Length: 178, dtype: int64",
+    "target_encoder": null,
+    "extras": {
+      "confusion_matrix": [
+        [
+          14,
+          0,
+          0
+        ],
+        [
+          0,
+          14,
+          0
+        ],
+        [
+          0,
+          0,
+          8
+        ]
+      ],
+      "feature_importance": {
+        "alcohol": 0.09290190568038877,
+        "malic_acid": 0.0371490440209265,
+        "ash": 0.01574765210017764,
+        "alcalinity_of_ash": 0.02718816373915196,
+        "magnesium": 0.054704112782477436,
+        "total_phenols": 0.055998963157348106,
+        "flavanoids": 0.23879579217160415,
+        "nonflavanoid_phenols": 0.024095705576269888,
+        "proanthocyanins": 0.01481892962686728,
+        "color_intensity": 0.14498623162385882,
+        "hue": 0.09092352236249875,
+        "od280/od315_of_diluted_wines": 0.11900812539978446,
+        "proline": 0.08368185175864633
+      },
+      "trained_models": {
+        "Logistic Regression": "LogisticRegression(max_iter=500, random_state=42)",
+        "Decision Tree": "DecisionTreeClassifier(random_state=42)",
+        "Random Forest": "RandomForestClassifier(n_estimators=30, random_state=42)",
+        "Extra Trees": "ExtraTreesClassifier(n_estimators=30, random_state=42)",
+        "Gradient Boosting": "GradientBoostingClassifier(random_state=42)",
+        "AdaBoost": "AdaBoostClassifier(random_state=42)",
+        "KNN": "KNeighborsClassifier()",
+        "Naive Bayes": "GaussianNB()",
+        "SVM": "SVC(probability=True, random_state=42)",
+        "XGBoost": "XGBClassifier(base_score=None, booster=None, callbacks=None,\n              colsample_bylevel=None, colsample_bynode=None,\n              colsample_bytree=None, device=None, early_stopping_rounds=None,\n              enable_categorical=False, eval_metric='logloss',\n              feature_types=None, feature_weights=None, gamma=None,\n              grow_policy=None, importance_type=None,\n              interaction_constraints=None, learning_rate=None, max_bin=None,\n              max_cat_threshold=None, max_cat_to_onehot=None,\n              max_delta_step=None, max_depth=None, max_leaves=None,\n              min_child_weight=None, missing=nan, monotone_constraints=None,\n              multi_strategy=None, n_estimators=30, n_jobs=None,\n              num_parallel_tree=None, ...)"
+      },
+      "X_test": "     alcohol  malic_acid   ash  ...   hue  od280/od315_of_diluted_wines  proline\n19     13.64        3.10  2.56  ...  0.96                          3.36    845.0\n45     14.21        4.04  2.44  ...  0.87                          3.33   1080.0\n140    12.93        2.81  2.70  ...  0.77                          2.31    600.0\n30     13.73        1.50  2.70  ...  1.19                          2.71   1285.0\n67     12.37        1.17  1.92  ...  1.12                          3.48    510.0\n16     14.30        1.92  2.72  ...  1.07                          2.65   1280.0\n119    12.00        3.43  2.00  ...  0.93                          3.05    564.0\n174    13.40        3.91  2.48  ...  0.70                          1.56    750.0\n109    11.61        1.35  2.70  ...  0.96                          3.26    680.0\n141    13.36        2.56  2.35  ...  0.70                          2.47    780.0\n24     13.50        1.81  2.61  ...  1.12                          3.82    845.0\n150    13.50        3.12  2.62  ...  0.59                          1.30    500.0\n41     13.41        3.84  2.12  ...  0.91                          3.00   1035.0\n118    12.77        3.43  1.98  ...  0.70                          2.12    372.0\n15     13.63        1.81  2.70  ...  1.28                          2.88   1310.0\n111    12.52        2.43  2.17  ...  0.90                          2.78    325.0\n113    11.41        0.74  2.50  ...  1.10                          2.31    434.0\n82     12.08        1.13  2.51  ...  1.31                          2.72    630.0\n9      13.86        1.35  2.27  ...  1.01                          3.55   1045.0\n114    12.08        1.39  2.50  ...  0.93                          3.19    385.0\n18     14.19        1.59  2.48  ...  1.23                          2.82   1680.0\n66     13.11        1.01  1.70  ...  1.12                          3.18    502.0\n60     12.33        1.10  2.28  ...  1.25                          1.67    680.0\n169    13.40        4.60  2.86  ...  0.67                          1.92    630.0\n171    12.77        2.39  2.28  ...  0.57                          1.63    470.0\n164    13.78        2.76  2.30  ...  0.70                          1.68    615.0\n117    12.42        1.61  2.19  ...  1.06                          2.96    345.0\n65     12.37        1.21  2.56  ...  1.19                          2.30    678.0\n90     12.08        1.83  2.32  ...  1.08                          2.27    480.0\n55     13.56        1.73  2.46  ...  0.98                          3.03   1120.0\n29     14.02        1.68  2.21  ...  1.04                          3.59   1035.0\n128    12.37        1.63  2.30  ...  0.89                          2.78    342.0\n145    13.16        3.57  2.15  ...  0.60                          1.68    830.0\n31     13.58        1.66  2.36  ...  1.09                          2.88   1515.0\n12     13.75        1.73  2.41  ...  1.15                          2.90   1320.0\n42     13.88        1.89  2.59  ...  0.88                          3.56   1095.0\n\n[36 rows x 13 columns]",
+      "y_test": "19     0\n45     0\n140    2\n30     0\n67     1\n16     0\n119    1\n174    2\n109    1\n141    2\n24     0\n150    2\n41     0\n118    1\n15     0\n111    1\n113    1\n82     1\n9      0\n114    1\n18     0\n66     1\n60     1\n169    2\n171    2\n164    2\n117    1\n65     1\n90     1\n55     0\n29     0\n128    1\n145    2\n31     0\n12     0\n42     0\nName: target, dtype: int64",
+      "detailed_metrics": {
+        "Logistic Regression": {
+          "accuracy": 0.9722222222222222,
+          "precision": 0.974074074074074,
+          "recall": 0.9722222222222222,
+          "f1": 0.9721867461331064,
+          "roc_auc": 1.0,
+          "cv_score": 0.9296690307328604
+        },
+        "Decision Tree": {
+          "accuracy": 0.9444444444444444,
+          "precision": 0.9462962962962962,
+          "recall": 0.9444444444444444,
+          "f1": 0.9439974457215836,
+          "roc_auc": 0.9545454545454545,
+          "cv_score": 0.9222813238770685
+        },
+        "Random Forest": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9787234042553191
+        },
+        "Extra Trees": {
+          "accuracy": 0.9722222222222222,
+          "precision": 0.974074074074074,
+          "recall": 0.9722222222222222,
+          "f1": 0.9721867461331064,
+          "roc_auc": 1.0,
+          "cv_score": 0.9787234042553191
+        },
+        "Gradient Boosting": {
+          "accuracy": 0.9444444444444444,
+          "precision": 0.9462962962962962,
+          "recall": 0.9444444444444444,
+          "f1": 0.9439974457215836,
+          "roc_auc": 0.9886363636363638,
+          "cv_score": 0.9014479905437351
+        },
+        "AdaBoost": {
+          "accuracy": 0.9444444444444444,
+          "precision": 0.9462962962962962,
+          "recall": 0.9444444444444444,
+          "f1": 0.9439974457215836,
+          "roc_auc": 1.0,
+          "cv_score": 0.9578900709219859
+        },
+        "KNN": {
+          "accuracy": 0.7222222222222222,
+          "precision": 0.7222222222222222,
+          "recall": 0.7222222222222222,
+          "f1": 0.7222222222222222,
+          "roc_auc": 0.8945707070707071,
+          "cv_score": 0.6546985815602837
+        },
+        "Naive Bayes": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "cv_score": 0.9645390070921986
+        },
+        "SVM": {
+          "accuracy": 0.8055555555555556,
+          "precision": 0.801058201058201,
+          "recall": 0.8055555555555556,
+          "f1": 0.80242656449553,
+          "roc_auc": 0.9126082251082251,
+          "cv_score": 0.6552895981087471
+        },
+        "XGBoost": {
+          "accuracy": 0.9722222222222222,
+          "precision": 0.974074074074074,
+          "recall": 0.9722222222222222,
+          "f1": 0.9717752234993614,
+          "roc_auc": 1.0,
+          "cv_score": 0.9574468085106383
+        }
+      },
+      "training_times": {
+        "Logistic Regression": 24.93,
+        "Decision Tree": 19.073,
+        "Random Forest": 19.416,
+        "Extra Trees": 19.752,
+        "Gradient Boosting": 24.757,
+        "AdaBoost": 15.877,
+        "KNN": 13.305,
+        "Naive Bayes": 13.084,
+        "SVM": 18.457,
+        "XGBoost": 29.647
+      },
+      "model_comparison": [
+        {
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9787234042553191
+          },
+          "training_time": 19.416
+        },
+        {
+          "model": "Naive Bayes",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "roc_auc": 1.0,
+            "cv_score": 0.9645390070921986
+          },
+          "training_time": 13.084
+        },
+        {
+          "model": "Extra Trees",
+          "metrics": {
+            "accuracy": 0.9722222222222222,
+            "precision": 0.974074074074074,
+            "recall": 0.9722222222222222,
+            "f1": 0.9721867461331064,
+            "roc_auc": 1.0,
+            "cv_score": 0.9787234042553191
+          },
+          "training_time": 19.752
+        },
+        {
+          "model": "XGBoost",
+          "metrics": {
+            "accuracy": 0.9722222222222222,
+            "precision": 0.974074074074074,
+            "recall": 0.9722222222222222,
+            "f1": 0.9717752234993614,
+            "roc_auc": 1.0,
+            "cv_score": 0.9574468085106383
+          },
+          "training_time": 29.647
+        },
+        {
+          "model": "Logistic Regression",
+          "metrics": {
+            "accuracy": 0.9722222222222222,
+            "precision": 0.974074074074074,
+            "recall": 0.9722222222222222,
+            "f1": 0.9721867461331064,
+            "roc_auc": 1.0,
+            "cv_score": 0.9296690307328604
+          },
+          "training_time": 24.93
+        },
+        {
+          "model": "AdaBoost",
+          "metrics": {
+            "accuracy": 0.9444444444444444,
+            "precision": 0.9462962962962962,
+            "recall": 0.9444444444444444,
+            "f1": 0.9439974457215836,
+            "roc_auc": 1.0,
+            "cv_score": 0.9578900709219859
+          },
+          "training_time": 15.877
+        },
+        {
+          "model": "Decision Tree",
+          "metrics": {
+            "accuracy": 0.9444444444444444,
+            "precision": 0.9462962962962962,
+            "recall": 0.9444444444444444,
+            "f1": 0.9439974457215836,
+            "roc_auc": 0.9545454545454545,
+            "cv_score": 0.9222813238770685
+          },
+          "training_time": 19.073
+        },
+        {
+          "model": "Gradient Boosting",
+          "metrics": {
+            "accuracy": 0.9444444444444444,
+            "precision": 0.9462962962962962,
+            "recall": 0.9444444444444444,
+            "f1": 0.9439974457215836,
+            "roc_auc": 0.9886363636363638,
+            "cv_score": 0.9014479905437351
+          },
+          "training_time": 24.757
+        },
+        {
+          "model": "SVM",
+          "metrics": {
+            "accuracy": 0.8055555555555556,
+            "precision": 0.801058201058201,
+            "recall": 0.8055555555555556,
+            "f1": 0.80242656449553,
+            "roc_auc": 0.9126082251082251,
+            "cv_score": 0.6552895981087471
+          },
+          "training_time": 18.457
+        },
+        {
+          "model": "KNN",
+          "metrics": {
+            "accuracy": 0.7222222222222222,
+            "precision": 0.7222222222222222,
+            "recall": 0.7222222222222222,
+            "f1": 0.7222222222222222,
+            "roc_auc": 0.8945707070707071,
+            "cv_score": 0.6546985815602837
+          },
+          "training_time": 13.305
+        }
+      ],
+      "model_selection_explanation": {
+        "selected_model": "Random Forest",
+        "problem_type": "Classification",
+        "why_chosen": [
+          "Highest validation accuracy (100.0%) among trained candidates",
+          "Strong F1 score (100.0%) indicating balanced precision and recall",
+          "Competitive ROC-AUC (1.000) for ranking quality",
+          "Stable 3-fold cross-validation accuracy (97.9%)"
+        ],
+        "alternatives": [
+          {
+            "model": "Naive Bayes",
+            "reasons": [
+              "Not selected as the top-performing candidate"
+            ]
+          },
+          {
+            "model": "Logistic Regression",
+            "reasons": [
+              "Lower validation accuracy (97.2% vs best 100.0%)"
+            ]
+          },
+          {
+            "model": "Extra Trees",
+            "reasons": [
+              "Lower validation accuracy (97.2% vs best 100.0%)"
+            ]
+          },
+          {
+            "model": "XGBoost",
+            "reasons": [
+              "Lower validation accuracy (97.2% vs best 100.0%)",
+              "Longer training time without compensating score improvement"
+            ]
+          },
+          {
+            "model": "Decision Tree",
+            "reasons": [
+              "Lower validation accuracy (94.4% vs best 100.0%)",
+              "Weaker precision-recall balance (lower F1)"
+            ]
+          },
+          {
+            "model": "Gradient Boosting",
+            "reasons": [
+              "Lower validation accuracy (94.4% vs best 100.0%)",
+              "Weaker precision-recall balance (lower F1)"
+            ]
+          },
+          {
+            "model": "AdaBoost",
+            "reasons": [
+              "Lower validation accuracy (94.4% vs best 100.0%)",
+              "Weaker precision-recall balance (lower F1)"
+            ]
+          },
+          {
+            "model": "SVM",
+            "reasons": [
+              "Lower validation accuracy (80.6% vs best 100.0%)",
+              "Weaker precision-recall balance (lower F1)",
+              "Longer training time on this dataset size"
+            ]
+          }
+        ]
+      }
+    },
+    "cleaned_dataframe": "     alcohol  malic_acid   ash  ...  od280/od315_of_diluted_wines  proline  target\n0      14.23        1.71  2.43  ...                          3.92   1065.0       0\n1      13.20        1.78  2.14  ...                          3.40   1050.0       0\n2      13.16        2.36  2.67  ...                          3.17   1185.0       0\n3      14.37        1.95  2.50  ...                          3.45   1480.0       0\n4      13.24        2.59  2.87  ...                          2.93    735.0       0\n..       ...         ...   ...  ...                           ...      ...     ...\n173    13.71        5.65  2.45  ...                          1.74    740.0       2\n174    13.40        3.91  2.48  ...                          1.56    750.0       2\n175    13.27        4.28  2.26  ...                          1.56    835.0       2\n176    13.17        2.59  2.37  ...                          1.62    840.0       2\n177    14.13        4.10  2.74  ...                          1.60    560.0       2\n\n[178 rows x 14 columns]"
+  },
+  "model_comparison": [],
+  "improvement_history": [],
+  "best_model_version": "Random Forest",
+  "optimization_report": {
+    "skipped_due_to_budget": true,
+    "artifacts": {
+      "model": "deployment_package\\DEP_20260623081553\\best_model.pkl",
+      "encoder": null
+    }
+  },
+  "validation_results": {},
+  "model_registry": {
+    "model_id": "MODEL_094",
+    "timestamp": "2026-06-23T08:15:53.731241Z",
+    "version": "MODEL_v8",
+    "model_name": "Random Forest",
+    "dataset_name": "Wine-Quality",
+    "problem_type": "Classification",
+    "algorithm": "Random Forest",
+    "feature_names": [
+      "alcohol",
+      "malic_acid",
+      "ash",
+      "alcalinity_of_ash",
+      "magnesium",
+      "total_phenols",
+      "flavanoids",
+      "nonflavanoid_phenols",
+      "proanthocyanins",
+      "color_intensity",
+      "hue",
+      "od280/od315_of_diluted_wines",
+      "proline",
+      "target"
+    ],
+    "metrics": {
+      "test_score": 0.0,
+      "train_score": 0.0
+    },
+    "hyperparameters": {
+      "n_estimators": [
+        50,
+        100,
+        200,
+        300,
+        400,
+        500
+      ],
+      "max_depth": [
+        3,
+        5,
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "min_samples_split": [
+        2,
+        5,
+        10,
+        15,
+        20
+      ]
+    },
+    "training_time": 0.0,
+    "shap_available": true,
+    "deployment_status": "Not Deployed",
+    "artifact_path": "deployment_package\\DEP_20260623081553\\v1\\best_model.pkl",
+    "is_active": true,
+    "extra_metadata": {
+      "encoder_path": "deployment_package\\DEP_20260623081553\\v1\\target_encoder.pkl",
+      "preprocessing_path": "deployment_package\\DEP_20260623081553\\v1\\preprocessing_pipeline.pkl",
+      "feature_schema": "deployment_package\\DEP_20260623081553\\v1\\feature_schema.json"
+    }
+  },
+  "model_versions": [
+    {
+      "version": "v1",
+      "artifact_path": "deployment_package\\DEP_20260623081553\\v1\\best_model.pkl",
+      "encoder_path": "deployment_package\\DEP_20260623081553\\v1\\target_encoder.pkl",
+      "preprocessing_path": "deployment_package\\DEP_20260623081553\\v1\\preprocessing_pipeline.pkl",
+      "feature_schema": "deployment_package\\DEP_20260623081553\\v1\\feature_schema.json",
+      "metadata_path": "deployment_package\\DEP_20260623081553\\v1\\model_metadata.json",
+      "metrics": 1.0
+    }
+  ],
+  "production_model": {
+    "version": "v1",
+    "artifact_path": "deployment_package\\DEP_20260623081553\\v1\\best_model.pkl"
+  },
+  "validation_history": [
+    {}
+  ],
+  "optimization_iterations": 0,
+  "final_ai_confidence_score": 100,
+  "mlops_results": {
+    "deployment_score": 100,
+    "risk_level": "Low"
+  },
+  "final_scores": {
+    "dataset_score": 70.0,
+    "model_score": 100,
+    "trust_score": 100.0,
+    "mlops_score": 100,
+    "overall_score": 88
+  },
+  "hyperparameter_report": {
+    "algorithm": "Random Forest",
+    "problem_type": "Classification",
+    "supported_models": [
+      "Logistic Regression",
+      "Random Forest",
+      "SVM",
+      "Gradient Boosting",
+      "XGBoost"
+    ],
+    "recommended_parameters": {
+      "n_estimators": [
+        50,
+        100,
+        200,
+        300,
+        400,
+        500
+      ],
+      "max_depth": [
+        3,
+        5,
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "min_samples_split": [
+        2,
+        5,
+        10,
+        15,
+        20
+      ]
+    },
+    "notes": "Hyperparameter tuning plan based on model selection and dataset problem type. Use the supported model grid to guide optimization."
+  },
+  "ethics_report": {
+    "executive_summary": "The ethics assessment identifies bias, fairness, and privacy risks in the dataset and model predictions.",
+    "bias_concerns": [
+      "No sensitive attributes explicitly detected."
+    ],
+    "fairness_concerns": [],
+    "privacy_concerns": [],
+    "compliance_recommendations": {
+      "bias": [
+        "Continue regular bias audits and documentation."
+      ],
+      "fairness": [
+        "Monitor fairness metrics during model updates."
+      ],
+      "privacy": [
+        "Maintain minimal data collection and retention practices."
+      ]
+    },
+    "risk_level": "Low"
+  },
+  "memory_updates": {
+    "experiment_id": "EXP_200",
+    "status": "logged"
+  },
+  "deployment_readiness": {
+    "risk_level": "Low",
+    "warnings": [],
+    "recommendations": [
+      "Deploy with monitoring and schedule retraining if performance drifts."
+    ]
+  },
+  "documentation": {
+    "title": "Validate dataset verification_wine.json",
+    "created_at": "2026-06-23T08:15:53.815782+00:00",
+    "sections": {
+      "Business Objective": "Validate dataset verification_wine.json",
+      "Dataset Summary": null,
+      "Data Preprocessing": "Automated cleaning, missing value handling, duplicate review, and encoding were applied where needed.",
+      "Feature Engineering": "Remove constant and duplicate columns; Encode categorical variables; Impute missing values; Create derived features for dates and ratios; Scale or normalize numerical features",
+      "Model Selection": "Random Forest achieved the highest validation score among evaluated candidates.",
+      "Hyperparameter Optimization": "n_estimators=[50, 100, 200, 300, 400, 500], max_depth=[3, 5, 10, 20, 30, 40, 50], min_samples_split=[2, 5, 10, 15, 20]",
+      "Evaluation Metrics": "Random Forest: 1.0000, Naive Bayes: 1.0000, Logistic Regression: 0.9722, Extra Trees: 0.9722, XGBoost: 0.9722",
+      "Explainability Summary": "Top drivers: flavanoids (0.105), color_intensity (0.075), alcohol (0.057), proline (0.055), od280/od315_of_diluted_wines (0.052)",
+      "Deployment Recommendation": "Risk level: Low. Deploy with monitoring and schedule retraining if performance drifts.",
+      "Future Improvements": "Collect more data, monitor drift, and iterate on feature engineering."
+    },
+    "summary": "Validate dataset verification_wine.json analyzed Wine-Quality end-to-end: data quality review, EDA, model training, explainability, and deployment readiness. Best model: Random Forest."
+  },
+  "model_registry_entry": {
+    "model_id": "MODEL_094",
+    "timestamp": "2026-06-23T08:15:53.731241Z",
+    "version": "MODEL_v8",
+    "model_name": "Random Forest",
+    "dataset_name": "Wine-Quality",
+    "problem_type": "Classification",
+    "algorithm": "Random Forest",
+    "feature_names": [
+      "alcohol",
+      "malic_acid",
+      "ash",
+      "alcalinity_of_ash",
+      "magnesium",
+      "total_phenols",
+      "flavanoids",
+      "nonflavanoid_phenols",
+      "proanthocyanins",
+      "color_intensity",
+      "hue",
+      "od280/od315_of_diluted_wines",
+      "proline",
+      "target"
+    ],
+    "metrics": {
+      "test_score": 0.0,
+      "train_score": 0.0
+    },
+    "hyperparameters": {
+      "n_estimators": [
+        50,
+        100,
+        200,
+        300,
+        400,
+        500
+      ],
+      "max_depth": [
+        3,
+        5,
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "min_samples_split": [
+        2,
+        5,
+        10,
+        15,
+        20
+      ]
+    },
+    "training_time": 0.0,
+    "shap_available": true,
+    "deployment_status": "Not Deployed",
+    "artifact_path": "deployment_package\\DEP_20260623081553\\v1\\best_model.pkl",
+    "is_active": true,
+    "extra_metadata": {
+      "encoder_path": "deployment_package\\DEP_20260623081553\\v1\\target_encoder.pkl",
+      "preprocessing_path": "deployment_package\\DEP_20260623081553\\v1\\preprocessing_pipeline.pkl",
+      "feature_schema": "deployment_package\\DEP_20260623081553\\v1\\feature_schema.json"
+    }
+  },
+  "final_score": 88,
+  "recommendation": "Ready for deployment",
+  "project_goal": "Validate dataset verification_wine.json",
+  "constraints": {},
+  "dataset_name": "Wine-Quality",
+  "stage_durations": {
+    "dataset_analysis": 0.11142134666442871,
+    "feature_engineering": 0.09390878677368164,
+    "data_cleaning": 0.01773977279663086,
+    "eda": 0.17878437042236328,
+    "ethics": 0.009131669998168945,
+    "auto_ml": 199.58294677734375,
+    "explainability": 0.15360546112060547,
+    "self_improvement": 0.0683584213256836
+  },
+  "stage_errors": [],
+  "total_runtime": 200.61615562438965,
+  "final_report": {
+    "path": "reports/AutoDS_Report.pdf",
+    "payload": {
+      "project_name": "Validate dataset verification_wine.json",
+      "project_goal": "Validate dataset verification_wine.json",
+      "executive_summary": "Validate dataset verification_wine.json analyzed Wine-Quality end-to-end: data quality review, EDA, model training, explainability, and deployment readiness. Best model: Random Forest.",
+      "dataset_name": "Wine-Quality",
+      "rows": 178,
+      "columns": 14,
+      "health_score": 70.0,
+      "health_grade": "Needs improvement",
+      "health_summary": "Overall pipeline score 88/100 with dataset quality 70.0/100.",
+      "dataset_summary": "",
+      "feature_types": {},
+      "problem_type": "Classification",
+      "best_model": "Random Forest",
+      "model_selection_rationale": "Random Forest achieved the highest validation score among evaluated candidates.",
+      "target_column": "target",
+      "confidence": 100,
+      "trust_score": 100,
+      "fairness_score": "Not Evaluated",
+      "deployment_label": "Ready for deployment",
+      "final_score": 88,
+      "feature_importance": "    Rank                       Feature  Mean |SHAP|\n0      1                    flavanoids     0.104955\n1      2               color_intensity     0.075217\n2      3                       alcohol     0.056641\n3      4                       proline     0.055056\n4      5  od280/od315_of_diluted_wines     0.052097\n5      6                           hue     0.039542\n6      7                     magnesium     0.036070\n7      8                 total_phenols     0.025345\n8      9                    malic_acid     0.014231\n9     10             alcalinity_of_ash     0.013536\n10    11          nonflavanoid_phenols     0.008967\n11    12               proanthocyanins     0.007008\n12    13                           ash     0.006957",
+      "explainability_summary": "",
+      "trust_concerns": [],
+      "model_results": [
+        "Logistic Regression: 0.9722",
+        "Decision Tree: 0.9444",
+        "Random Forest: 1.0000",
+        "Extra Trees: 0.9722",
+        "Gradient Boosting: 0.9444",
+        "AdaBoost: 0.9444",
+        "KNN: 0.7222",
+        "Naive Bayes: 1.0000",
+        "SVM: 0.8056",
+        "XGBoost: 0.9722"
+      ],
+      "ai_insights": [
+        "**alcohol** distribution is symmetric.",
+        "**malic_acid** distribution is right-skewed and contains ~1.7% outliers.",
+        "**ash** distribution is symmetric and contains ~1.7% outliers.",
+        "**alcalinity_of_ash** distribution is symmetric and contains ~2.2% outliers.",
+        "**magnesium** distribution is right-skewed and contains ~2.2% outliers."
+      ],
+      "eda_findings": [
+        "**alcohol** distribution is symmetric.",
+        "**malic_acid** distribution is right-skewed and contains ~1.7% outliers.",
+        "**ash** distribution is symmetric and contains ~1.7% outliers.",
+        "**alcalinity_of_ash** distribution is symmetric and contains ~2.2% outliers.",
+        "**magnesium** distribution is right-skewed and contains ~2.2% outliers."
+      ],
+      "cleaning_actions": [],
+      "cleaning_before_rows": 178,
+      "cleaning_after_rows": 178,
+      "recommendations": [
+        "Ready for deployment",
+        "Risk level: Low. Deploy with monitoring and schedule retraining if performance drifts."
+      ],
+      "issues": [
+        {
+          "severity": "low",
+          "title": "No Critical Issues",
+          "description": "Dataset passed automated quality checks.",
+          "recommendation": "Proceed to EDA and modeling."
+        }
+      ],
+      "shap_ranking": [
+        "flavanoids: 0.1050",
+        "color_intensity: 0.0752",
+        "alcohol: 0.0566",
+        "proline: 0.0551",
+        "od280/od315_of_diluted_wines: 0.0521",
+        "hue: 0.0395",
+        "magnesium: 0.0361",
+        "total_phenols: 0.0253",
+        "malic_acid: 0.0142",
+        "alcalinity_of_ash: 0.0135"
+      ],
+      "deployment_readiness_score": 100,
+      "deployment_risk": "Low",
+      "business_recommendations": "Collect more data, monitor drift, and iterate on feature engineering.",
+      "health_breakdown": {
+        "dataset": 70.0,
+        "model": 100,
+        "trust": 100.0,
+        "mlops": 100
+      },
+      "conclusion": "Ready for deployment",
+      "generated_at": "2026-06-23 08:15 UTC"
+    }
+  }
+}

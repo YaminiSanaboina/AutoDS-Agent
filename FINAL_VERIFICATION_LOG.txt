@@ -1,0 +1,211 @@
+﻿======================================================================
+FINAL VERIFICATION - Titanic Dataset
+======================================================================
+Dataset loaded: 891 rows x 12 cols
+Columns: ['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']
+
+--- 1. AutoML CANDIDATE MODELS (smart_mode registry) ---
+Problem type: Classification
+Registry keys (10): ['Logistic Regression', 'Decision Tree', 'Random Forest', 'Extra Trees', 'Gradient Boosting', 'AdaBoost', 'KNN', 'Naive Bayes', 'SVM', 'XGBoost']
+
+--- Running MasterAutonomousPipeline (use_cache=False) ---
+[MasterPipeline] dataset_report keys: ['dataset_name', 'dataset_shape', 'domain_analysis', 'problem_analysis', 'risk_analysis', 'model_strategy', 'roadmap', 'intelligence_score', 'executive_summary']
+[MasterPipeline] feature_plan keys: ['current_features', 'recommended_changes', 'expected_benefit', 'steps']
+[MasterPipeline] project_summary keys: ['project_stage', 'project_health', 'health_label', 'strengths', 'weaknesses', 'risks', 'next_best_action', 'dataset_report', 'problem_insights', 'risk_assessment', 'roadmap', 'workflow_status']
+[MasterPipeline] cleaning_results keys: ['report', 'shape']
+[MasterPipeline] eda_results keys: ['summary', 'numerical_columns', 'categorical_columns', 'insights', 'charts']
+[MasterPipeline] ethics_report keys: ['executive_summary', 'bias_concerns', 'fairness_concerns', 'privacy_concerns', 'compliance_recommendations', 'risk_level']
+[MasterPipeline] Detected problem type: Classification
+[MasterPipeline] deployment_readiness keys: ['risk_level', 'warnings', 'recommendations']
+Pipeline completed in 24.4s
+
+--- 1b. MODELS ACTUALLY TRAINED ---
+Count: 10
+  AdaBoost: accuracy=0.8101, cv=0.7991762105686155, time=0.367s
+  Decision Tree: accuracy=0.8045, cv=0.7598305144842747, time=0.019s
+  Extra Trees: accuracy=0.8324, cv=0.8076386672812585, time=0.138s
+  Gradient Boosting: accuracy=0.8101, cv=0.8216560885957759, time=0.538s
+  KNN: accuracy=0.6704, cv=0.6250162512262288, time=0.011s
+  Logistic Regression: accuracy=0.8101, cv=0.7963455424363839, time=0.486s
+  Naive Bayes: accuracy=0.8045, cv=0.7640085570093017, time=0.005s
+  Random Forest: accuracy=0.8380, cv=0.8146001016440332, time=0.163s
+  SVM: accuracy=0.6536, cv=0.6488612322566157, time=0.372s
+  XGBoost: accuracy=0.8268, cv=0.8160065714049333, time=0.156s
+
+--- 2. LEADERBOARD (by composite score) ---
+  Rank 1: Random Forest | test=0.8380 | cv=0.8146001016440332 | composite=0.8310 | time=0.163s
+  Rank 2: Extra Trees | test=0.8324 | cv=0.8076386672812585 | composite=0.8250 | time=0.138s
+  Rank 3: XGBoost | test=0.8268 | cv=0.8160065714049333 | composite=0.8236 | time=0.156s
+  Rank 4: Gradient Boosting | test=0.8101 | cv=0.8216560885957759 | composite=0.8135 | time=0.538s
+  Rank 5: AdaBoost | test=0.8101 | cv=0.7991762105686155 | composite=0.8068 | time=0.367s
+  Rank 6: Logistic Regression | test=0.8101 | cv=0.7963455424363839 | composite=0.8059 | time=0.486s
+  Rank 7: Naive Bayes | test=0.8045 | cv=0.7640085570093017 | composite=0.7923 | time=0.005s
+  Rank 8: Decision Tree | test=0.8045 | cv=0.7598305144842747 | composite=0.7911 | time=0.019s
+  Rank 9: KNN | test=0.6704 | cv=0.6250162512262288 | composite=0.6568 | time=0.011s
+  Rank 10: SVM | test=0.6536 | cv=0.6488612322566157 | composite=0.6522 | time=0.372s
+
+--- 3. BEST MODEL & COMPOSITE FORMULA ---
+Best model: Random Forest
+Best test score: 0.8379888268156425
+Formula: composite = 0.7 * test_score + 0.3 * cv_score (when cv available)
+Computed composite: 0.7*0.8380 + 0.3*0.8146 = 0.8310
+Selection explanation: {
+  "selected_model": "Random Forest",
+  "problem_type": "Classification",
+  "why_chosen": [
+    "Highest validation accuracy (83.8%) among trained candidates",
+    "Strong F1 score (78.8%) indicating balanced precision and recall",
+    "Competitive ROC-AUC (0.889) for ranking quality",
+    "Efficient training time relative to performance gain",
+    "Stable 3-fold cross-validation accuracy (81.5%)"
+  ],
+  "alternatives": [
+    {
+      "model": "Extra Trees",
+      "reasons": [
+        "Lower validation accuracy (83.2% vs best 83.8%)",
+        "Longer training time without compensating score improvement"
+      ]
+    },
+    {
+      "model": "XGBoost",
+      "reasons": [
+        "Lower validation accuracy (82.7% vs best 83.8%)",
+        "Longer training time without compensating score improvement"
+      ]
+    },
+    {
+      "model": "Logistic Regression",
+      "reasons": [
+        "Lower validation accuracy (81.0% vs best 83.8%)",
+        "Weaker precision-recall balance (lower F1)",
+        "Longer training time without compensating score improvement"
+      ]
+    },
+    {
+      "model": "Gradient Boosting",
+      "reasons": [
+        "Lower validation accuracy (81.0% vs best 83.8%)",
+        "Weaker precision-recall balance (lower F1)",
+        "Longer training time without compensating score improvement"
+      ]
+    },
+    {
+      "model": "AdaBoost",
+      "reasons": [
+        "Lower validation accuracy (81.0% vs best 83.8%)",
+        "Longer training time without compensating score improvement"
+      ]
+    },
+    {
+      "model": "Decision Tree",
+      "reasons": [
+        "Lower validation accuracy (80.4% vs best 83.8%)",
+        "Longer training time without compensating score improvement"
+      ]
+    },
+    {
+      "model": "Naive Bayes",
+      "reasons": [
+        "Lower validation accuracy (80.4% vs best 83.8%)"
+      ]
+    },
+    {
+      "model": "KNN",
+      "reasons": [
+        "Lower validation accuracy (67.0% vs best 83.8%)",
+        "Weaker precision-recall balance (lower F1)",
+        "Longer training time without compensating score improvement"
+      ]
+    }
+  ]
+}
+
+--- 4. SESSION STATE KEYS POPULATED ---
+  X_data: DataFrame((891, 11))
+  ai_insights: list(len=4, bytes~510)
+  analysis_profile: dict(len=4, bytes~1574)
+  auto_ml_error_history: list(len=2, bytes~1147)
+  autonomous_result: dict(len=39, bytes~36408)
+  best_model: Model(RandomForestClassifier)
+  best_model_name: 'Random Forest'
+  best_score: 0.8379888268156425
+  cleaning_issues: list(len=6, bytes~1145)
+  cleaning_report: list(len=3, bytes~148)
+  confidence_score: np.float64(81.0)
+  current_page: 'ai_command_center'
+  dataset_loaded: True
+  dataset_metadata: dict(len=4, bytes~8371)
+  dataset_name: 'Titanic-Dataset.csv'
+  df: DataFrame((891, 12))
+  eda_categorical_columns: list(len=5, bytes~46)
+  eda_generated: True
+  eda_insights: list(len=5, bytes~269)
+  eda_numerical_columns: list(len=7, bytes~70)
+  eda_summary: DataFrame((11, 12))
+  model_leaderboard: list(len=2, bytes~583)
+  model_metrics: dict(len=10, bytes~1951)
+  model_trained: True
+  pipeline_elapsed_time: 0
+  pipeline_executed: True
+  pipeline_progress: 0
+  pipeline_recovery_messages: list(len=2, bytes~213)
+  problem_type: 'Classification'
+  recommendations: list(len=3, bytes~311)
+  results: dict(len=10, bytes~345)
+  shap_computed: True
+  shap_importance: DataFrame((11, 3))
+  shap_values: array([[[-0.01553135,  0.01553135],
+        [-0.08972124,  0.08972124],
+        [-0.01052971,  0.010
+  target_column: 'Survived'
+  training_times: dict(len=10, bytes~215)
+  upload_filename: 'Titanic-Dataset.csv'
+  uploaded_dataframe: DataFrame((891, 12))
+  validation_report: dict(len=7, bytes~3246)
+  validation_score: 80
+  y_data: 0      0
+1      1
+2      1
+3      1
+4      0
+      ..
+886    0
+887    1
+888    0
+889    1
+890    0
+N
+
+SessionKeys NOT set (17): ['cleaning_history', 'confusion_matrix', 'df_original', 'eda_active_tab', 'eda_chart_type', 'eda_selected_feature', 'eda_selected_feature_2', 'feature_importance', 'health_after_cleaning', 'health_before_cleaning', 'report_path', 'report_payload', 'roc_data', 'selected_algorithms', 'shap_positive_negative', 'target_encoder', 'trained_models']
+
+--- 5. HEALTH SCORE BREAKDOWN ---
+get_session_health():
+{
+  "score": 83.3,
+  "grade": "Good",
+  "letter_grade": "B",
+  "grade_class": "health-good",
+  "breakdown": {
+    "Missing Values": 83.8,
+    "Duplicates": 100.0,
+    "Outliers": 95.0,
+    "Feature Diversity": 100.0,
+    "Row Completeness": 20.5,
+    "Data Consistency": 100.0
+  },
+  "summary": "Dataset is in good shape with minor improvements possible. Missing values affect 8.1% of cells.",
+  "recommendations": [
+    "Impute or remove missing values in 'Cabin' (687 gaps)."
+  ],
+  "missing_pct": 8.1,
+  "duplicate_pct": 0.0,
+  "outlier_pct": 3.35,
+  "imbalance_pct": 61.62
+}
+
+ANALYSIS_PROFILE health score: 83.3
+DATASET_METADATA health score: 83.3
+Direct compute_health_score score: 83.3
+
+--- 6. ASSISTANT CONTEXT PAYLOAD ---

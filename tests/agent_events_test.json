@@ -1,0 +1,138 @@
+{
+  "events": [
+    {
+      "event_id": "evt_81e01aa97ce64095808eaca19f7f5038",
+      "timestamp": "2026-06-26T11:32:53.319389+00:00",
+      "event_type": "dataset_uploaded",
+      "source_agent": "DataAgent",
+      "target_agents": [],
+      "payload": {
+        "source": "upload",
+        "details": "New dataset added."
+      },
+      "priority": "medium",
+      "status": "created",
+      "delivery_logs": []
+    },
+    {
+      "event_id": "evt_d2cc73d45ea04225b4975b5f79874473",
+      "timestamp": "2026-06-26T11:32:53.370939+00:00",
+      "event_type": "retraining_required",
+      "source_agent": "AutoMLAgent",
+      "target_agents": [],
+      "payload": {
+        "source": "validation",
+        "details": "Performance drift detected."
+      },
+      "priority": "medium",
+      "status": "dispatched",
+      "delivery_logs": [
+        {
+          "agent_name": "RetrainingAgent",
+          "status": "processed",
+          "timestamp": "2026-06-26T11:32:53.380924+00:00"
+        },
+        {
+          "agent_name": "RetrainingAgent",
+          "status": "processed",
+          "timestamp": "2026-06-26T11:32:53.395465+00:00"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_5dca92c71d664e54a3658bcb6e536d19",
+      "timestamp": "2026-06-26T11:32:53.420562+00:00",
+      "event_type": "model_trained",
+      "source_agent": "TrainingAgent",
+      "target_agents": [],
+      "payload": {
+        "source": "train",
+        "details": "Model finished."
+      },
+      "priority": "medium",
+      "status": "failed",
+      "delivery_logs": [
+        {
+          "agent_name": "BrokenAgent",
+          "status": "failed",
+          "timestamp": "2026-06-26T11:32:53.432473+00:00",
+          "error": "Callback 'non_existent_callback' not found or not callable"
+        },
+        {
+          "agent_name": "BrokenAgent",
+          "status": "failed",
+          "timestamp": "2026-06-26T11:32:53.450417+00:00",
+          "error": "Callback 'non_existent_callback' not found or not callable"
+        }
+      ]
+    }
+  ],
+  "subscriptions": [
+    {
+      "agent_name": "RetrainingAgent",
+      "event_types": [
+        "retraining_required"
+      ],
+      "callback": null,
+      "subscribed_at": "2026-06-26T11:32:53.354414+00:00"
+    },
+    {
+      "agent_name": "BrokenAgent",
+      "event_types": [
+        "model_trained"
+      ],
+      "callback": "non_existent_callback",
+      "subscribed_at": "2026-06-26T11:32:53.409576+00:00"
+    }
+  ],
+  "dead_letter_queue": [
+    {
+      "event_id": "evt_5dca92c71d664e54a3658bcb6e536d19",
+      "timestamp": "2026-06-26T11:32:53.420562+00:00",
+      "event_type": "model_trained",
+      "source_agent": "TrainingAgent",
+      "target_agents": [],
+      "payload": {
+        "source": "train",
+        "details": "Model finished."
+      },
+      "priority": "medium",
+      "status": "failed",
+      "delivery_logs": [
+        {
+          "agent_name": "BrokenAgent",
+          "status": "failed",
+          "timestamp": "2026-06-26T11:32:53.432473+00:00",
+          "error": "Callback 'non_existent_callback' not found or not callable"
+        }
+      ]
+    },
+    {
+      "event_id": "evt_5dca92c71d664e54a3658bcb6e536d19",
+      "timestamp": "2026-06-26T11:32:53.420562+00:00",
+      "event_type": "model_trained",
+      "source_agent": "TrainingAgent",
+      "target_agents": [],
+      "payload": {
+        "source": "train",
+        "details": "Model finished."
+      },
+      "priority": "medium",
+      "status": "failed",
+      "delivery_logs": [
+        {
+          "agent_name": "BrokenAgent",
+          "status": "failed",
+          "timestamp": "2026-06-26T11:32:53.432473+00:00",
+          "error": "Callback 'non_existent_callback' not found or not callable"
+        },
+        {
+          "agent_name": "BrokenAgent",
+          "status": "failed",
+          "timestamp": "2026-06-26T11:32:53.450417+00:00",
+          "error": "Callback 'non_existent_callback' not found or not callable"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "generated_at": "2026-06-27 08:51 UTC",
+  "overall_score": 83,
+  "overall_status": "FAIL",
+  "sections": {
+    "dataset_analysis": {
+      "name": "dataset_analysis",
+      "status": "PASS",
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "label": "Row count",
+          "status": "PASS",
+          "expected": 569,
+          "actual": 569,
+          "details": ""
+        },
+        {
+          "label": "Column count",
+          "status": "PASS",
+          "expected": 31,
+          "actual": 31,
+          "details": ""
+        },
+        {
+          "label": "Numeric feature count",
+          "status": "PASS",
+          "expected": 31,
+          "actual": 31,
+          "details": ""
+        },
+        {
+          "label": "Categorical feature count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "details": "EDA categorical list unavailable; actual count recorded."
+        },
+        {
+          "label": "Missing values computed",
+          "status": "PASS",
+          "expected": ">= 0",
+          "actual": 0,
+          "details": ""
+        },
+        {
+          "label": "Duplicate rows computed",
+          "status": "PASS",
+          "expected": ">= 0",
+          "actual": 0,
+          "details": ""
+        }
+      ]
+    },
+    "problem_type": {
+      "name": "problem_type",
+      "status": "PASS",
+      "passed": 1,
+      "total": 1,
+      "checks": [
+        {
+          "label": "Problem type matches target",
+          "status": "PASS",
+          "expected": "classification",
+          "actual": "classification",
+          "details": "Target column: target"
+        }
+      ]
+    },
+    "model_metrics": {
+      "name": "model_metrics",
+      "status": "FAIL",
+      "passed": 1,
+      "total": 6,
+      "checks": [
+        {
+          "label": "Primary metric (accuracy)",
+          "status": "PASS",
+          "expected": 0.9713750435691878,
+          "actual": 0.9649122807017544,
+          "details": ""
+        },
+        {
+          "label": "ACCURACY",
+          "status": "FAIL",
+          "expected": 0.37719298245614036,
+          "actual": 0.9649122807017544,
+          "details": ""
+        },
+        {
+          "label": "PRECISION",
+          "status": "FAIL",
+          "expected": 0.18859649122807018,
+          "actual": 0.9652053622194477,
+          "details": ""
+        },
+        {
+          "label": "RECALL",
+          "status": "FAIL",
+          "expected": 0.5,
+          "actual": 0.9649122807017544,
+          "details": ""
+        },
+        {
+          "label": "F1",
+          "status": "FAIL",
+          "expected": 0.27388535031847133,
+          "actual": 0.9647382344750765,
+          "details": ""
+        },
+        {
+          "label": "ROC_AUC",
+          "status": "FAIL",
+          "expected": 0.5845070422535211,
+          "actual": 0.9580740255486406,
+          "details": ""
+        }
+      ]
+    },
+    "best_model_selection": {
+      "name": "best_model_selection",
+      "status": "PASS",
+      "passed": 1,
+      "total": 1,
+      "checks": [
+        {
+          "label": "Best model has highest score",
+          "status": "PASS",
+          "expected": "AdaBoost",
+          "actual": "AdaBoost",
+          "details": ""
+        }
+      ]
+    },
+    "explainability": {
+      "name": "explainability",
+      "status": "PASS",
+      "passed": 3,
+      "total": 3,
+      "checks": [
+        {
+          "label": "Feature importance exists",
+          "status": "PASS",
+          "expected": "non-empty",
+          "actual": 30,
+          "details": ""
+        },
+        {
+          "label": "Importance values numeric",
+          "status": "PASS",
+          "expected": "numeric",
+          "actual": true,
+          "details": ""
+        },
+        {
+          "label": "Top features exist in dataset",
+          "status": "PASS",
+          "expected": [
+            "mean radius",
+            "mean texture",
+            "mean perimeter",
+            "mean area",
+            "mean smoothness"
+          ],
+          "actual": [
+            "area error",
+            "compactness error",
+            "concave points error",
+            "concavity error",
+            "fractal dimension error",
+            "mean area",
+            "mean compactness",
+            "mean concave points",
+            "mean concavity",
+            "mean fractal dimension",
+            "mean perimeter",
+            "mean radius",
+            "mean smoothness",
+            "mean symmetry",
+            "mean texture",
+            "perimeter error",
+            "radius error",
+            "smoothness error",
+            "symmetry error",
+            "target",
+            "texture error",
+            "worst area",
+            "worst compactness",
+            "worst concave points",
+            "worst concavity",
+            "worst fractal dimension",
+            "worst perimeter",
+            "worst radius",
+            "worst smoothness",
+            "worst symmetry",
+            "worst texture"
+          ],
+          "details": ""
+        }
+      ]
+    },
+    "report_accuracy": {
+      "name": "report_accuracy",
+      "status": "PASS",
+      "passed": 5,
+      "total": 5,
+      "checks": [
+        {
+          "label": "Dataset name",
+          "status": "PASS",
+          "expected": "Heart-Disease.csv",
+          "actual": "Heart-Disease.csv",
+          "details": ""
+        },
+        {
+          "label": "Rows",
+          "status": "PASS",
+          "expected": 569,
+          "actual": 569,
+          "details": ""
+        },
+        {
+          "label": "Columns",
+          "status": "PASS",
+          "expected": 31,
+          "actual": 31,
+          "details": ""
+        },
+        {
+          "label": "Best model",
+          "status": "PASS",
+          "expected": "AdaBoost",
+          "actual": "AdaBoost",
+          "details": ""
+        },
+        {
+          "label": "Primary metric in report",
+          "status": "PASS",
+          "expected": 0.9713750435691878,
+          "actual": 0.9714,
+          "details": ""
+        }
+      ]
+    }
+  },
+  "summary_lines": [
+    "Dataset Analysis: PASS",
+    "Problem Type: PASS",
+    "Model Metrics: FAIL",
+    "Best Model Selection: PASS",
+    "Explainability: PASS",
+    "Report Accuracy: PASS",
+    "Overall Validation Score: 83/100"
+  ]
+}

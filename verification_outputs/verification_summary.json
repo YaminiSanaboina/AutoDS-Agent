@@ -1,0 +1,2220 @@
+[
+  {
+    "dataset": "Iris",
+    "path": "data\\Iris.csv",
+    "ui_checks": {
+      "uploader_found": true,
+      "session_keys": []
+    },
+    "pipeline": {
+      "output_path": "verification_outputs\\Iris_pipeline_output.json",
+      "events": [
+        {
+          "time": 1782129876.9793444,
+          "ev": {
+            "stage": "dataset_upload",
+            "status": "completed",
+            "percent": 2,
+            "result": {
+              "dataset_name": "Iris.csv"
+            }
+          }
+        },
+        {
+          "time": 1782129876.9803913,
+          "ev": {
+            "stage": "dataset_intelligence",
+            "status": "started",
+            "percent": 5
+          }
+        },
+        {
+          "time": 1782129876.995393,
+          "ev": {
+            "stage": "dataset_intelligence",
+            "status": "completed",
+            "percent": 10,
+            "result": {
+              "dataset_name": "Iris.csv",
+              "dataset_shape": {
+                "rows": 150,
+                "columns": 5
+              },
+              "domain_analysis": {
+                "domain": "Botanical Science",
+                "confidence": 0.95,
+                "reason": "Recognized as Iris dataset based on column names and filename."
+              },
+              "problem_analysis": {
+                "problem_type": "Multi-Class Classification",
+                "likely_target": "target",
+                "recommended_metrics": [
+                  "Precision",
+                  "Recall",
+                  "F1-Score",
+                  "Macro-F1"
+                ],
+                "reason": "Recognized dataset: Multi-Class Classification problem."
+              },
+              "risk_analysis": {
+                "risk_level": "Low",
+                "risk_score": 2.0,
+                "risks": [
+                  "Dataset is small. Use cross-validation and regularization carefully."
+                ],
+                "detailed_scores": {
+                  "missing_values": 0.0,
+                  "duplicates": 0.0,
+                  "small_dataset": 2.0,
+                  "high_dimensionality": 0.0,
+                  "class_imbalance": 0.0,
+                  "data_leakage": 0.0,
+                  "very_small_dataset": 0.0,
+                  "high_dimensional": 0.0
+                }
+              },
+              "model_strategy": {
+                "problem_type": "Multi-Class Classification",
+                "recommendations": [
+                  {
+                    "model": "Logistic Regression",
+                    "reason": "Effective multiclass baseline."
+                  },
+                  {
+                    "model": "Random Forest",
+                    "reason": "Naturally handles multiclass, great for botanical data."
+                  },
+                  {
+                    "model": "SVM",
+                    "reason": "High performance on multiclass problems."
+                  }
+                ],
+                "metric_focus": [
+                  "Precision",
+                  "Recall",
+                  "F1-Score",
+                  "Macro-F1"
+                ]
+              },
+              "roadmap": [
+                "Step 1: Address data quality issues (1 issues identified). Impute missing values, remove duplicates.",
+                "Step 2: Analyze patterns specific to Botanical Science domain. Focus on domain-relevant features.",
+                "Step 3: Create new features based on domain knowledge and EDA insights.",
+                "Step 4: Train multiple multi-class classification models using AutoML Studio.",
+                "Step 5: Optimize for Recall/F1-Score and other domain-relevant metrics. Use cross-validation.",
+                "Step 6: Generate SHAP explanations in AI Decision Intelligence. Understand feature impacts.",
+                "Step 7: Validate model on held-out test set. Deploy with monitoring.",
+                "Step 8: Generate AI Research Report with findings and recommendations."
+              ],
+              "intelligence_score": {
+                "score": 69.9,
+                "label": "Needs Attention",
+                "components": {
+                  "quality": 24.866666666666667,
+                  "size": 5,
+                  "balance": 0,
+                  "dimensionality": 10
+                }
+              },
+              "executive_summary": "This Botanical Science dataset represents a Multi-Class Classification problem. Dataset contains 150 records and 5 features with low risk. Intelligence Score: 69.9/100 (Needs Attention). Data Quality: 24.9/25 points. Recommended Approach: Start with Logistic Regression, optimize for Precision, Recall. Priority: Low risk dataset requires careful data preparation before modeling."
+            }
+          }
+        },
+        {
+          "time": 1782129877.0085144,
+          "ev": {
+            "stage": "feature_engineering",
+            "status": "started",
+            "percent": 22
+          }
+        },
+        {
+          "time": 1782129877.0095692,
+          "ev": {
+            "stage": "feature_engineering",
+            "status": "completed",
+            "percent": 25,
+            "result": {
+              "current_features": 5,
+              "recommended_changes": 3,
+              "expected_benefit": "Improved model accuracy and stability",
+              "steps": [
+                "Remove constant and duplicate columns",
+                "Encode categorical variables",
+                "Impute missing values",
+                "Create derived features for dates and ratios",
+                "Scale or normalize numerical features"
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129877.044657,
+          "ev": {
+            "stage": "hyperparameter_optimization",
+            "status": "completed",
+            "percent": 18,
+            "result": {
+              "algorithm": "Logistic Regression",
+              "problem_type": "Classification",
+              "supported_models": [
+                "Logistic Regression",
+                "Random Forest",
+                "SVM",
+                "Gradient Boosting",
+                "XGBoost"
+              ],
+              "recommended_parameters": {
+                "C": [
+                  0.01,
+                  0.1,
+                  1,
+                  10,
+                  100
+                ],
+                "penalty": [
+                  "l1",
+                  "l2"
+                ],
+                "solver": [
+                  "liblinear"
+                ]
+              },
+              "notes": "Hyperparameter tuning plan based on model selection and dataset problem type. Use the supported model grid to guide optimization."
+            }
+          }
+        },
+        {
+          "time": 1782129877.044657,
+          "ev": {
+            "stage": "data_cleaning",
+            "status": "started",
+            "percent": 15
+          }
+        },
+        {
+          "time": 1782129877.0511394,
+          "ev": {
+            "stage": "data_cleaning",
+            "status": "completed",
+            "percent": 20,
+            "result": {
+              "report": [
+                "Removed 1 duplicate rows."
+              ],
+              "shape": [
+                149,
+                5
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129877.0511394,
+          "ev": {
+            "stage": "eda",
+            "status": "started",
+            "percent": 22
+          }
+        },
+        {
+          "time": 1782129877.074663,
+          "ev": {
+            "stage": "eda",
+            "status": "completed",
+            "percent": 30,
+            "result": {
+              "summary": "       sepal length (cm)  sepal width (cm)  ...  petal width (cm)      target\ncount         149.000000        149.000000  ...        149.000000  149.000000\nmean            5.843624          3.059732  ...          1.194631    0.993289\nstd             0.830851          0.436342  ...          0.762622    0.817847\nmin             4.300000          2.000000  ...          0.100000    0.000000\n25%             5.100000          2.800000  ...          0.300000    0.000000\n50%             5.800000          3.000000  ...          1.300000    1.000000\n75%             6.400000          3.300000  ...          1.800000    2.000000\nmax             7.900000          4.400000  ...          2.500000    2.000000\n\n[8 rows x 5 columns]",
+              "numerical_columns": [
+                "sepal length (cm)",
+                "sepal width (cm)",
+                "petal length (cm)",
+                "petal width (cm)",
+                "target"
+              ],
+              "categorical_columns": [],
+              "insights": [
+                "**sepal length (cm)** distribution is symmetric.",
+                "**sepal width (cm)** distribution is symmetric and contains ~2.7% outliers.",
+                "**petal length (cm)** distribution is symmetric.",
+                "**petal width (cm)** distribution is symmetric.",
+                "**target** distribution is symmetric."
+              ],
+              "charts": {}
+            }
+          }
+        },
+        {
+          "time": 1782129877.0962496,
+          "ev": {
+            "stage": "ai_ethics_trust",
+            "status": "completed",
+            "percent": 35,
+            "result": {
+              "executive_summary": "The ethics assessment identifies bias, fairness, and privacy risks in the dataset and model predictions.",
+              "bias_concerns": [
+                "No sensitive attributes explicitly detected."
+              ],
+              "fairness_concerns": [],
+              "privacy_concerns": [],
+              "compliance_recommendations": {
+                "bias": [
+                  "Continue regular bias audits and documentation."
+                ],
+                "fairness": [
+                  "Monitor fairness metrics during model updates."
+                ],
+                "privacy": [
+                  "Maintain minimal data collection and retention practices."
+                ]
+              },
+              "risk_level": "Low"
+            }
+          }
+        },
+        {
+          "time": 1782129877.1062558,
+          "ev": {
+            "stage": "automl",
+            "status": "started",
+            "percent": 40
+          }
+        },
+        {
+          "time": 1782129879.9065962,
+          "ev": {
+            "stage": "automl",
+            "status": "completed",
+            "percent": 55,
+            "result": {
+              "best_model": "SVM",
+              "metrics": {
+                "Logistic Regression": 1.0,
+                "Decision Tree": 1.0,
+                "Random Forest": 1.0,
+                "Extra Trees": 1.0,
+                "Gradient Boosting": 1.0,
+                "AdaBoost": 0.9333333333333333,
+                "KNN": 1.0,
+                "Naive Bayes": 1.0,
+                "SVM": 1.0,
+                "XGBoost": 1.0
+              },
+              "model_readiness_score": 100,
+              "problem_type": "Classification",
+              "training_times": {
+                "Logistic Regression": 0.116,
+                "Decision Tree": 0.011,
+                "Random Forest": 0.037,
+                "Extra Trees": 0.029,
+                "Gradient Boosting": 0.364,
+                "AdaBoost": 0.067,
+                "KNN": 0.008,
+                "Naive Bayes": 0.001,
+                "SVM": 0.005,
+                "XGBoost": 0.057
+              },
+              "detailed_metrics": {
+                "Logistic Regression": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9581196581196582
+                },
+                "Decision Tree": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9412393162393163
+                },
+                "Random Forest": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9581196581196582
+                },
+                "Extra Trees": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9497863247863249
+                },
+                "Gradient Boosting": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9412393162393163
+                },
+                "AdaBoost": {
+                  "accuracy": 0.9333333333333333,
+                  "precision": 0.9333333333333333,
+                  "recall": 0.9333333333333333,
+                  "f1": 0.9333333333333333,
+                  "roc_auc": 0.9934837092731829,
+                  "cv_score": 0.9412393162393163
+                },
+                "KNN": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9581196581196582
+                },
+                "Naive Bayes": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9495726495726494
+                },
+                "SVM": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9664529914529915
+                },
+                "XGBoost": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9329059829059828
+                }
+              },
+              "model_selection_explanation": {
+                "selected_model": "SVM",
+                "problem_type": "Classification",
+                "why_chosen": [
+                  "Highest validation accuracy (100.0%) among trained candidates",
+                  "Strong F1 score (100.0%) indicating balanced precision and recall",
+                  "Competitive ROC-AUC (1.000) for ranking quality",
+                  "Efficient training time relative to performance gain",
+                  "Stable 3-fold cross-validation accuracy (96.6%)"
+                ],
+                "alternatives": [
+                  {
+                    "model": "Logistic Regression",
+                    "reasons": [
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Decision Tree",
+                    "reasons": [
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Random Forest",
+                    "reasons": [
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Extra Trees",
+                    "reasons": [
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Gradient Boosting",
+                    "reasons": [
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "KNN",
+                    "reasons": [
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Naive Bayes",
+                    "reasons": [
+                      "Not selected as the top-performing candidate"
+                    ]
+                  },
+                  {
+                    "model": "XGBoost",
+                    "reasons": [
+                      "Longer training time without compensating score improvement"
+                    ]
+                  }
+                ]
+              },
+              "improved_best_model": "baseline"
+            }
+          }
+        },
+        {
+          "time": 1782129891.8647034,
+          "ev": {
+            "stage": "explainability",
+            "status": "completed",
+            "percent": 70,
+            "result": {
+              "shap_values": {},
+              "feature_importance": {
+                "sepal length (cm)": 0.006666666666666672,
+                "sepal width (cm)": 0.01666666666666668,
+                "petal length (cm)": 0.58,
+                "petal width (cm)": 0.13666666666666663
+              },
+              "summary": "SHAP explainability failed; using fallback feature importance."
+            }
+          }
+        },
+        {
+          "time": 1782129891.8647034,
+          "ev": {
+            "stage": "deployment_readiness",
+            "status": "completed",
+            "percent": 75,
+            "result": {
+              "risk_level": "Low",
+              "warnings": [],
+              "recommendations": [
+                "Deploy with monitoring and schedule retraining if performance drifts."
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129898.0491583,
+          "ev": {
+            "stage": "self_improvement",
+            "status": "completed",
+            "percent": 80,
+            "result": {
+              "improvement_history": [
+                {
+                  "iteration": 1,
+                  "model": "Logistic Regression",
+                  "changes": {
+                    "hyperparams": {
+                      "best_params": null,
+                      "best_score": null
+                    }
+                  }
+                }
+              ],
+              "model_comparison": [
+                {
+                  "version": "baseline",
+                  "metrics": {
+                    "Logistic Regression": 1.0,
+                    "Decision Tree": 1.0,
+                    "Random Forest": 1.0,
+                    "Extra Trees": 1.0,
+                    "Gradient Boosting": 1.0,
+                    "AdaBoost": 0.9333333333333333,
+                    "KNN": 1.0,
+                    "Naive Bayes": 1.0,
+                    "SVM": 1.0,
+                    "XGBoost": 1.0
+                  }
+                },
+                {
+                  "version": "iter1_Logistic Regression",
+                  "metrics": {
+                    "accuracy": 0.0,
+                    "f1": 0.0,
+                    "roc_auc": 0.0
+                  },
+                  "opt_report": {
+                    "best_params": null,
+                    "best_score": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129898.0491583,
+          "ev": {
+            "stage": "hyperparameter_optimization",
+            "status": "completed",
+            "percent": 78,
+            "result": {
+              "iterations": 1,
+              "artifacts": {
+                "model": "deployment_package\\DEP_20260622120458\\best_model.pkl",
+                "encoder": null
+              }
+            }
+          }
+        },
+        {
+          "time": 1782129898.0491583,
+          "ev": {
+            "stage": "model_comparison",
+            "status": "completed",
+            "percent": 82,
+            "result": [
+              {
+                "version": "baseline",
+                "metrics": {
+                  "Logistic Regression": 1.0,
+                  "Decision Tree": 1.0,
+                  "Random Forest": 1.0,
+                  "Extra Trees": 1.0,
+                  "Gradient Boosting": 1.0,
+                  "AdaBoost": 0.9333333333333333,
+                  "KNN": 1.0,
+                  "Naive Bayes": 1.0,
+                  "SVM": 1.0,
+                  "XGBoost": 1.0
+                }
+              },
+              {
+                "version": "iter1_Logistic Regression",
+                "metrics": {
+                  "accuracy": 0.0,
+                  "f1": 0.0,
+                  "roc_auc": 0.0
+                },
+                "opt_report": {
+                  "best_params": null,
+                  "best_score": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "time": 1782129898.098618,
+          "ev": {
+            "stage": "pdf_report",
+            "status": "completed",
+            "percent": 95,
+            "result": {
+              "path": "reports/AutoDS_Report.pdf",
+              "payload": {
+                "project_name": "Validate Iris",
+                "project_goal": "Validate Iris",
+                "executive_summary": "Validate Iris analyzed Iris.csv end-to-end: data quality review, EDA, model training, explainability, and deployment readiness. Best model: SVM.",
+                "dataset_name": "Iris.csv",
+                "rows": 150,
+                "columns": 5,
+                "health_score": 69.9,
+                "health_grade": "Needs improvement",
+                "health_summary": "Overall pipeline score 88/100 with dataset quality 69.9/100.",
+                "dataset_summary": "",
+                "feature_types": {},
+                "problem_type": "Classification",
+                "best_model": "SVM",
+                "model_selection_rationale": "SVM achieved the highest validation score among evaluated candidates.",
+                "target_column": "target",
+                "confidence": 100,
+                "trust_score": 100,
+                "fairness_score": "Not Evaluated",
+                "deployment_label": "Ready for deployment",
+                "final_score": 88,
+                "feature_importance": {
+                  "sepal length (cm)": 0.006666666666666672,
+                  "sepal width (cm)": 0.01666666666666668,
+                  "petal length (cm)": 0.58,
+                  "petal width (cm)": 0.13666666666666663
+                },
+                "explainability_summary": "SHAP explainability failed; using fallback feature importance.",
+                "trust_concerns": [],
+                "model_results": [
+                  "Logistic Regression: 1.0000",
+                  "Decision Tree: 1.0000",
+                  "Random Forest: 1.0000",
+                  "Extra Trees: 1.0000",
+                  "Gradient Boosting: 1.0000",
+                  "AdaBoost: 0.9333",
+                  "KNN: 1.0000",
+                  "Naive Bayes: 1.0000",
+                  "SVM: 1.0000",
+                  "XGBoost: 1.0000"
+                ],
+                "ai_insights": [
+                  "**sepal length (cm)** distribution is symmetric.",
+                  "**sepal width (cm)** distribution is symmetric and contains ~2.7% outliers.",
+                  "**petal length (cm)** distribution is symmetric.",
+                  "**petal width (cm)** distribution is symmetric.",
+                  "**target** distribution is symmetric."
+                ],
+                "eda_findings": [
+                  "**sepal length (cm)** distribution is symmetric.",
+                  "**sepal width (cm)** distribution is symmetric and contains ~2.7% outliers.",
+                  "**petal length (cm)** distribution is symmetric.",
+                  "**petal width (cm)** distribution is symmetric.",
+                  "**target** distribution is symmetric."
+                ],
+                "cleaning_actions": [],
+                "cleaning_before_rows": 150,
+                "cleaning_after_rows": 149,
+                "recommendations": [
+                  "Ready for deployment",
+                  "Risk level: Low. Deploy with monitoring and schedule retraining if performance drifts."
+                ],
+                "issues": [
+                  {
+                    "severity": "medium",
+                    "title": "Duplicate Rows",
+                    "description": "1 duplicate row(s) found.",
+                    "recommendation": "Remove duplicates to prevent biased model training."
+                  }
+                ],
+                "shap_ranking": [
+                  "petal length (cm): 0.5800",
+                  "petal width (cm): 0.1367",
+                  "sepal width (cm): 0.0167",
+                  "sepal length (cm): 0.0067"
+                ],
+                "deployment_readiness_score": 100,
+                "deployment_risk": "Low",
+                "business_recommendations": "Collect more data, monitor drift, and iterate on feature engineering.",
+                "health_breakdown": {
+                  "dataset": 69.9,
+                  "model": 100,
+                  "trust": 100.0,
+                  "mlops": 100
+                },
+                "conclusion": "Ready for deployment",
+                "generated_at": "2026-06-22 12:04 UTC"
+              }
+            }
+          }
+        },
+        {
+          "time": 1782129898.0996573,
+          "ev": {
+            "stage": "ai_decision",
+            "status": "completed",
+            "percent": 98,
+            "result": {
+              "recommendation": "Ready for deployment",
+              "final_score": 88,
+              "best_model": "SVM"
+            }
+          }
+        }
+      ],
+      "best_model_name": null,
+      "training_artifacts_present": true,
+      "trust_score": null,
+      "pdf_generated": "reports/AutoDS_Report.pdf"
+    },
+    "errors": [
+      "Upload processing error: 'SessionState' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\AutoDS-Agent\\archive\\dev_probes\\full_verification.py\", line 77, in <module>\n    rec[\"ui_checks\"][\"dataset_loaded_after_upload\"] = bool(state.get('dataset_loaded'))\n                                                           ^^^^^^^^^\nAttributeError: 'SessionState' object has no attribute 'get'\n"
+    ]
+  },
+  {
+    "dataset": "Wine-Quality",
+    "path": "data\\Wine-Quality.csv",
+    "ui_checks": {
+      "uploader_found": true,
+      "session_keys": []
+    },
+    "pipeline": {
+      "output_path": "verification_outputs\\Wine-Quality_pipeline_output.json",
+      "events": [
+        {
+          "time": 1782129898.5703754,
+          "ev": {
+            "stage": "dataset_upload",
+            "status": "completed",
+            "percent": 2,
+            "result": {
+              "dataset_name": "Wine-Quality.csv"
+            }
+          }
+        },
+        {
+          "time": 1782129898.5713751,
+          "ev": {
+            "stage": "dataset_intelligence",
+            "status": "started",
+            "percent": 5
+          }
+        },
+        {
+          "time": 1782129898.593461,
+          "ev": {
+            "stage": "dataset_intelligence",
+            "status": "completed",
+            "percent": 10,
+            "result": {
+              "dataset_name": "Wine-Quality.csv",
+              "dataset_shape": {
+                "rows": 178,
+                "columns": 14
+              },
+              "domain_analysis": {
+                "domain": "Food Chemistry",
+                "confidence": 0.95,
+                "reason": "Recognized as Wine dataset based on column names and filename."
+              },
+              "problem_analysis": {
+                "problem_type": "Classification",
+                "likely_target": "target",
+                "recommended_metrics": [
+                  "MAE",
+                  "RMSE",
+                  "R\u00b2",
+                  "MAPE"
+                ],
+                "reason": "Recognized dataset: Classification problem."
+              },
+              "risk_analysis": {
+                "risk_level": "Low",
+                "risk_score": 2.0,
+                "risks": [
+                  "Dataset is small. Use cross-validation and regularization carefully."
+                ],
+                "detailed_scores": {
+                  "missing_values": 0.0,
+                  "duplicates": 0.0,
+                  "small_dataset": 2.0,
+                  "high_dimensionality": 0.0,
+                  "class_imbalance": 0.0,
+                  "data_leakage": 0.0,
+                  "very_small_dataset": 0.0,
+                  "high_dimensional": 0.0
+                }
+              },
+              "model_strategy": {
+                "problem_type": "Classification",
+                "recommendations": [
+                  {
+                    "model": "Random Forest",
+                    "reason": "Versatile, works for most problems."
+                  },
+                  {
+                    "model": "XGBoost",
+                    "reason": "High performance, feature importance."
+                  },
+                  {
+                    "model": "Neural Network",
+                    "reason": "Deep learning for complex patterns."
+                  }
+                ],
+                "metric_focus": [
+                  "MAE",
+                  "RMSE",
+                  "R\u00b2",
+                  "MAPE"
+                ]
+              },
+              "roadmap": [
+                "Step 1: Address data quality issues (1 issues identified). Impute missing values, remove duplicates.",
+                "Step 2: Analyze patterns specific to Food Chemistry domain. Focus on domain-relevant features.",
+                "Step 3: Create new features based on domain knowledge and EDA insights.",
+                "Step 4: Train multiple classification models using AutoML Studio.",
+                "Step 5: Optimize for Recall/F1-Score and other domain-relevant metrics. Use cross-validation.",
+                "Step 6: Generate SHAP explanations in AI Decision Intelligence. Understand feature impacts.",
+                "Step 7: Validate model on held-out test set. Deploy with monitoring.",
+                "Step 8: Generate AI Research Report with findings and recommendations."
+              ],
+              "intelligence_score": {
+                "score": 70.0,
+                "label": "Good Dataset",
+                "components": {
+                  "quality": 25.0,
+                  "size": 5,
+                  "balance": 0,
+                  "dimensionality": 10
+                }
+              },
+              "executive_summary": "This Food Chemistry dataset represents a Classification problem. Dataset contains 178 records and 14 features with low risk. Intelligence Score: 70.0/100 (Good Dataset). Data Quality: 25.0/25 points. Recommended Approach: Start with Random Forest, optimize for MAE, RMSE. Priority: Low risk dataset requires careful data preparation before modeling."
+            }
+          }
+        },
+        {
+          "time": 1782129898.6177013,
+          "ev": {
+            "stage": "feature_engineering",
+            "status": "started",
+            "percent": 22
+          }
+        },
+        {
+          "time": 1782129898.6177013,
+          "ev": {
+            "stage": "feature_engineering",
+            "status": "completed",
+            "percent": 25,
+            "result": {
+              "current_features": 14,
+              "recommended_changes": 1,
+              "expected_benefit": "Improved model accuracy and stability",
+              "steps": [
+                "Remove constant and duplicate columns",
+                "Encode categorical variables",
+                "Impute missing values",
+                "Create derived features for dates and ratios",
+                "Scale or normalize numerical features"
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129898.6996543,
+          "ev": {
+            "stage": "hyperparameter_optimization",
+            "status": "completed",
+            "percent": 18,
+            "result": {
+              "algorithm": "Random Forest",
+              "problem_type": "Classification",
+              "supported_models": [
+                "Logistic Regression",
+                "Random Forest",
+                "SVM",
+                "Gradient Boosting",
+                "XGBoost"
+              ],
+              "recommended_parameters": {
+                "n_estimators": [
+                  50,
+                  100,
+                  200,
+                  300,
+                  400,
+                  500
+                ],
+                "max_depth": [
+                  3,
+                  5,
+                  10,
+                  20,
+                  30,
+                  40,
+                  50
+                ],
+                "min_samples_split": [
+                  2,
+                  5,
+                  10,
+                  15,
+                  20
+                ]
+              },
+              "notes": "Hyperparameter tuning plan based on model selection and dataset problem type. Use the supported model grid to guide optimization."
+            }
+          }
+        },
+        {
+          "time": 1782129898.6996543,
+          "ev": {
+            "stage": "data_cleaning",
+            "status": "started",
+            "percent": 15
+          }
+        },
+        {
+          "time": 1782129898.7086065,
+          "ev": {
+            "stage": "data_cleaning",
+            "status": "completed",
+            "percent": 20,
+            "result": {
+              "report": [
+                "Dataset was already clean."
+              ],
+              "shape": [
+                178,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129898.7086065,
+          "ev": {
+            "stage": "eda",
+            "status": "started",
+            "percent": 22
+          }
+        },
+        {
+          "time": 1782129898.7834337,
+          "ev": {
+            "stage": "eda",
+            "status": "completed",
+            "percent": 30,
+            "result": {
+              "summary": "          alcohol  malic_acid  ...      proline      target\ncount  178.000000  178.000000  ...   178.000000  178.000000\nmean    13.000618    2.336348  ...   746.893258    0.938202\nstd      0.811827    1.117146  ...   314.907474    0.775035\nmin     11.030000    0.740000  ...   278.000000    0.000000\n25%     12.362500    1.602500  ...   500.500000    0.000000\n50%     13.050000    1.865000  ...   673.500000    1.000000\n75%     13.677500    3.082500  ...   985.000000    2.000000\nmax     14.830000    5.800000  ...  1680.000000    2.000000\n\n[8 rows x 14 columns]",
+              "numerical_columns": [
+                "alcohol",
+                "malic_acid",
+                "ash",
+                "alcalinity_of_ash",
+                "magnesium",
+                "total_phenols",
+                "flavanoids",
+                "nonflavanoid_phenols",
+                "proanthocyanins",
+                "color_intensity",
+                "hue",
+                "od280/od315_of_diluted_wines",
+                "proline",
+                "target"
+              ],
+              "categorical_columns": [],
+              "insights": [
+                "**alcohol** distribution is symmetric.",
+                "**malic_acid** distribution is right-skewed and contains ~1.7% outliers.",
+                "**ash** distribution is symmetric and contains ~1.7% outliers.",
+                "**alcalinity_of_ash** distribution is symmetric and contains ~2.2% outliers.",
+                "**magnesium** distribution is right-skewed and contains ~2.2% outliers."
+              ],
+              "charts": {}
+            }
+          }
+        },
+        {
+          "time": 1782129898.808432,
+          "ev": {
+            "stage": "ai_ethics_trust",
+            "status": "completed",
+            "percent": 35,
+            "result": {
+              "executive_summary": "The ethics assessment identifies bias, fairness, and privacy risks in the dataset and model predictions.",
+              "bias_concerns": [
+                "No sensitive attributes explicitly detected."
+              ],
+              "fairness_concerns": [],
+              "privacy_concerns": [],
+              "compliance_recommendations": {
+                "bias": [
+                  "Continue regular bias audits and documentation."
+                ],
+                "fairness": [
+                  "Monitor fairness metrics during model updates."
+                ],
+                "privacy": [
+                  "Maintain minimal data collection and retention practices."
+                ]
+              },
+              "risk_level": "Low"
+            }
+          }
+        },
+        {
+          "time": 1782129898.823676,
+          "ev": {
+            "stage": "automl",
+            "status": "started",
+            "percent": 40
+          }
+        },
+        {
+          "time": 1782129902.123788,
+          "ev": {
+            "stage": "automl",
+            "status": "completed",
+            "percent": 55,
+            "result": {
+              "best_model": "Random Forest",
+              "metrics": {
+                "Logistic Regression": 0.9722222222222222,
+                "Decision Tree": 0.9444444444444444,
+                "Random Forest": 1.0,
+                "Extra Trees": 0.9722222222222222,
+                "Gradient Boosting": 0.9444444444444444,
+                "AdaBoost": 0.9444444444444444,
+                "KNN": 0.7222222222222222,
+                "Naive Bayes": 1.0,
+                "SVM": 0.8055555555555556,
+                "XGBoost": 0.9722222222222222
+              },
+              "model_readiness_score": 100,
+              "problem_type": "Classification",
+              "training_times": {
+                "Logistic Regression": 0.273,
+                "Decision Tree": 0.005,
+                "Random Forest": 0.058,
+                "Extra Trees": 0.027,
+                "Gradient Boosting": 0.357,
+                "AdaBoost": 0.088,
+                "KNN": 0.002,
+                "Naive Bayes": 0.002,
+                "SVM": 0.011,
+                "XGBoost": 0.03
+              },
+              "detailed_metrics": {
+                "Logistic Regression": {
+                  "accuracy": 0.9722222222222222,
+                  "precision": 0.974074074074074,
+                  "recall": 0.9722222222222222,
+                  "f1": 0.9721867461331064,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9296690307328604
+                },
+                "Decision Tree": {
+                  "accuracy": 0.9444444444444444,
+                  "precision": 0.9462962962962962,
+                  "recall": 0.9444444444444444,
+                  "f1": 0.9439974457215836,
+                  "roc_auc": 0.9545454545454545,
+                  "cv_score": 0.9222813238770685
+                },
+                "Random Forest": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9787234042553191
+                },
+                "Extra Trees": {
+                  "accuracy": 0.9722222222222222,
+                  "precision": 0.974074074074074,
+                  "recall": 0.9722222222222222,
+                  "f1": 0.9721867461331064,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9787234042553191
+                },
+                "Gradient Boosting": {
+                  "accuracy": 0.9444444444444444,
+                  "precision": 0.9462962962962962,
+                  "recall": 0.9444444444444444,
+                  "f1": 0.9439974457215836,
+                  "roc_auc": 0.9886363636363638,
+                  "cv_score": 0.9014479905437351
+                },
+                "AdaBoost": {
+                  "accuracy": 0.9444444444444444,
+                  "precision": 0.9462962962962962,
+                  "recall": 0.9444444444444444,
+                  "f1": 0.9439974457215836,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9578900709219859
+                },
+                "KNN": {
+                  "accuracy": 0.7222222222222222,
+                  "precision": 0.7222222222222222,
+                  "recall": 0.7222222222222222,
+                  "f1": 0.7222222222222222,
+                  "roc_auc": 0.8945707070707071,
+                  "cv_score": 0.6546985815602837
+                },
+                "Naive Bayes": {
+                  "accuracy": 1.0,
+                  "precision": 1.0,
+                  "recall": 1.0,
+                  "f1": 1.0,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9645390070921986
+                },
+                "SVM": {
+                  "accuracy": 0.8055555555555556,
+                  "precision": 0.801058201058201,
+                  "recall": 0.8055555555555556,
+                  "f1": 0.80242656449553,
+                  "roc_auc": 0.9126082251082251,
+                  "cv_score": 0.6552895981087471
+                },
+                "XGBoost": {
+                  "accuracy": 0.9722222222222222,
+                  "precision": 0.974074074074074,
+                  "recall": 0.9722222222222222,
+                  "f1": 0.9717752234993614,
+                  "roc_auc": 1.0,
+                  "cv_score": 0.9574468085106383
+                }
+              },
+              "model_selection_explanation": {
+                "selected_model": "Random Forest",
+                "problem_type": "Classification",
+                "why_chosen": [
+                  "Highest validation accuracy (100.0%) among trained candidates",
+                  "Strong F1 score (100.0%) indicating balanced precision and recall",
+                  "Competitive ROC-AUC (1.000) for ranking quality",
+                  "Efficient training time relative to performance gain",
+                  "Stable 3-fold cross-validation accuracy (97.9%)"
+                ],
+                "alternatives": [
+                  {
+                    "model": "Naive Bayes",
+                    "reasons": [
+                      "Not selected as the top-performing candidate"
+                    ]
+                  },
+                  {
+                    "model": "Logistic Regression",
+                    "reasons": [
+                      "Lower validation accuracy (97.2% vs best 100.0%)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Extra Trees",
+                    "reasons": [
+                      "Lower validation accuracy (97.2% vs best 100.0%)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "XGBoost",
+                    "reasons": [
+                      "Lower validation accuracy (97.2% vs best 100.0%)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Decision Tree",
+                    "reasons": [
+                      "Lower validation accuracy (94.4% vs best 100.0%)",
+                      "Weaker precision-recall balance (lower F1)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Gradient Boosting",
+                    "reasons": [
+                      "Lower validation accuracy (94.4% vs best 100.0%)",
+                      "Weaker precision-recall balance (lower F1)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "AdaBoost",
+                    "reasons": [
+                      "Lower validation accuracy (94.4% vs best 100.0%)",
+                      "Weaker precision-recall balance (lower F1)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "SVM",
+                    "reasons": [
+                      "Lower validation accuracy (80.6% vs best 100.0%)",
+                      "Weaker precision-recall balance (lower F1)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  }
+                ]
+              },
+              "improved_best_model": "baseline"
+            }
+          }
+        },
+        {
+          "time": 1782129902.140793,
+          "ev": {
+            "stage": "explainability",
+            "status": "completed",
+            "percent": 70,
+            "result": {
+              "shap_values": "[[[ 0.08380821 -0.097486    0.01367779]\n  [-0.00162639 -0.0159325   0.01755889]\n  [ 0.0039448  -0.00750823  0.00356343]\n  ...\n  [ 0.04678972 -0.00015047 -0.04663925]\n  [ 0.10182224 -0.00547944 -0.09634279]\n  [ 0.07166147 -0.0582824  -0.01337907]]\n\n [[ 0.08742328 -0.09953537  0.01211209]\n  [-0.00945326 -0.01065376  0.02010702]\n  [ 0.00333396 -0.00526207  0.00192811]\n  ...\n  [-0.00507473 -0.00810519  0.01317992]\n  [ 0.11522997  0.00847829 -0.12370826]\n  [ 0.09475098 -0.07935722 -0.01539376]]\n\n [[ 0.0196167  -0.04490629  0.02528958]\n  [-0.00455614 -0.02477542  0.02933156]\n  [ 0.00217533 -0.02639819  0.02422287]\n  ...\n  [-0.04403574 -0.03419181  0.07822755]\n  [-0.01639487  0.02975538 -0.01336051]\n  [-0.06718483  0.04964665  0.01753818]]\n\n ...\n\n [[ 0.08216225 -0.09289529  0.01073304]\n  [ 0.01714806 -0.00447725 -0.01267081]\n  [ 0.00719172 -0.00797143  0.00077971]\n  ...\n  [ 0.0423255   0.01284558 -0.05517108]\n  [ 0.07449236 -0.00311489 -0.07137747]\n  [ 0.10626907 -0.08792401 -0.01834506]]\n\n [[ 0.07109335 -0.08166215  0.01056879]\n  [ 0.01338845 -0.0015587  -0.01182974]\n  [ 0.00719172 -0.0098945   0.00270278]\n  ...\n  [ 0.03751904  0.02275223 -0.06027127]\n  [ 0.04826277  0.01821657 -0.06647934]\n  [ 0.09769477 -0.08226447 -0.0154303 ]]\n\n [[ 0.08122684 -0.09459672  0.01336988]\n  [ 0.01077378  0.00029929 -0.01107307]\n  [ 0.0016176  -0.00541552  0.00379792]\n  ...\n  [ 0.01965554 -0.00264593 -0.0170096 ]\n  [ 0.08822164  0.00449223 -0.09271386]\n  [ 0.10261628 -0.08705688 -0.0155594 ]]]",
+              "feature_importance": "    Rank                       Feature  Mean |SHAP|\n0      1                    flavanoids     0.104955\n1      2               color_intensity     0.075217\n2      3                       alcohol     0.056641\n3      4                       proline     0.055056\n4      5  od280/od315_of_diluted_wines     0.052097\n5      6                           hue     0.039542\n6      7                     magnesium     0.036070\n7      8                 total_phenols     0.025345\n8      9                    malic_acid     0.014231\n9     10             alcalinity_of_ash     0.013536\n10    11          nonflavanoid_phenols     0.008967\n11    12               proanthocyanins     0.007008\n12    13                           ash     0.006957"
+            }
+          }
+        },
+        {
+          "time": 1782129902.14689,
+          "ev": {
+            "stage": "deployment_readiness",
+            "status": "completed",
+            "percent": 75,
+            "result": {
+              "risk_level": "Low",
+              "warnings": [],
+              "recommendations": [
+                "Deploy with monitoring and schedule retraining if performance drifts."
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129906.312743,
+          "ev": {
+            "stage": "self_improvement",
+            "status": "completed",
+            "percent": 80,
+            "result": {
+              "improvement_history": [
+                {
+                  "iteration": 1,
+                  "model": "Logistic Regression",
+                  "changes": {
+                    "hyperparams": {
+                      "best_params": null,
+                      "best_score": null
+                    }
+                  }
+                }
+              ],
+              "model_comparison": [
+                {
+                  "version": "baseline",
+                  "metrics": {
+                    "Logistic Regression": 0.9722222222222222,
+                    "Decision Tree": 0.9444444444444444,
+                    "Random Forest": 1.0,
+                    "Extra Trees": 0.9722222222222222,
+                    "Gradient Boosting": 0.9444444444444444,
+                    "AdaBoost": 0.9444444444444444,
+                    "KNN": 0.7222222222222222,
+                    "Naive Bayes": 1.0,
+                    "SVM": 0.8055555555555556,
+                    "XGBoost": 0.9722222222222222
+                  }
+                },
+                {
+                  "version": "iter1_Logistic Regression",
+                  "metrics": {
+                    "accuracy": 0.0,
+                    "f1": 0.0,
+                    "roc_auc": 0.0
+                  },
+                  "opt_report": {
+                    "best_params": null,
+                    "best_score": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129906.3137448,
+          "ev": {
+            "stage": "hyperparameter_optimization",
+            "status": "completed",
+            "percent": 78,
+            "result": {
+              "iterations": 1,
+              "artifacts": {
+                "model": "deployment_package\\DEP_20260622120506\\best_model.pkl",
+                "encoder": null
+              }
+            }
+          }
+        },
+        {
+          "time": 1782129906.3137448,
+          "ev": {
+            "stage": "model_comparison",
+            "status": "completed",
+            "percent": 82,
+            "result": [
+              {
+                "version": "baseline",
+                "metrics": {
+                  "Logistic Regression": 0.9722222222222222,
+                  "Decision Tree": 0.9444444444444444,
+                  "Random Forest": 1.0,
+                  "Extra Trees": 0.9722222222222222,
+                  "Gradient Boosting": 0.9444444444444444,
+                  "AdaBoost": 0.9444444444444444,
+                  "KNN": 0.7222222222222222,
+                  "Naive Bayes": 1.0,
+                  "SVM": 0.8055555555555556,
+                  "XGBoost": 0.9722222222222222
+                }
+              },
+              {
+                "version": "iter1_Logistic Regression",
+                "metrics": {
+                  "accuracy": 0.0,
+                  "f1": 0.0,
+                  "roc_auc": 0.0
+                },
+                "opt_report": {
+                  "best_params": null,
+                  "best_score": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "time": 1782129906.3607833,
+          "ev": {
+            "stage": "pdf_report",
+            "status": "completed",
+            "percent": 95,
+            "result": {
+              "path": "reports/AutoDS_Report.pdf",
+              "payload": {
+                "project_name": "Validate Wine-Quality",
+                "project_goal": "Validate Wine-Quality",
+                "executive_summary": "Validate Wine-Quality analyzed Wine-Quality.csv end-to-end: data quality review, EDA, model training, explainability, and deployment readiness. Best model: Random Forest.",
+                "dataset_name": "Wine-Quality.csv",
+                "rows": 178,
+                "columns": 14,
+                "health_score": 70.0,
+                "health_grade": "Needs improvement",
+                "health_summary": "Overall pipeline score 88/100 with dataset quality 70.0/100.",
+                "dataset_summary": "",
+                "feature_types": {},
+                "problem_type": "Classification",
+                "best_model": "Random Forest",
+                "model_selection_rationale": "Random Forest achieved the highest validation score among evaluated candidates.",
+                "target_column": "target",
+                "confidence": 100,
+                "trust_score": 100,
+                "fairness_score": "Not Evaluated",
+                "deployment_label": "Ready for deployment",
+                "final_score": 88,
+                "feature_importance": "    Rank                       Feature  Mean |SHAP|\n0      1                    flavanoids     0.104955\n1      2               color_intensity     0.075217\n2      3                       alcohol     0.056641\n3      4                       proline     0.055056\n4      5  od280/od315_of_diluted_wines     0.052097\n5      6                           hue     0.039542\n6      7                     magnesium     0.036070\n7      8                 total_phenols     0.025345\n8      9                    malic_acid     0.014231\n9     10             alcalinity_of_ash     0.013536\n10    11          nonflavanoid_phenols     0.008967\n11    12               proanthocyanins     0.007008\n12    13                           ash     0.006957",
+                "explainability_summary": "",
+                "trust_concerns": [],
+                "model_results": [
+                  "Logistic Regression: 0.9722",
+                  "Decision Tree: 0.9444",
+                  "Random Forest: 1.0000",
+                  "Extra Trees: 0.9722",
+                  "Gradient Boosting: 0.9444",
+                  "AdaBoost: 0.9444",
+                  "KNN: 0.7222",
+                  "Naive Bayes: 1.0000",
+                  "SVM: 0.8056",
+                  "XGBoost: 0.9722"
+                ],
+                "ai_insights": [
+                  "**alcohol** distribution is symmetric.",
+                  "**malic_acid** distribution is right-skewed and contains ~1.7% outliers.",
+                  "**ash** distribution is symmetric and contains ~1.7% outliers.",
+                  "**alcalinity_of_ash** distribution is symmetric and contains ~2.2% outliers.",
+                  "**magnesium** distribution is right-skewed and contains ~2.2% outliers."
+                ],
+                "eda_findings": [
+                  "**alcohol** distribution is symmetric.",
+                  "**malic_acid** distribution is right-skewed and contains ~1.7% outliers.",
+                  "**ash** distribution is symmetric and contains ~1.7% outliers.",
+                  "**alcalinity_of_ash** distribution is symmetric and contains ~2.2% outliers.",
+                  "**magnesium** distribution is right-skewed and contains ~2.2% outliers."
+                ],
+                "cleaning_actions": [],
+                "cleaning_before_rows": 178,
+                "cleaning_after_rows": 178,
+                "recommendations": [
+                  "Ready for deployment",
+                  "Risk level: Low. Deploy with monitoring and schedule retraining if performance drifts."
+                ],
+                "issues": [
+                  {
+                    "severity": "low",
+                    "title": "No Critical Issues",
+                    "description": "Dataset passed automated quality checks.",
+                    "recommendation": "Proceed to EDA and modeling."
+                  }
+                ],
+                "shap_ranking": [
+                  "flavanoids: 0.1050",
+                  "color_intensity: 0.0752",
+                  "alcohol: 0.0566",
+                  "proline: 0.0551",
+                  "od280/od315_of_diluted_wines: 0.0521",
+                  "hue: 0.0395",
+                  "magnesium: 0.0361",
+                  "total_phenols: 0.0253",
+                  "malic_acid: 0.0142",
+                  "alcalinity_of_ash: 0.0135"
+                ],
+                "deployment_readiness_score": 100,
+                "deployment_risk": "Low",
+                "business_recommendations": "Collect more data, monitor drift, and iterate on feature engineering.",
+                "health_breakdown": {
+                  "dataset": 70.0,
+                  "model": 100,
+                  "trust": 100.0,
+                  "mlops": 100
+                },
+                "conclusion": "Ready for deployment",
+                "generated_at": "2026-06-22 12:05 UTC"
+              }
+            }
+          }
+        },
+        {
+          "time": 1782129906.3667893,
+          "ev": {
+            "stage": "ai_decision",
+            "status": "completed",
+            "percent": 98,
+            "result": {
+              "recommendation": "Ready for deployment",
+              "final_score": 88,
+              "best_model": "Random Forest"
+            }
+          }
+        }
+      ],
+      "best_model_name": null,
+      "training_artifacts_present": true,
+      "trust_score": null,
+      "pdf_generated": "reports/AutoDS_Report.pdf"
+    },
+    "errors": [
+      "Upload processing error: 'SessionState' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\AutoDS-Agent\\archive\\dev_probes\\full_verification.py\", line 77, in <module>\n    rec[\"ui_checks\"][\"dataset_loaded_after_upload\"] = bool(state.get('dataset_loaded'))\n                                                           ^^^^^^^^^\nAttributeError: 'SessionState' object has no attribute 'get'\n"
+    ]
+  },
+  {
+    "dataset": "Housing",
+    "path": "data\\Housing.csv",
+    "ui_checks": {
+      "uploader_found": true,
+      "session_keys": []
+    },
+    "pipeline": {
+      "output_path": "verification_outputs\\Housing_pipeline_output.json",
+      "events": [
+        {
+          "time": 1782129906.929867,
+          "ev": {
+            "stage": "dataset_upload",
+            "status": "completed",
+            "percent": 2,
+            "result": {
+              "dataset_name": "Housing.csv"
+            }
+          }
+        },
+        {
+          "time": 1782129906.9308662,
+          "ev": {
+            "stage": "dataset_intelligence",
+            "status": "started",
+            "percent": 5
+          }
+        },
+        {
+          "time": 1782129906.9575186,
+          "ev": {
+            "stage": "dataset_intelligence",
+            "status": "completed",
+            "percent": 10,
+            "result": {
+              "dataset_name": "Housing.csv",
+              "dataset_shape": {
+                "rows": 545,
+                "columns": 13
+              },
+              "domain_analysis": {
+                "domain": "Real Estate",
+                "confidence": 0.95,
+                "reason": "Recognized as Housing dataset based on column names and filename."
+              },
+              "problem_analysis": {
+                "problem_type": "Regression",
+                "likely_target": "furnishingstatus",
+                "recommended_metrics": [
+                  "MAE",
+                  "RMSE",
+                  "R\u00b2",
+                  "MAPE"
+                ],
+                "reason": "Recognized dataset: Regression problem."
+              },
+              "risk_analysis": {
+                "risk_level": "Low",
+                "risk_score": 0.0,
+                "risks": [],
+                "detailed_scores": {
+                  "missing_values": 0.0,
+                  "duplicates": 0.0,
+                  "small_dataset": 0.0,
+                  "high_dimensionality": 0.0,
+                  "data_leakage": 0.0,
+                  "very_small_dataset": 0.0,
+                  "high_dimensional": 0.0
+                }
+              },
+              "model_strategy": {
+                "problem_type": "Regression",
+                "recommendations": [
+                  {
+                    "model": "Linear Regression",
+                    "reason": "Baseline for property valuation."
+                  },
+                  {
+                    "model": "Random Forest Regressor",
+                    "reason": "Non-linear, captures location effects."
+                  },
+                  {
+                    "model": "Gradient Boosting Regressor",
+                    "reason": "Best for real estate price prediction."
+                  }
+                ],
+                "metric_focus": [
+                  "MAE",
+                  "RMSE",
+                  "R\u00b2",
+                  "MAPE"
+                ]
+              },
+              "roadmap": [
+                "Step 1: Data quality is good. Proceed with exploratory analysis.",
+                "Step 2: Analyze patterns specific to Real Estate domain. Focus on domain-relevant features.",
+                "Step 3: Create new features based on domain knowledge and EDA insights.",
+                "Step 4: Train multiple regression models using AutoML Studio.",
+                "Step 5: Optimize for MAE/RMSE. Fine-tune hyperparameters.",
+                "Step 6: Generate SHAP explanations in AI Decision Intelligence. Understand feature impacts.",
+                "Step 7: Validate model on held-out test set. Deploy with monitoring.",
+                "Step 8: Generate AI Research Report with findings and recommendations."
+              ],
+              "intelligence_score": {
+                "score": 80.0,
+                "label": "Good Dataset",
+                "components": {
+                  "quality": 25.0,
+                  "size": 20,
+                  "balance": 10,
+                  "dimensionality": 10
+                }
+              },
+              "executive_summary": "This Real Estate dataset represents a Regression problem. Dataset contains 545 records and 13 features with low risk. Intelligence Score: 80.0/100 (Good Dataset). Data Quality: 25.0/25 points. Recommended Approach: Start with Linear Regression, optimize for MAE, RMSE. Priority: Low risk dataset requires careful data preparation before modeling."
+            }
+          }
+        },
+        {
+          "time": 1782129907.0164487,
+          "ev": {
+            "stage": "feature_engineering",
+            "status": "started",
+            "percent": 22
+          }
+        },
+        {
+          "time": 1782129907.0164487,
+          "ev": {
+            "stage": "feature_engineering",
+            "status": "completed",
+            "percent": 25,
+            "result": {
+              "current_features": 13,
+              "recommended_changes": 10,
+              "expected_benefit": "Improved model accuracy and stability",
+              "steps": [
+                "Remove constant and duplicate columns",
+                "Encode categorical variables",
+                "Impute missing values",
+                "Create derived features for dates and ratios",
+                "Scale or normalize numerical features"
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129907.083289,
+          "ev": {
+            "stage": "hyperparameter_optimization",
+            "status": "completed",
+            "percent": 18,
+            "result": {
+              "algorithm": "Linear Regression",
+              "problem_type": "Regression",
+              "supported_models": [
+                "Linear Regression",
+                "Random Forest Regressor",
+                "Gradient Boosting Regressor",
+                "XGBoost Regressor"
+              ],
+              "recommended_parameters": {
+                "fit_intercept": [
+                  true,
+                  false
+                ]
+              },
+              "notes": "Hyperparameter tuning plan based on model selection and dataset problem type. Use the supported model grid to guide optimization."
+            }
+          }
+        },
+        {
+          "time": 1782129907.083289,
+          "ev": {
+            "stage": "data_cleaning",
+            "status": "started",
+            "percent": 15
+          }
+        },
+        {
+          "time": 1782129907.0882888,
+          "ev": {
+            "stage": "data_cleaning",
+            "status": "completed",
+            "percent": 20,
+            "result": {
+              "report": [
+                "Dataset was already clean."
+              ],
+              "shape": [
+                545,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129907.0882888,
+          "ev": {
+            "stage": "eda",
+            "status": "started",
+            "percent": 22
+          }
+        },
+        {
+          "time": 1782129907.1304896,
+          "ev": {
+            "stage": "eda",
+            "status": "completed",
+            "percent": 30,
+            "result": {
+              "summary": "               price          area  ...  prefarea  furnishingstatus\ncount   5.450000e+02    545.000000  ...       545               545\nunique           NaN           NaN  ...         2                 3\ntop              NaN           NaN  ...        no    semi-furnished\nfreq             NaN           NaN  ...       417               227\nmean    4.766729e+06   5150.541284  ...       NaN               NaN\nstd     1.870440e+06   2170.141023  ...       NaN               NaN\nmin     1.750000e+06   1650.000000  ...       NaN               NaN\n25%     3.430000e+06   3600.000000  ...       NaN               NaN\n50%     4.340000e+06   4600.000000  ...       NaN               NaN\n75%     5.740000e+06   6360.000000  ...       NaN               NaN\nmax     1.330000e+07  16200.000000  ...       NaN               NaN\n\n[11 rows x 13 columns]",
+              "numerical_columns": [
+                "price",
+                "area",
+                "bedrooms",
+                "bathrooms",
+                "stories",
+                "parking"
+              ],
+              "categorical_columns": [
+                "mainroad",
+                "guestroom",
+                "basement",
+                "hotwaterheating",
+                "airconditioning",
+                "prefarea",
+                "furnishingstatus"
+              ],
+              "insights": [
+                "**price** distribution is right-skewed and contains ~2.8% outliers.",
+                "**area** distribution is right-skewed and contains ~2.2% outliers.",
+                "**bedrooms** distribution is symmetric and contains ~2.2% outliers.",
+                "**bathrooms** distribution is right-skewed.",
+                "**stories** distribution is right-skewed and contains ~7.5% outliers."
+              ],
+              "charts": {}
+            }
+          }
+        },
+        {
+          "time": 1782129907.1666532,
+          "ev": {
+            "stage": "ai_ethics_trust",
+            "status": "completed",
+            "percent": 35,
+            "result": {
+              "executive_summary": "The ethics assessment identifies bias, fairness, and privacy risks in the dataset and model predictions.",
+              "bias_concerns": [
+                "No sensitive attributes explicitly detected."
+              ],
+              "fairness_concerns": [],
+              "privacy_concerns": [],
+              "compliance_recommendations": {
+                "bias": [
+                  "Continue regular bias audits and documentation."
+                ],
+                "fairness": [
+                  "Monitor fairness metrics during model updates."
+                ],
+                "privacy": [
+                  "Maintain minimal data collection and retention practices."
+                ]
+              },
+              "risk_level": "Low"
+            }
+          }
+        },
+        {
+          "time": 1782129907.2022095,
+          "ev": {
+            "stage": "automl",
+            "status": "started",
+            "percent": 40
+          }
+        },
+        {
+          "time": 1782129910.6658602,
+          "ev": {
+            "stage": "automl",
+            "status": "completed",
+            "percent": 55,
+            "result": {
+              "best_model": "AdaBoost",
+              "metrics": {
+                "Logistic Regression": 0.47706422018348627,
+                "Decision Tree": 0.3853211009174312,
+                "Random Forest": 0.5137614678899083,
+                "Extra Trees": 0.42201834862385323,
+                "Gradient Boosting": 0.47706422018348627,
+                "AdaBoost": 0.5779816513761468,
+                "KNN": 0.5137614678899083,
+                "Naive Bayes": 0.5412844036697247,
+                "SVM": 0.4954128440366973,
+                "XGBoost": 0.3944954128440367
+              },
+              "model_readiness_score": 57,
+              "problem_type": "Classification",
+              "training_times": {
+                "Logistic Regression": 0.059,
+                "Decision Tree": 0.004,
+                "Random Forest": 0.089,
+                "Extra Trees": 0.056,
+                "Gradient Boosting": 0.418,
+                "AdaBoost": 0.083,
+                "KNN": 0.001,
+                "Naive Bayes": 0.001,
+                "SVM": 0.066,
+                "XGBoost": 0.048
+              },
+              "detailed_metrics": {
+                "Logistic Regression": {
+                  "accuracy": 0.47706422018348627,
+                  "precision": 0.5107493857493858,
+                  "recall": 0.47706422018348627,
+                  "f1": 0.44276672016787305,
+                  "roc_auc": 0.6624142317477449,
+                  "cv_score": 0.45186584789796874
+                },
+                "Decision Tree": {
+                  "accuracy": 0.3853211009174312,
+                  "precision": 0.38754726291087893,
+                  "recall": 0.3853211009174312,
+                  "f1": 0.3862385321100917,
+                  "roc_auc": 0.5359768907563025,
+                  "cv_score": 0.43804125334592975
+                },
+                "Random Forest": {
+                  "accuracy": 0.5137614678899083,
+                  "precision": 0.5387101829164055,
+                  "recall": 0.5137614678899083,
+                  "f1": 0.5131530556888111,
+                  "roc_auc": 0.6368731208079562,
+                  "cv_score": 0.46107699574870104
+                },
+                "Extra Trees": {
+                  "accuracy": 0.42201834862385323,
+                  "precision": 0.4536394708008307,
+                  "recall": 0.42201834862385323,
+                  "f1": 0.4237724985875326,
+                  "roc_auc": 0.5853663942641276,
+                  "cv_score": 0.43816721776098255
+                },
+                "Gradient Boosting": {
+                  "accuracy": 0.47706422018348627,
+                  "precision": 0.4781676171584428,
+                  "recall": 0.47706422018348627,
+                  "f1": 0.47028070225973245,
+                  "roc_auc": 0.6291457867550689,
+                  "cv_score": 0.47709022201228146
+                },
+                "AdaBoost": {
+                  "accuracy": 0.5779816513761468,
+                  "precision": 0.6175432770144049,
+                  "recall": 0.5779816513761468,
+                  "f1": 0.5643654326114131,
+                  "roc_auc": 0.6774472862539512,
+                  "cv_score": 0.5252086285624311
+                },
+                "KNN": {
+                  "accuracy": 0.5137614678899083,
+                  "precision": 0.530597022877175,
+                  "recall": 0.5137614678899083,
+                  "f1": 0.518322278700719,
+                  "roc_auc": 0.6292566109012413,
+                  "cv_score": 0.4565422768068021
+                },
+                "Naive Bayes": {
+                  "accuracy": 0.5412844036697247,
+                  "precision": 0.5477976068630552,
+                  "recall": 0.5412844036697247,
+                  "f1": 0.5282711089362158,
+                  "roc_auc": 0.6801778968468121,
+                  "cv_score": 0.5115099984254448
+                },
+                "SVM": {
+                  "accuracy": 0.4954128440366973,
+                  "precision": 0.5127509639675575,
+                  "recall": 0.4954128440366973,
+                  "f1": 0.46526583637321456,
+                  "roc_auc": 0.6778197517539125,
+                  "cv_score": 0.5275862068965518
+                },
+                "XGBoost": {
+                  "accuracy": 0.3944954128440367,
+                  "precision": 0.40560851992044655,
+                  "recall": 0.3944954128440367,
+                  "f1": 0.3954407800609223,
+                  "roc_auc": 0.5804766401973633,
+                  "cv_score": 0.4610140135411746
+                }
+              },
+              "model_selection_explanation": {
+                "selected_model": "AdaBoost",
+                "problem_type": "Classification",
+                "why_chosen": [
+                  "Highest validation accuracy (57.8%) among trained candidates",
+                  "Strong F1 score (56.4%) indicating balanced precision and recall",
+                  "Competitive ROC-AUC (0.677) for ranking quality",
+                  "Efficient training time relative to performance gain",
+                  "Stable 3-fold cross-validation accuracy (52.5%)"
+                ],
+                "alternatives": [
+                  {
+                    "model": "Naive Bayes",
+                    "reasons": [
+                      "Lower validation accuracy (54.1% vs best 57.8%)",
+                      "Weaker precision-recall balance (lower F1)"
+                    ]
+                  },
+                  {
+                    "model": "Random Forest",
+                    "reasons": [
+                      "Lower validation accuracy (51.4% vs best 57.8%)",
+                      "Weaker precision-recall balance (lower F1)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "KNN",
+                    "reasons": [
+                      "Lower validation accuracy (51.4% vs best 57.8%)",
+                      "Weaker precision-recall balance (lower F1)"
+                    ]
+                  },
+                  {
+                    "model": "SVM",
+                    "reasons": [
+                      "Lower validation accuracy (49.5% vs best 57.8%)",
+                      "Weaker precision-recall balance (lower F1)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Logistic Regression",
+                    "reasons": [
+                      "Lower validation accuracy (47.7% vs best 57.8%)",
+                      "Weaker precision-recall balance (lower F1)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Gradient Boosting",
+                    "reasons": [
+                      "Lower validation accuracy (47.7% vs best 57.8%)",
+                      "Weaker precision-recall balance (lower F1)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "Extra Trees",
+                    "reasons": [
+                      "Lower validation accuracy (42.2% vs best 57.8%)",
+                      "Weaker precision-recall balance (lower F1)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  },
+                  {
+                    "model": "XGBoost",
+                    "reasons": [
+                      "Lower validation accuracy (39.4% vs best 57.8%)",
+                      "Weaker precision-recall balance (lower F1)",
+                      "Longer training time without compensating score improvement"
+                    ]
+                  }
+                ]
+              },
+              "improved_best_model": "baseline"
+            }
+          }
+        },
+        {
+          "time": 1782129942.5145676,
+          "ev": {
+            "stage": "explainability",
+            "status": "completed",
+            "percent": 70,
+            "result": {
+              "shap_values": {},
+              "feature_importance": {
+                "price": 0.495445482127995,
+                "area": 0.2262057353970568,
+                "bedrooms": 0.1425395749207341,
+                "bathrooms": 0.0,
+                "stories": 0.0,
+                "mainroad": 0.06856783967783328,
+                "guestroom": 0.0,
+                "basement": 0.0,
+                "hotwaterheating": 0.0,
+                "airconditioning": 0.024423834184802137,
+                "parking": 0.04281753369157851,
+                "prefarea": 0.0
+              },
+              "summary": "SHAP explainability failed; using fallback feature importance."
+            }
+          }
+        },
+        {
+          "time": 1782129942.515481,
+          "ev": {
+            "stage": "deployment_readiness",
+            "status": "completed",
+            "percent": 75,
+            "result": {
+              "risk_level": "Low",
+              "warnings": [
+                "Model accuracy is lower than expected for production."
+              ],
+              "recommendations": [
+                "Deploy with monitoring and schedule retraining if performance drifts."
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129946.8000274,
+          "ev": {
+            "stage": "self_improvement",
+            "status": "completed",
+            "percent": 80,
+            "result": {
+              "improvement_history": [
+                {
+                  "iteration": 1,
+                  "model": "Logistic Regression",
+                  "changes": {
+                    "hyperparams": {
+                      "best_params": null,
+                      "best_score": null
+                    }
+                  }
+                }
+              ],
+              "model_comparison": [
+                {
+                  "version": "baseline",
+                  "metrics": {
+                    "Logistic Regression": 0.47706422018348627,
+                    "Decision Tree": 0.3853211009174312,
+                    "Random Forest": 0.5137614678899083,
+                    "Extra Trees": 0.42201834862385323,
+                    "Gradient Boosting": 0.47706422018348627,
+                    "AdaBoost": 0.5779816513761468,
+                    "KNN": 0.5137614678899083,
+                    "Naive Bayes": 0.5412844036697247,
+                    "SVM": 0.4954128440366973,
+                    "XGBoost": 0.3944954128440367
+                  }
+                },
+                {
+                  "version": "iter1_Logistic Regression",
+                  "metrics": {
+                    "accuracy": 0.0,
+                    "f1": 0.0,
+                    "roc_auc": 0.0
+                  },
+                  "opt_report": {
+                    "best_params": null,
+                    "best_score": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "time": 1782129946.8000274,
+          "ev": {
+            "stage": "hyperparameter_optimization",
+            "status": "completed",
+            "percent": 78,
+            "result": {
+              "iterations": 1,
+              "artifacts": {
+                "model": "deployment_package\\DEP_20260622120546\\best_model.pkl",
+                "encoder": "deployment_package\\DEP_20260622120546\\target_encoder.pkl"
+              }
+            }
+          }
+        },
+        {
+          "time": 1782129946.8010292,
+          "ev": {
+            "stage": "model_comparison",
+            "status": "completed",
+            "percent": 82,
+            "result": [
+              {
+                "version": "baseline",
+                "metrics": {
+                  "Logistic Regression": 0.47706422018348627,
+                  "Decision Tree": 0.3853211009174312,
+                  "Random Forest": 0.5137614678899083,
+                  "Extra Trees": 0.42201834862385323,
+                  "Gradient Boosting": 0.47706422018348627,
+                  "AdaBoost": 0.5779816513761468,
+                  "KNN": 0.5137614678899083,
+                  "Naive Bayes": 0.5412844036697247,
+                  "SVM": 0.4954128440366973,
+                  "XGBoost": 0.3944954128440367
+                }
+              },
+              {
+                "version": "iter1_Logistic Regression",
+                "metrics": {
+                  "accuracy": 0.0,
+                  "f1": 0.0,
+                  "roc_auc": 0.0
+                },
+                "opt_report": {
+                  "best_params": null,
+                  "best_score": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "time": 1782129946.8753486,
+          "ev": {
+            "stage": "pdf_report",
+            "status": "completed",
+            "percent": 95,
+            "result": {
+              "path": "reports/AutoDS_Report.pdf",
+              "payload": {
+                "project_name": "Validate Housing",
+                "project_goal": "Validate Housing",
+                "executive_summary": "Validate Housing analyzed Housing.csv end-to-end: data quality review, EDA, model training, explainability, and deployment readiness. Best model: AdaBoost.",
+                "dataset_name": "Housing.csv",
+                "rows": 545,
+                "columns": 13,
+                "health_score": 80.0,
+                "health_grade": "Good",
+                "health_summary": "Overall pipeline score 79/100 with dataset quality 80.0/100.",
+                "dataset_summary": "",
+                "feature_types": {},
+                "problem_type": "Classification",
+                "best_model": "AdaBoost",
+                "model_selection_rationale": "AdaBoost achieved the highest validation score among evaluated candidates.",
+                "target_column": "furnishingstatus",
+                "confidence": 100,
+                "trust_score": 100,
+                "fairness_score": "Not Evaluated",
+                "deployment_label": "Needs improvement",
+                "final_score": 79,
+                "feature_importance": {
+                  "price": 0.495445482127995,
+                  "area": 0.2262057353970568,
+                  "bedrooms": 0.1425395749207341,
+                  "bathrooms": 0.0,
+                  "stories": 0.0,
+                  "mainroad": 0.06856783967783328,
+                  "guestroom": 0.0,
+                  "basement": 0.0,
+                  "hotwaterheating": 0.0,
+                  "airconditioning": 0.024423834184802137,
+                  "parking": 0.04281753369157851,
+                  "prefarea": 0.0
+                },
+                "explainability_summary": "SHAP explainability failed; using fallback feature importance.",
+                "trust_concerns": [],
+                "model_results": [
+                  "Logistic Regression: 0.4771",
+                  "Decision Tree: 0.3853",
+                  "Random Forest: 0.5138",
+                  "Extra Trees: 0.4220",
+                  "Gradient Boosting: 0.4771",
+                  "AdaBoost: 0.5780",
+                  "KNN: 0.5138",
+                  "Naive Bayes: 0.5413",
+                  "SVM: 0.4954",
+                  "XGBoost: 0.3945"
+                ],
+                "ai_insights": [
+                  "**price** distribution is right-skewed and contains ~2.8% outliers.",
+                  "**area** distribution is right-skewed and contains ~2.2% outliers.",
+                  "**bedrooms** distribution is symmetric and contains ~2.2% outliers.",
+                  "**bathrooms** distribution is right-skewed.",
+                  "**stories** distribution is right-skewed and contains ~7.5% outliers."
+                ],
+                "eda_findings": [
+                  "**price** distribution is right-skewed and contains ~2.8% outliers.",
+                  "**area** distribution is right-skewed and contains ~2.2% outliers.",
+                  "**bedrooms** distribution is symmetric and contains ~2.2% outliers.",
+                  "**bathrooms** distribution is right-skewed.",
+                  "**stories** distribution is right-skewed and contains ~7.5% outliers."
+                ],
+                "cleaning_actions": [],
+                "cleaning_before_rows": 545,
+                "cleaning_after_rows": 545,
+                "recommendations": [
+                  "Needs improvement",
+                  "Risk level: Low. Deploy with monitoring and schedule retraining if performance drifts."
+                ],
+                "issues": [
+                  {
+                    "severity": "low",
+                    "title": "No Critical Issues",
+                    "description": "Dataset passed automated quality checks.",
+                    "recommendation": "Proceed to EDA and modeling."
+                  }
+                ],
+                "shap_ranking": [
+                  "price: 0.4954",
+                  "area: 0.2262",
+                  "bedrooms: 0.1425",
+                  "mainroad: 0.0686",
+                  "parking: 0.0428",
+                  "airconditioning: 0.0244",
+                  "bathrooms: 0.0000",
+                  "stories: 0.0000",
+                  "guestroom: 0.0000",
+                  "basement: 0.0000"
+                ],
+                "deployment_readiness_score": 100,
+                "deployment_risk": "Low",
+                "business_recommendations": "Collect more data, monitor drift, and iterate on feature engineering.",
+                "health_breakdown": {
+                  "dataset": 80.0,
+                  "model": 57,
+                  "trust": 100.0,
+                  "mlops": 100
+                },
+                "conclusion": "Needs improvement",
+                "generated_at": "2026-06-22 12:05 UTC"
+              }
+            }
+          }
+        },
+        {
+          "time": 1782129946.8753486,
+          "ev": {
+            "stage": "ai_decision",
+            "status": "completed",
+            "percent": 98,
+            "result": {
+              "recommendation": "Needs improvement",
+              "final_score": 79,
+              "best_model": "AdaBoost"
+            }
+          }
+        }
+      ],
+      "best_model_name": null,
+      "training_artifacts_present": true,
+      "trust_score": null,
+      "pdf_generated": "reports/AutoDS_Report.pdf"
+    },
+    "errors": [
+      "Upload processing error: 'SessionState' object has no attribute 'get'\nTraceback (most recent call last):\n  File \"C:\\AutoDS-Agent\\archive\\dev_probes\\full_verification.py\", line 77, in <module>\n    rec[\"ui_checks\"][\"dataset_loaded_after_upload\"] = bool(state.get('dataset_loaded'))\n                                                           ^^^^^^^^^\nAttributeError: 'SessionState' object has no attribute 'get'\n"
+    ]
+  }
+]

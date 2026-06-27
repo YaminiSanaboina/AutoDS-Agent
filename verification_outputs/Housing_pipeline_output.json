@@ -1,0 +1,1191 @@
+{
+  "start_time": "2026-06-22T12:05:06.926852Z",
+  "dataset_analysis": {
+    "dataset_name": "Housing.csv",
+    "dataset_shape": {
+      "rows": 545,
+      "columns": 13
+    },
+    "domain_analysis": {
+      "domain": "Real Estate",
+      "confidence": 0.95,
+      "reason": "Recognized as Housing dataset based on column names and filename."
+    },
+    "problem_analysis": {
+      "problem_type": "Regression",
+      "likely_target": "furnishingstatus",
+      "recommended_metrics": [
+        "MAE",
+        "RMSE",
+        "R\u00b2",
+        "MAPE"
+      ],
+      "reason": "Recognized dataset: Regression problem."
+    },
+    "risk_analysis": {
+      "risk_level": "Low",
+      "risk_score": 0.0,
+      "risks": [],
+      "detailed_scores": {
+        "missing_values": 0.0,
+        "duplicates": 0.0,
+        "small_dataset": 0.0,
+        "high_dimensionality": 0.0,
+        "data_leakage": 0.0,
+        "very_small_dataset": 0.0,
+        "high_dimensional": 0.0
+      }
+    },
+    "model_strategy": {
+      "problem_type": "Regression",
+      "recommendations": [
+        {
+          "model": "Linear Regression",
+          "reason": "Baseline for property valuation."
+        },
+        {
+          "model": "Random Forest Regressor",
+          "reason": "Non-linear, captures location effects."
+        },
+        {
+          "model": "Gradient Boosting Regressor",
+          "reason": "Best for real estate price prediction."
+        }
+      ],
+      "metric_focus": [
+        "MAE",
+        "RMSE",
+        "R\u00b2",
+        "MAPE"
+      ]
+    },
+    "roadmap": [
+      "Step 1: Data quality is good. Proceed with exploratory analysis.",
+      "Step 2: Analyze patterns specific to Real Estate domain. Focus on domain-relevant features.",
+      "Step 3: Create new features based on domain knowledge and EDA insights.",
+      "Step 4: Train multiple regression models using AutoML Studio.",
+      "Step 5: Optimize for MAE/RMSE. Fine-tune hyperparameters.",
+      "Step 6: Generate SHAP explanations in AI Decision Intelligence. Understand feature impacts.",
+      "Step 7: Validate model on held-out test set. Deploy with monitoring.",
+      "Step 8: Generate AI Research Report with findings and recommendations."
+    ],
+    "intelligence_score": {
+      "score": 80.0,
+      "label": "Good Dataset",
+      "components": {
+        "quality": 25.0,
+        "size": 20,
+        "balance": 10,
+        "dimensionality": 10
+      }
+    },
+    "executive_summary": "This Real Estate dataset represents a Regression problem. Dataset contains 545 records and 13 features with low risk. Intelligence Score: 80.0/100 (Good Dataset). Data Quality: 25.0/25 points. Recommended Approach: Start with Linear Regression, optimize for MAE, RMSE. Priority: Low risk dataset requires careful data preparation before modeling."
+  },
+  "dataset_report": {
+    "dataset_name": "Housing.csv",
+    "dataset_shape": {
+      "rows": 545,
+      "columns": 13
+    },
+    "domain_analysis": {
+      "domain": "Real Estate",
+      "confidence": 0.95,
+      "reason": "Recognized as Housing dataset based on column names and filename."
+    },
+    "problem_analysis": {
+      "problem_type": "Regression",
+      "likely_target": "furnishingstatus",
+      "recommended_metrics": [
+        "MAE",
+        "RMSE",
+        "R\u00b2",
+        "MAPE"
+      ],
+      "reason": "Recognized dataset: Regression problem."
+    },
+    "risk_analysis": {
+      "risk_level": "Low",
+      "risk_score": 0.0,
+      "risks": [],
+      "detailed_scores": {
+        "missing_values": 0.0,
+        "duplicates": 0.0,
+        "small_dataset": 0.0,
+        "high_dimensionality": 0.0,
+        "data_leakage": 0.0,
+        "very_small_dataset": 0.0,
+        "high_dimensional": 0.0
+      }
+    },
+    "model_strategy": {
+      "problem_type": "Regression",
+      "recommendations": [
+        {
+          "model": "Linear Regression",
+          "reason": "Baseline for property valuation."
+        },
+        {
+          "model": "Random Forest Regressor",
+          "reason": "Non-linear, captures location effects."
+        },
+        {
+          "model": "Gradient Boosting Regressor",
+          "reason": "Best for real estate price prediction."
+        }
+      ],
+      "metric_focus": [
+        "MAE",
+        "RMSE",
+        "R\u00b2",
+        "MAPE"
+      ]
+    },
+    "roadmap": [
+      "Step 1: Data quality is good. Proceed with exploratory analysis.",
+      "Step 2: Analyze patterns specific to Real Estate domain. Focus on domain-relevant features.",
+      "Step 3: Create new features based on domain knowledge and EDA insights.",
+      "Step 4: Train multiple regression models using AutoML Studio.",
+      "Step 5: Optimize for MAE/RMSE. Fine-tune hyperparameters.",
+      "Step 6: Generate SHAP explanations in AI Decision Intelligence. Understand feature impacts.",
+      "Step 7: Validate model on held-out test set. Deploy with monitoring.",
+      "Step 8: Generate AI Research Report with findings and recommendations."
+    ],
+    "intelligence_score": {
+      "score": 80.0,
+      "label": "Good Dataset",
+      "components": {
+        "quality": 25.0,
+        "size": 20,
+        "balance": 10,
+        "dimensionality": 10
+      }
+    },
+    "executive_summary": "This Real Estate dataset represents a Regression problem. Dataset contains 545 records and 13 features with low risk. Intelligence Score: 80.0/100 (Good Dataset). Data Quality: 25.0/25 points. Recommended Approach: Start with Linear Regression, optimize for MAE, RMSE. Priority: Low risk dataset requires careful data preparation before modeling."
+  },
+  "cleaning_results": {
+    "report": [
+      "Dataset was already clean."
+    ],
+    "shape": [
+      545,
+      13
+    ]
+  },
+  "eda_results": {
+    "summary": "               price          area  ...  prefarea  furnishingstatus\ncount   5.450000e+02    545.000000  ...       545               545\nunique           NaN           NaN  ...         2                 3\ntop              NaN           NaN  ...        no    semi-furnished\nfreq             NaN           NaN  ...       417               227\nmean    4.766729e+06   5150.541284  ...       NaN               NaN\nstd     1.870440e+06   2170.141023  ...       NaN               NaN\nmin     1.750000e+06   1650.000000  ...       NaN               NaN\n25%     3.430000e+06   3600.000000  ...       NaN               NaN\n50%     4.340000e+06   4600.000000  ...       NaN               NaN\n75%     5.740000e+06   6360.000000  ...       NaN               NaN\nmax     1.330000e+07  16200.000000  ...       NaN               NaN\n\n[11 rows x 13 columns]",
+    "numerical_columns": [
+      "price",
+      "area",
+      "bedrooms",
+      "bathrooms",
+      "stories",
+      "parking"
+    ],
+    "categorical_columns": [
+      "mainroad",
+      "guestroom",
+      "basement",
+      "hotwaterheating",
+      "airconditioning",
+      "prefarea",
+      "furnishingstatus"
+    ],
+    "insights": [
+      "**price** distribution is right-skewed and contains ~2.8% outliers.",
+      "**area** distribution is right-skewed and contains ~2.2% outliers.",
+      "**bedrooms** distribution is symmetric and contains ~2.2% outliers.",
+      "**bathrooms** distribution is right-skewed.",
+      "**stories** distribution is right-skewed and contains ~7.5% outliers."
+    ],
+    "charts": {}
+  },
+  "feature_engineering_results": {
+    "current_features": 13,
+    "recommended_changes": 10,
+    "expected_benefit": "Improved model accuracy and stability",
+    "steps": [
+      "Remove constant and duplicate columns",
+      "Encode categorical variables",
+      "Impute missing values",
+      "Create derived features for dates and ratios",
+      "Scale or normalize numerical features"
+    ]
+  },
+  "model_results": {
+    "best_model": "AdaBoost",
+    "metrics": {
+      "Logistic Regression": 0.47706422018348627,
+      "Decision Tree": 0.3853211009174312,
+      "Random Forest": 0.5137614678899083,
+      "Extra Trees": 0.42201834862385323,
+      "Gradient Boosting": 0.47706422018348627,
+      "AdaBoost": 0.5779816513761468,
+      "KNN": 0.5137614678899083,
+      "Naive Bayes": 0.5412844036697247,
+      "SVM": 0.4954128440366973,
+      "XGBoost": 0.3944954128440367
+    },
+    "model_readiness_score": 57,
+    "problem_type": "Classification",
+    "training_times": {
+      "Logistic Regression": 0.059,
+      "Decision Tree": 0.004,
+      "Random Forest": 0.089,
+      "Extra Trees": 0.056,
+      "Gradient Boosting": 0.418,
+      "AdaBoost": 0.083,
+      "KNN": 0.001,
+      "Naive Bayes": 0.001,
+      "SVM": 0.066,
+      "XGBoost": 0.048
+    },
+    "detailed_metrics": {
+      "Logistic Regression": {
+        "accuracy": 0.47706422018348627,
+        "precision": 0.5107493857493858,
+        "recall": 0.47706422018348627,
+        "f1": 0.44276672016787305,
+        "roc_auc": 0.6624142317477449,
+        "cv_score": 0.45186584789796874
+      },
+      "Decision Tree": {
+        "accuracy": 0.3853211009174312,
+        "precision": 0.38754726291087893,
+        "recall": 0.3853211009174312,
+        "f1": 0.3862385321100917,
+        "roc_auc": 0.5359768907563025,
+        "cv_score": 0.43804125334592975
+      },
+      "Random Forest": {
+        "accuracy": 0.5137614678899083,
+        "precision": 0.5387101829164055,
+        "recall": 0.5137614678899083,
+        "f1": 0.5131530556888111,
+        "roc_auc": 0.6368731208079562,
+        "cv_score": 0.46107699574870104
+      },
+      "Extra Trees": {
+        "accuracy": 0.42201834862385323,
+        "precision": 0.4536394708008307,
+        "recall": 0.42201834862385323,
+        "f1": 0.4237724985875326,
+        "roc_auc": 0.5853663942641276,
+        "cv_score": 0.43816721776098255
+      },
+      "Gradient Boosting": {
+        "accuracy": 0.47706422018348627,
+        "precision": 0.4781676171584428,
+        "recall": 0.47706422018348627,
+        "f1": 0.47028070225973245,
+        "roc_auc": 0.6291457867550689,
+        "cv_score": 0.47709022201228146
+      },
+      "AdaBoost": {
+        "accuracy": 0.5779816513761468,
+        "precision": 0.6175432770144049,
+        "recall": 0.5779816513761468,
+        "f1": 0.5643654326114131,
+        "roc_auc": 0.6774472862539512,
+        "cv_score": 0.5252086285624311
+      },
+      "KNN": {
+        "accuracy": 0.5137614678899083,
+        "precision": 0.530597022877175,
+        "recall": 0.5137614678899083,
+        "f1": 0.518322278700719,
+        "roc_auc": 0.6292566109012413,
+        "cv_score": 0.4565422768068021
+      },
+      "Naive Bayes": {
+        "accuracy": 0.5412844036697247,
+        "precision": 0.5477976068630552,
+        "recall": 0.5412844036697247,
+        "f1": 0.5282711089362158,
+        "roc_auc": 0.6801778968468121,
+        "cv_score": 0.5115099984254448
+      },
+      "SVM": {
+        "accuracy": 0.4954128440366973,
+        "precision": 0.5127509639675575,
+        "recall": 0.4954128440366973,
+        "f1": 0.46526583637321456,
+        "roc_auc": 0.6778197517539125,
+        "cv_score": 0.5275862068965518
+      },
+      "XGBoost": {
+        "accuracy": 0.3944954128440367,
+        "precision": 0.40560851992044655,
+        "recall": 0.3944954128440367,
+        "f1": 0.3954407800609223,
+        "roc_auc": 0.5804766401973633,
+        "cv_score": 0.4610140135411746
+      }
+    },
+    "model_selection_explanation": {
+      "selected_model": "AdaBoost",
+      "problem_type": "Classification",
+      "why_chosen": [
+        "Highest validation accuracy (57.8%) among trained candidates",
+        "Strong F1 score (56.4%) indicating balanced precision and recall",
+        "Competitive ROC-AUC (0.677) for ranking quality",
+        "Efficient training time relative to performance gain",
+        "Stable 3-fold cross-validation accuracy (52.5%)"
+      ],
+      "alternatives": [
+        {
+          "model": "Naive Bayes",
+          "reasons": [
+            "Lower validation accuracy (54.1% vs best 57.8%)",
+            "Weaker precision-recall balance (lower F1)"
+          ]
+        },
+        {
+          "model": "Random Forest",
+          "reasons": [
+            "Lower validation accuracy (51.4% vs best 57.8%)",
+            "Weaker precision-recall balance (lower F1)",
+            "Longer training time without compensating score improvement"
+          ]
+        },
+        {
+          "model": "KNN",
+          "reasons": [
+            "Lower validation accuracy (51.4% vs best 57.8%)",
+            "Weaker precision-recall balance (lower F1)"
+          ]
+        },
+        {
+          "model": "SVM",
+          "reasons": [
+            "Lower validation accuracy (49.5% vs best 57.8%)",
+            "Weaker precision-recall balance (lower F1)",
+            "Longer training time without compensating score improvement"
+          ]
+        },
+        {
+          "model": "Logistic Regression",
+          "reasons": [
+            "Lower validation accuracy (47.7% vs best 57.8%)",
+            "Weaker precision-recall balance (lower F1)",
+            "Longer training time without compensating score improvement"
+          ]
+        },
+        {
+          "model": "Gradient Boosting",
+          "reasons": [
+            "Lower validation accuracy (47.7% vs best 57.8%)",
+            "Weaker precision-recall balance (lower F1)",
+            "Longer training time without compensating score improvement"
+          ]
+        },
+        {
+          "model": "Extra Trees",
+          "reasons": [
+            "Lower validation accuracy (42.2% vs best 57.8%)",
+            "Weaker precision-recall balance (lower F1)",
+            "Longer training time without compensating score improvement"
+          ]
+        },
+        {
+          "model": "XGBoost",
+          "reasons": [
+            "Lower validation accuracy (39.4% vs best 57.8%)",
+            "Weaker precision-recall balance (lower F1)",
+            "Longer training time without compensating score improvement"
+          ]
+        }
+      ]
+    },
+    "improved_best_model": "baseline"
+  },
+  "explainability_results": {
+    "shap_values": {},
+    "feature_importance": {
+      "price": 0.495445482127995,
+      "area": 0.2262057353970568,
+      "bedrooms": 0.1425395749207341,
+      "bathrooms": 0.0,
+      "stories": 0.0,
+      "mainroad": 0.06856783967783328,
+      "guestroom": 0.0,
+      "basement": 0.0,
+      "hotwaterheating": 0.0,
+      "airconditioning": 0.024423834184802137,
+      "parking": 0.04281753369157851,
+      "prefarea": 0.0
+    },
+    "summary": "SHAP explainability failed; using fallback feature importance."
+  },
+  "xai_results": {
+    "shap_values": {},
+    "feature_importance": {
+      "price": 0.495445482127995,
+      "area": 0.2262057353970568,
+      "bedrooms": 0.1425395749207341,
+      "bathrooms": 0.0,
+      "stories": 0.0,
+      "mainroad": 0.06856783967783328,
+      "guestroom": 0.0,
+      "basement": 0.0,
+      "hotwaterheating": 0.0,
+      "airconditioning": 0.024423834184802137,
+      "parking": 0.04281753369157851,
+      "prefarea": 0.0
+    },
+    "summary": "SHAP explainability failed; using fallback feature importance."
+  },
+  "ai_trust_results": {
+    "fairness_score": "Not Evaluated",
+    "bias_analysis": {
+      "bias_risk": "Low",
+      "sensitive_features": [],
+      "issues": [
+        "No sensitive attributes explicitly detected."
+      ],
+      "recommendations": [
+        "Continue monitoring dataset composition."
+      ]
+    },
+    "trust_score": 100
+  },
+  "training_artifacts": {
+    "best_model": "AdaBoostClassifier(random_state=42)",
+    "best_name": "AdaBoost",
+    "results": {
+      "Logistic Regression": 0.47706422018348627,
+      "Decision Tree": 0.3853211009174312,
+      "Random Forest": 0.5137614678899083,
+      "Extra Trees": 0.42201834862385323,
+      "Gradient Boosting": 0.47706422018348627,
+      "AdaBoost": 0.5779816513761468,
+      "KNN": 0.5137614678899083,
+      "Naive Bayes": 0.5412844036697247,
+      "SVM": 0.4954128440366973,
+      "XGBoost": 0.3944954128440367
+    },
+    "problem_type": "Classification",
+    "target_column": "furnishingstatus",
+    "X_data": "        price  area  bedrooms  ...  airconditioning  parking  prefarea\n0    13300000  7420         4  ...                1        2         1\n1    12250000  8960         4  ...                1        3         0\n2    12250000  9960         3  ...                0        2         1\n3    12215000  7500         4  ...                1        3         1\n4    11410000  7420         4  ...                1        2         0\n..        ...   ...       ...  ...              ...      ...       ...\n540   1820000  3000         2  ...                0        2         0\n541   1767150  2400         3  ...                0        0         0\n542   1750000  3620         2  ...                0        0         0\n543   1750000  2910         3  ...                0        0         0\n544   1750000  3850         3  ...                0        0         0\n\n[545 rows x 12 columns]",
+    "y_data": "[0 0 1 0 0 1 1 2 0 2 0 1 1 0 1 1 2 0 0 1 1 2 0 0 0 0 1 1 2 1 2 1 0 2 0 0 0\n 0 2 1 0 0 2 1 0 1 0 0 2 1 2 2 0 1 1 2 1 0 1 0 1 1 0 0 0 0 0 2 0 0 1 2 2 0\n 0 1 0 0 0 0 1 1 0 1 1 0 2 1 2 0 1 0 0 1 1 1 0 1 2 2 2 2 1 0 0 2 1 2 1 1 1\n 2 0 0 0 1 2 0 0 1 0 1 1 0 0 1 2 2 0 1 2 1 1 2 1 2 2 1 1 0 2 1 1 2 0 0 1 1\n 1 1 2 1 0 1 1 0 1 0 1 0 0 1 1 1 0 2 2 1 0 1 1 1 2 2 2 1 0 1 1 1 1 0 1 1 0\n 2 0 1 2 1 0 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 2 1 0 1 1 2 2 1 0 1 2 1 1\n 1 0 2 1 1 0 1 1 1 1 0 2 1 1 1 1 1 0 1 1 0 0 1 2 1 2 1 0 1 1 1 0 1 2 0 0 1\n 0 0 1 1 1 1 1 2 1 1 2 0 1 1 0 1 0 1 1 1 0 2 0 2 0 0 1 0 2 2 1 1 2 1 2 1 1\n 1 2 1 0 1 1 2 0 1 1 1 1 1 1 1 1 0 1 1 1 2 2 1 1 0 1 0 1 1 1 2 1 1 0 2 0 1\n 1 0 0 1 2 1 0 1 1 0 1 1 1 1 2 1 1 1 1 2 0 0 0 0 0 1 2 1 1 0 1 1 0 0 2 1 0\n 1 1 1 0 1 2 1 2 1 2 1 1 0 0 0 2 2 1 2 1 2 1 1 2 2 2 1 0 2 1 2 2 2 2 2 2 2\n 0 2 2 2 0 2 2 2 0 2 0 2 1 2 2 2 2 1 0 0 0 2 2 2 2 0 1 1 2 0 2 1 2 2 2 2 2\n 0 0 2 1 1 2 1 1 1 2 2 2 1 2 2 2 2 2 1 2 1 2 1 1 1 0 2 2 1 2 2 1 2 2 2 2 1\n 0 2 1 2 2 1 2 2 1 2 0 2 0 2 2 2 2 1 2 2 2 1 1 2 2 2 2 2 0 2 2 0 2 1 2 2 2\n 2 2 2 2 0 0 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 0 2]",
+    "target_encoder": "LabelEncoder()",
+    "extras": {
+      "confusion_matrix": [
+        [
+          9,
+          15,
+          5
+        ],
+        [
+          2,
+          31,
+          6
+        ],
+        [
+          2,
+          16,
+          23
+        ]
+      ],
+      "feature_importance": {
+        "price": 0.495445482127995,
+        "area": 0.2262057353970568,
+        "bedrooms": 0.1425395749207341,
+        "bathrooms": 0.0,
+        "stories": 0.0,
+        "mainroad": 0.06856783967783328,
+        "guestroom": 0.0,
+        "basement": 0.0,
+        "hotwaterheating": 0.0,
+        "airconditioning": 0.024423834184802137,
+        "parking": 0.04281753369157851,
+        "prefarea": 0.0
+      },
+      "trained_models": {
+        "Logistic Regression": "LogisticRegression(max_iter=500, random_state=42)",
+        "Decision Tree": "DecisionTreeClassifier(random_state=42)",
+        "Random Forest": "RandomForestClassifier(n_estimators=30, random_state=42)",
+        "Extra Trees": "ExtraTreesClassifier(n_estimators=30, random_state=42)",
+        "Gradient Boosting": "GradientBoostingClassifier(random_state=42)",
+        "AdaBoost": "AdaBoostClassifier(random_state=42)",
+        "KNN": "KNeighborsClassifier()",
+        "Naive Bayes": "GaussianNB()",
+        "SVM": "SVC(probability=True, random_state=42)",
+        "XGBoost": "XGBClassifier(base_score=None, booster=None, callbacks=None,\n              colsample_bylevel=None, colsample_bynode=None,\n              colsample_bytree=None, device=None, early_stopping_rounds=None,\n              enable_categorical=False, eval_metric='logloss',\n              feature_types=None, feature_weights=None, gamma=None,\n              grow_policy=None, importance_type=None,\n              interaction_constraints=None, learning_rate=None, max_bin=None,\n              max_cat_threshold=None, max_cat_to_onehot=None,\n              max_delta_step=None, max_depth=None, max_leaves=None,\n              min_child_weight=None, missing=nan, monotone_constraints=None,\n              multi_strategy=None, n_estimators=30, n_jobs=None,\n              num_parallel_tree=None, ...)"
+      },
+      "X_test": "       price  area  bedrooms  ...  airconditioning  parking  prefarea\n316  4060000  5900         4  ...                0        1         0\n77   6650000  6500         3  ...                1        0         1\n360  3710000  4040         2  ...                0        0         0\n90   6440000  5000         3  ...                1        0         0\n493  2800000  3960         3  ...                0        0         0\n..       ...   ...       ...  ...              ...      ...       ...\n15   9100000  6000         4  ...                0        2         0\n357  3773000  6930         4  ...                0        1         0\n39   7910000  6000         4  ...                1        1         0\n54   7350000  6000         3  ...                1        1         0\n155  5530000  6100         3  ...                0        2         1\n\n[109 rows x 12 columns]",
+      "y_test": "[2 0 1 1 0 2 0 0 2 0 1 2 2 1 2 2 1 2 2 1 2 1 2 2 1 1 2 0 0 0 1 2 0 1 2 1 1\n 2 2 0 1 2 0 0 1 2 1 1 2 2 2 2 0 1 2 0 2 2 1 2 1 2 1 2 2 1 0 2 2 0 2 1 0 0\n 2 1 1 1 0 2 0 1 0 2 2 2 2 1 0 1 1 0 0 1 0 0 1 2 2 1 1 0 1 1 1 0 1 1 0]",
+      "detailed_metrics": {
+        "Logistic Regression": {
+          "accuracy": 0.47706422018348627,
+          "precision": 0.5107493857493858,
+          "recall": 0.47706422018348627,
+          "f1": 0.44276672016787305,
+          "roc_auc": 0.6624142317477449,
+          "cv_score": 0.45186584789796874
+        },
+        "Decision Tree": {
+          "accuracy": 0.3853211009174312,
+          "precision": 0.38754726291087893,
+          "recall": 0.3853211009174312,
+          "f1": 0.3862385321100917,
+          "roc_auc": 0.5359768907563025,
+          "cv_score": 0.43804125334592975
+        },
+        "Random Forest": {
+          "accuracy": 0.5137614678899083,
+          "precision": 0.5387101829164055,
+          "recall": 0.5137614678899083,
+          "f1": 0.5131530556888111,
+          "roc_auc": 0.6368731208079562,
+          "cv_score": 0.46107699574870104
+        },
+        "Extra Trees": {
+          "accuracy": 0.42201834862385323,
+          "precision": 0.4536394708008307,
+          "recall": 0.42201834862385323,
+          "f1": 0.4237724985875326,
+          "roc_auc": 0.5853663942641276,
+          "cv_score": 0.43816721776098255
+        },
+        "Gradient Boosting": {
+          "accuracy": 0.47706422018348627,
+          "precision": 0.4781676171584428,
+          "recall": 0.47706422018348627,
+          "f1": 0.47028070225973245,
+          "roc_auc": 0.6291457867550689,
+          "cv_score": 0.47709022201228146
+        },
+        "AdaBoost": {
+          "accuracy": 0.5779816513761468,
+          "precision": 0.6175432770144049,
+          "recall": 0.5779816513761468,
+          "f1": 0.5643654326114131,
+          "roc_auc": 0.6774472862539512,
+          "cv_score": 0.5252086285624311
+        },
+        "KNN": {
+          "accuracy": 0.5137614678899083,
+          "precision": 0.530597022877175,
+          "recall": 0.5137614678899083,
+          "f1": 0.518322278700719,
+          "roc_auc": 0.6292566109012413,
+          "cv_score": 0.4565422768068021
+        },
+        "Naive Bayes": {
+          "accuracy": 0.5412844036697247,
+          "precision": 0.5477976068630552,
+          "recall": 0.5412844036697247,
+          "f1": 0.5282711089362158,
+          "roc_auc": 0.6801778968468121,
+          "cv_score": 0.5115099984254448
+        },
+        "SVM": {
+          "accuracy": 0.4954128440366973,
+          "precision": 0.5127509639675575,
+          "recall": 0.4954128440366973,
+          "f1": 0.46526583637321456,
+          "roc_auc": 0.6778197517539125,
+          "cv_score": 0.5275862068965518
+        },
+        "XGBoost": {
+          "accuracy": 0.3944954128440367,
+          "precision": 0.40560851992044655,
+          "recall": 0.3944954128440367,
+          "f1": 0.3954407800609223,
+          "roc_auc": 0.5804766401973633,
+          "cv_score": 0.4610140135411746
+        }
+      },
+      "training_times": {
+        "Logistic Regression": 0.059,
+        "Decision Tree": 0.004,
+        "Random Forest": 0.089,
+        "Extra Trees": 0.056,
+        "Gradient Boosting": 0.418,
+        "AdaBoost": 0.083,
+        "KNN": 0.001,
+        "Naive Bayes": 0.001,
+        "SVM": 0.066,
+        "XGBoost": 0.048
+      },
+      "model_comparison": [
+        {
+          "model": "AdaBoost",
+          "metrics": {
+            "accuracy": 0.5779816513761468,
+            "precision": 0.6175432770144049,
+            "recall": 0.5779816513761468,
+            "f1": 0.5643654326114131,
+            "roc_auc": 0.6774472862539512,
+            "cv_score": 0.5252086285624311
+          },
+          "training_time": 0.083
+        },
+        {
+          "model": "Naive Bayes",
+          "metrics": {
+            "accuracy": 0.5412844036697247,
+            "precision": 0.5477976068630552,
+            "recall": 0.5412844036697247,
+            "f1": 0.5282711089362158,
+            "roc_auc": 0.6801778968468121,
+            "cv_score": 0.5115099984254448
+          },
+          "training_time": 0.001
+        },
+        {
+          "model": "SVM",
+          "metrics": {
+            "accuracy": 0.4954128440366973,
+            "precision": 0.5127509639675575,
+            "recall": 0.4954128440366973,
+            "f1": 0.46526583637321456,
+            "roc_auc": 0.6778197517539125,
+            "cv_score": 0.5275862068965518
+          },
+          "training_time": 0.066
+        },
+        {
+          "model": "Random Forest",
+          "metrics": {
+            "accuracy": 0.5137614678899083,
+            "precision": 0.5387101829164055,
+            "recall": 0.5137614678899083,
+            "f1": 0.5131530556888111,
+            "roc_auc": 0.6368731208079562,
+            "cv_score": 0.46107699574870104
+          },
+          "training_time": 0.089
+        },
+        {
+          "model": "KNN",
+          "metrics": {
+            "accuracy": 0.5137614678899083,
+            "precision": 0.530597022877175,
+            "recall": 0.5137614678899083,
+            "f1": 0.518322278700719,
+            "roc_auc": 0.6292566109012413,
+            "cv_score": 0.4565422768068021
+          },
+          "training_time": 0.001
+        },
+        {
+          "model": "Gradient Boosting",
+          "metrics": {
+            "accuracy": 0.47706422018348627,
+            "precision": 0.4781676171584428,
+            "recall": 0.47706422018348627,
+            "f1": 0.47028070225973245,
+            "roc_auc": 0.6291457867550689,
+            "cv_score": 0.47709022201228146
+          },
+          "training_time": 0.418
+        },
+        {
+          "model": "Logistic Regression",
+          "metrics": {
+            "accuracy": 0.47706422018348627,
+            "precision": 0.5107493857493858,
+            "recall": 0.47706422018348627,
+            "f1": 0.44276672016787305,
+            "roc_auc": 0.6624142317477449,
+            "cv_score": 0.45186584789796874
+          },
+          "training_time": 0.059
+        },
+        {
+          "model": "Extra Trees",
+          "metrics": {
+            "accuracy": 0.42201834862385323,
+            "precision": 0.4536394708008307,
+            "recall": 0.42201834862385323,
+            "f1": 0.4237724985875326,
+            "roc_auc": 0.5853663942641276,
+            "cv_score": 0.43816721776098255
+          },
+          "training_time": 0.056
+        },
+        {
+          "model": "XGBoost",
+          "metrics": {
+            "accuracy": 0.3944954128440367,
+            "precision": 0.40560851992044655,
+            "recall": 0.3944954128440367,
+            "f1": 0.3954407800609223,
+            "roc_auc": 0.5804766401973633,
+            "cv_score": 0.4610140135411746
+          },
+          "training_time": 0.048
+        },
+        {
+          "model": "Decision Tree",
+          "metrics": {
+            "accuracy": 0.3853211009174312,
+            "precision": 0.38754726291087893,
+            "recall": 0.3853211009174312,
+            "f1": 0.3862385321100917,
+            "roc_auc": 0.5359768907563025,
+            "cv_score": 0.43804125334592975
+          },
+          "training_time": 0.004
+        }
+      ],
+      "model_selection_explanation": {
+        "selected_model": "AdaBoost",
+        "problem_type": "Classification",
+        "why_chosen": [
+          "Highest validation accuracy (57.8%) among trained candidates",
+          "Strong F1 score (56.4%) indicating balanced precision and recall",
+          "Competitive ROC-AUC (0.677) for ranking quality",
+          "Efficient training time relative to performance gain",
+          "Stable 3-fold cross-validation accuracy (52.5%)"
+        ],
+        "alternatives": [
+          {
+            "model": "Naive Bayes",
+            "reasons": [
+              "Lower validation accuracy (54.1% vs best 57.8%)",
+              "Weaker precision-recall balance (lower F1)"
+            ]
+          },
+          {
+            "model": "Random Forest",
+            "reasons": [
+              "Lower validation accuracy (51.4% vs best 57.8%)",
+              "Weaker precision-recall balance (lower F1)",
+              "Longer training time without compensating score improvement"
+            ]
+          },
+          {
+            "model": "KNN",
+            "reasons": [
+              "Lower validation accuracy (51.4% vs best 57.8%)",
+              "Weaker precision-recall balance (lower F1)"
+            ]
+          },
+          {
+            "model": "SVM",
+            "reasons": [
+              "Lower validation accuracy (49.5% vs best 57.8%)",
+              "Weaker precision-recall balance (lower F1)",
+              "Longer training time without compensating score improvement"
+            ]
+          },
+          {
+            "model": "Logistic Regression",
+            "reasons": [
+              "Lower validation accuracy (47.7% vs best 57.8%)",
+              "Weaker precision-recall balance (lower F1)",
+              "Longer training time without compensating score improvement"
+            ]
+          },
+          {
+            "model": "Gradient Boosting",
+            "reasons": [
+              "Lower validation accuracy (47.7% vs best 57.8%)",
+              "Weaker precision-recall balance (lower F1)",
+              "Longer training time without compensating score improvement"
+            ]
+          },
+          {
+            "model": "Extra Trees",
+            "reasons": [
+              "Lower validation accuracy (42.2% vs best 57.8%)",
+              "Weaker precision-recall balance (lower F1)",
+              "Longer training time without compensating score improvement"
+            ]
+          },
+          {
+            "model": "XGBoost",
+            "reasons": [
+              "Lower validation accuracy (39.4% vs best 57.8%)",
+              "Weaker precision-recall balance (lower F1)",
+              "Longer training time without compensating score improvement"
+            ]
+          }
+        ]
+      }
+    },
+    "cleaned_dataframe": "        price  area  bedrooms  ...  parking  prefarea furnishingstatus\n0    13300000  7420         4  ...        2       yes        furnished\n1    12250000  8960         4  ...        3        no        furnished\n2    12250000  9960         3  ...        2       yes   semi-furnished\n3    12215000  7500         4  ...        3       yes        furnished\n4    11410000  7420         4  ...        2        no        furnished\n..        ...   ...       ...  ...      ...       ...              ...\n540   1820000  3000         2  ...        2        no      unfurnished\n541   1767150  2400         3  ...        0        no   semi-furnished\n542   1750000  3620         2  ...        0        no      unfurnished\n543   1750000  2910         3  ...        0        no        furnished\n544   1750000  3850         3  ...        0        no      unfurnished\n\n[545 rows x 13 columns]"
+  },
+  "model_comparison": [
+    {
+      "version": "baseline",
+      "metrics": {
+        "Logistic Regression": 0.47706422018348627,
+        "Decision Tree": 0.3853211009174312,
+        "Random Forest": 0.5137614678899083,
+        "Extra Trees": 0.42201834862385323,
+        "Gradient Boosting": 0.47706422018348627,
+        "AdaBoost": 0.5779816513761468,
+        "KNN": 0.5137614678899083,
+        "Naive Bayes": 0.5412844036697247,
+        "SVM": 0.4954128440366973,
+        "XGBoost": 0.3944954128440367
+      }
+    },
+    {
+      "version": "iter1_Logistic Regression",
+      "metrics": {
+        "accuracy": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.0
+      },
+      "opt_report": {
+        "best_params": null,
+        "best_score": null
+      }
+    }
+  ],
+  "improvement_history": [
+    {
+      "iteration": 1,
+      "model": "Logistic Regression",
+      "changes": {
+        "hyperparams": {
+          "best_params": null,
+          "best_score": null
+        }
+      }
+    }
+  ],
+  "best_model_version": "baseline",
+  "optimization_report": {
+    "iterations": 1,
+    "artifacts": {
+      "model": "deployment_package\\DEP_20260622120546\\best_model.pkl",
+      "encoder": "deployment_package\\DEP_20260622120546\\target_encoder.pkl"
+    }
+  },
+  "validation_results": [
+    {
+      "version": "iter1_Logistic Regression",
+      "validation": {}
+    }
+  ],
+  "model_registry": {
+    "model_id": "MODEL_086",
+    "timestamp": "2026-06-22T12:05:46.801029Z",
+    "version": "MODEL_v6",
+    "model_name": "Linear Regression",
+    "dataset_name": "Housing.csv",
+    "problem_type": "Classification",
+    "algorithm": "Linear Regression",
+    "feature_names": [
+      "price",
+      "area",
+      "bedrooms",
+      "bathrooms",
+      "stories",
+      "mainroad",
+      "guestroom",
+      "basement",
+      "hotwaterheating",
+      "airconditioning",
+      "parking",
+      "prefarea",
+      "furnishingstatus"
+    ],
+    "metrics": {
+      "test_score": 0.0,
+      "train_score": 0.0
+    },
+    "hyperparameters": {
+      "fit_intercept": [
+        true,
+        false
+      ]
+    },
+    "training_time": 0.0,
+    "shap_available": true,
+    "deployment_status": "Not Deployed",
+    "artifact_path": "deployment_package\\DEP_20260622120510\\v1\\best_model.pkl",
+    "is_active": true,
+    "extra_metadata": {
+      "encoder_path": "deployment_package\\DEP_20260622120510\\v1\\target_encoder.pkl",
+      "preprocessing_path": "deployment_package\\DEP_20260622120510\\v1\\preprocessing_pipeline.pkl",
+      "feature_schema": "deployment_package\\DEP_20260622120510\\v1\\feature_schema.json"
+    }
+  },
+  "model_versions": [
+    {
+      "version": "v1",
+      "artifact_path": "deployment_package\\DEP_20260622120510\\v1\\best_model.pkl",
+      "encoder_path": "deployment_package\\DEP_20260622120510\\v1\\target_encoder.pkl",
+      "preprocessing_path": "deployment_package\\DEP_20260622120510\\v1\\preprocessing_pipeline.pkl",
+      "feature_schema": "deployment_package\\DEP_20260622120510\\v1\\feature_schema.json",
+      "metadata_path": "deployment_package\\DEP_20260622120510\\v1\\model_metadata.json",
+      "metrics": 0.5779816513761468
+    }
+  ],
+  "production_model": {
+    "version": "v1",
+    "artifact_path": "deployment_package\\DEP_20260622120510\\v1\\best_model.pkl"
+  },
+  "validation_history": [
+    {
+      "version": "iter1_Logistic Regression",
+      "validation": {}
+    }
+  ],
+  "optimization_iterations": 1,
+  "final_ai_confidence_score": 100,
+  "mlops_results": {
+    "deployment_score": 100,
+    "risk_level": "Low"
+  },
+  "final_scores": {
+    "dataset_score": 80.0,
+    "model_score": 57,
+    "trust_score": 100.0,
+    "mlops_score": 100,
+    "overall_score": 79
+  },
+  "hyperparameter_report": {
+    "algorithm": "Linear Regression",
+    "problem_type": "Regression",
+    "supported_models": [
+      "Linear Regression",
+      "Random Forest Regressor",
+      "Gradient Boosting Regressor",
+      "XGBoost Regressor"
+    ],
+    "recommended_parameters": {
+      "fit_intercept": [
+        true,
+        false
+      ]
+    },
+    "notes": "Hyperparameter tuning plan based on model selection and dataset problem type. Use the supported model grid to guide optimization."
+  },
+  "ethics_report": {
+    "executive_summary": "The ethics assessment identifies bias, fairness, and privacy risks in the dataset and model predictions.",
+    "bias_concerns": [
+      "No sensitive attributes explicitly detected."
+    ],
+    "fairness_concerns": [],
+    "privacy_concerns": [],
+    "compliance_recommendations": {
+      "bias": [
+        "Continue regular bias audits and documentation."
+      ],
+      "fairness": [
+        "Monitor fairness metrics during model updates."
+      ],
+      "privacy": [
+        "Maintain minimal data collection and retention practices."
+      ]
+    },
+    "risk_level": "Low"
+  },
+  "memory_updates": {
+    "experiment_id": "EXP_188",
+    "status": "logged"
+  },
+  "deployment_readiness": {
+    "risk_level": "Low",
+    "warnings": [
+      "Model accuracy is lower than expected for production."
+    ],
+    "recommendations": [
+      "Deploy with monitoring and schedule retraining if performance drifts."
+    ]
+  },
+  "documentation": {
+    "title": "Validate Housing",
+    "created_at": "2026-06-22T12:05:46.814025+00:00",
+    "sections": {
+      "Business Objective": "Validate Housing",
+      "Dataset Summary": null,
+      "Data Preprocessing": "Automated cleaning, missing value handling, duplicate review, and encoding were applied where needed.",
+      "Feature Engineering": "Remove constant and duplicate columns; Encode categorical variables; Impute missing values; Create derived features for dates and ratios; Scale or normalize numerical features",
+      "Model Selection": "AdaBoost achieved the highest validation score among evaluated candidates.",
+      "Hyperparameter Optimization": "fit_intercept=[True, False]",
+      "Evaluation Metrics": "AdaBoost: 0.5780, Naive Bayes: 0.5413, Random Forest: 0.5138, KNN: 0.5138, SVM: 0.4954",
+      "Explainability Summary": "Top drivers: price (0.495), area (0.226), bedrooms (0.143), mainroad (0.069), parking (0.043)",
+      "Deployment Recommendation": "Risk level: Low. Deploy with monitoring and schedule retraining if performance drifts.",
+      "Future Improvements": "Collect more data, monitor drift, and iterate on feature engineering."
+    },
+    "summary": "Validate Housing analyzed Housing.csv end-to-end: data quality review, EDA, model training, explainability, and deployment readiness. Best model: AdaBoost."
+  },
+  "model_registry_entry": {
+    "model_id": "MODEL_086",
+    "timestamp": "2026-06-22T12:05:46.801029Z",
+    "version": "MODEL_v6",
+    "model_name": "Linear Regression",
+    "dataset_name": "Housing.csv",
+    "problem_type": "Classification",
+    "algorithm": "Linear Regression",
+    "feature_names": [
+      "price",
+      "area",
+      "bedrooms",
+      "bathrooms",
+      "stories",
+      "mainroad",
+      "guestroom",
+      "basement",
+      "hotwaterheating",
+      "airconditioning",
+      "parking",
+      "prefarea",
+      "furnishingstatus"
+    ],
+    "metrics": {
+      "test_score": 0.0,
+      "train_score": 0.0
+    },
+    "hyperparameters": {
+      "fit_intercept": [
+        true,
+        false
+      ]
+    },
+    "training_time": 0.0,
+    "shap_available": true,
+    "deployment_status": "Not Deployed",
+    "artifact_path": "deployment_package\\DEP_20260622120510\\v1\\best_model.pkl",
+    "is_active": true,
+    "extra_metadata": {
+      "encoder_path": "deployment_package\\DEP_20260622120510\\v1\\target_encoder.pkl",
+      "preprocessing_path": "deployment_package\\DEP_20260622120510\\v1\\preprocessing_pipeline.pkl",
+      "feature_schema": "deployment_package\\DEP_20260622120510\\v1\\feature_schema.json"
+    }
+  },
+  "final_score": 79,
+  "recommendation": "Needs improvement",
+  "project_goal": "Validate Housing",
+  "constraints": {},
+  "dataset_name": "Housing.csv",
+  "stage_durations": {
+    "dataset_analysis": 0.02665233612060547,
+    "feature_engineering": 0.057932138442993164,
+    "data_cleaning": 0.004999876022338867,
+    "eda": 0.04220080375671387,
+    "ethics": 0.004026174545288086,
+    "auto_ml": 3.4389748573303223,
+    "explainability": 31.847707509994507,
+    "self_improvement": 4.284546375274658
+  },
+  "stage_errors": [
+    {
+      "stage": "explainability",
+      "error": "SHAP explainability timed out after 10 seconds; using fallback feature importance.",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\AutoDS-Agent\\agents\\master_autonomous_pipeline.py\", line 679, in run_pipeline\n    shap_res = fut_shap.result(timeout=explainability_timeout)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 458, in result\n    raise TimeoutError()\nTimeoutError\n",
+      "timestamp": "2026-06-22T12:05:20.674620Z",
+      "recovery": {
+        "recommended_action": "Review the error context and dataset preprocessing to identify the root cause.",
+        "automation_possible": false,
+        "risk_level": "Medium",
+        "explanation": "The issue could not be classified automatically; inspect preprocessing and model inputs."
+      },
+      "user_message": "The issue could not be classified automatically; inspect preprocessing and model inputs."
+    }
+  ],
+  "total_runtime": 39.88415884971619,
+  "final_report": {
+    "path": "reports/AutoDS_Report.pdf",
+    "payload": {
+      "project_name": "Validate Housing",
+      "project_goal": "Validate Housing",
+      "executive_summary": "Validate Housing analyzed Housing.csv end-to-end: data quality review, EDA, model training, explainability, and deployment readiness. Best model: AdaBoost.",
+      "dataset_name": "Housing.csv",
+      "rows": 545,
+      "columns": 13,
+      "health_score": 80.0,
+      "health_grade": "Good",
+      "health_summary": "Overall pipeline score 79/100 with dataset quality 80.0/100.",
+      "dataset_summary": "",
+      "feature_types": {},
+      "problem_type": "Classification",
+      "best_model": "AdaBoost",
+      "model_selection_rationale": "AdaBoost achieved the highest validation score among evaluated candidates.",
+      "target_column": "furnishingstatus",
+      "confidence": 100,
+      "trust_score": 100,
+      "fairness_score": "Not Evaluated",
+      "deployment_label": "Needs improvement",
+      "final_score": 79,
+      "feature_importance": {
+        "price": 0.495445482127995,
+        "area": 0.2262057353970568,
+        "bedrooms": 0.1425395749207341,
+        "bathrooms": 0.0,
+        "stories": 0.0,
+        "mainroad": 0.06856783967783328,
+        "guestroom": 0.0,
+        "basement": 0.0,
+        "hotwaterheating": 0.0,
+        "airconditioning": 0.024423834184802137,
+        "parking": 0.04281753369157851,
+        "prefarea": 0.0
+      },
+      "explainability_summary": "SHAP explainability failed; using fallback feature importance.",
+      "trust_concerns": [],
+      "model_results": [
+        "Logistic Regression: 0.4771",
+        "Decision Tree: 0.3853",
+        "Random Forest: 0.5138",
+        "Extra Trees: 0.4220",
+        "Gradient Boosting: 0.4771",
+        "AdaBoost: 0.5780",
+        "KNN: 0.5138",
+        "Naive Bayes: 0.5413",
+        "SVM: 0.4954",
+        "XGBoost: 0.3945"
+      ],
+      "ai_insights": [
+        "**price** distribution is right-skewed and contains ~2.8% outliers.",
+        "**area** distribution is right-skewed and contains ~2.2% outliers.",
+        "**bedrooms** distribution is symmetric and contains ~2.2% outliers.",
+        "**bathrooms** distribution is right-skewed.",
+        "**stories** distribution is right-skewed and contains ~7.5% outliers."
+      ],
+      "eda_findings": [
+        "**price** distribution is right-skewed and contains ~2.8% outliers.",
+        "**area** distribution is right-skewed and contains ~2.2% outliers.",
+        "**bedrooms** distribution is symmetric and contains ~2.2% outliers.",
+        "**bathrooms** distribution is right-skewed.",
+        "**stories** distribution is right-skewed and contains ~7.5% outliers."
+      ],
+      "cleaning_actions": [],
+      "cleaning_before_rows": 545,
+      "cleaning_after_rows": 545,
+      "recommendations": [
+        "Needs improvement",
+        "Risk level: Low. Deploy with monitoring and schedule retraining if performance drifts."
+      ],
+      "issues": [
+        {
+          "severity": "low",
+          "title": "No Critical Issues",
+          "description": "Dataset passed automated quality checks.",
+          "recommendation": "Proceed to EDA and modeling."
+        }
+      ],
+      "shap_ranking": [
+        "price: 0.4954",
+        "area: 0.2262",
+        "bedrooms: 0.1425",
+        "mainroad: 0.0686",
+        "parking: 0.0428",
+        "airconditioning: 0.0244",
+        "bathrooms: 0.0000",
+        "stories: 0.0000",
+        "guestroom: 0.0000",
+        "basement: 0.0000"
+      ],
+      "deployment_readiness_score": 100,
+      "deployment_risk": "Low",
+      "business_recommendations": "Collect more data, monitor drift, and iterate on feature engineering.",
+      "health_breakdown": {
+        "dataset": 80.0,
+        "model": 57,
+        "trust": 100.0,
+        "mlops": 100
+      },
+      "conclusion": "Needs improvement",
+      "generated_at": "2026-06-22 12:05 UTC"
+    }
+  }
+}
