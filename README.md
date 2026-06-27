@@ -1,115 +1,184 @@
-# AutoDS-Agent
+# AutoDS Agent – AI-Powered Autonomous Data Science Platform
 
-AutoDS-Agent is an experimental autonomous data-science orchestration project that coordinates multiple specialized agents to prepare data, train models, evaluate results, and manage deployments.
+AutoDS Agent is an intelligent, end-to-end autonomous data science platform designed to simplify and accelerate the machine learning workflow. Developed as an M.Sc. Data Science final year project, it combines data ingestion, preprocessing, exploratory data analysis, automated machine learning, explainable AI, and report generation into a single interactive system.
 
-## Key Features
+## 1. Project Description
 
-- Modular agent architecture: many agents live in the `agents/` folder and each handles a focused responsibility (data, model, deployment, monitoring, etc.).
-- Reusable pipelines: orchestration primitives in `master_autonomous_pipeline.py` and `multi_agent_collaboration_engine.py`.
-- Validation and verification: a set of verification scripts under the repository root (e.g., `verification_pipeline_test.py`, `verify_code_changes.py`).
+AutoDS Agent empowers users to upload datasets, analyze data quality, build predictive models, compare algorithms, evaluate model performance, and generate business-ready reports with minimal manual effort. The platform is built to support students, researchers, and practitioners who want to explore machine learning workflows in a guided and automated way.
 
-## Repository layout (high level)
+## 2. Features
 
-- `app.py` — entrypoint for quick demos and script-based runs.
-- `agents/` — core autonomous agents and orchestrators.
-- `api/` — lightweight API scaffolding and example JSON fixtures.
-- `tests/`, `verification_*.json` and `autonomous_validation_runs/` — test inputs and validation outputs.
-- `requirements.txt` / `requirements-dev.txt` — Python dependencies.
+- Dataset Upload
+- Automated Data Cleaning
+- Missing Value Detection
+- Duplicate Detection
+- Feature Engineering
+- Automated EDA
+- Interactive Visualizations
+- AutoML
+- Multiple ML Algorithms
+- Model Comparison
+- Best Model Selection
+- Feature Importance
+- Trust Score
+- Health Score
+- AI Executive Summary
+- PDF Report Generation
+- Excel Report Generation
+- Deployment Readiness Analysis
 
-## Quickstart
+## 3. System Architecture
 
-1. Create and activate a virtual environment (Windows PowerShell example):
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
-
-2. Run the Streamlit demo UI:
-
-```powershell
-streamlit run app.py
-```
-
-3. Run tests:
-
-```powershell
-pip install -r requirements-dev.txt
-pytest -q
-```
-
-## Examples
-
-- Run the dataset pipeline script to validate a CSV and write a JSON result:
-
-```powershell
-python scripts\run_pipeline_dataset.py path\to\data.csv out_result.json
-```
-
-- Launch the Streamlit UI locally and open the browser to interact with the AI Command Center:
-
-```powershell
-streamlit run app.py
-```
-
-## Architecture
+The system follows a modular architecture where the frontend collects user input, the backend processes the data science workflow, and multiple intelligent agents coordinate tasks such as data cleaning, modeling, evaluation, and reporting.
 
 ```mermaid
 flowchart LR
-	UI[Streamlit UI\n`app.py`] --> Orchestrator[Master Pipeline\n`master_autonomous_pipeline.py`]
-	Orchestrator --> Agents[Agents Folder]
-	Agents --> Dataset[Dataset Intelligence]
-	Agents --> Feature[Feature Engineering]
-	Agents --> Model[Model Training & Registry]
-	Agents --> Deploy[Deployment Agent]
-	Orchestrator --> Memory[Experiment Memory DB]
-	Orchestrator --> Docs[Documentation Agent]
+    A[User Interface - Streamlit] --> B[Application Controller]
+    B --> C[Dataset Agent]
+    B --> D[EDA & Visualization Agent]
+    B --> E[Feature Engineering Agent]
+    B --> F[Model Training Agent]
+    B --> G[Explainable AI Agent]
+    B --> H[Report Generation Agent]
+    F --> I[Model Evaluation & Selection]
+    G --> J[SHAP / Feature Importance]
+    H --> K[PDF & Excel Reports]
 ```
 
-## Suggested license
+## 4. Workflow
 
-If you plan to open-source this project, a permissive license such as MIT is a common choice. Create a `LICENSE` file with the following header for MIT:
+1. Upload a dataset.
+2. Perform automated cleaning and quality analysis.
+3. Generate exploratory visualizations and insights.
+4. Engineer features and prepare training data.
+5. Train and compare multiple models.
+6. Select the best-performing model.
+7. Generate explainability insights and AI-based summaries.
+8. Produce deployment readiness and reporting outputs.
 
+## 5. Technology Stack
+
+### Frontend
+- Streamlit
+
+### Backend
+- Python
+
+### Libraries
+- Pandas
+- NumPy
+- Scikit-learn
+- Plotly
+- Matplotlib
+- SHAP
+- ReportLab
+- OpenPyXL
+
+### Version Control
+- Git
+- GitHub
+
+### Development Environment
+- VS Code
+
+## 6. Project Structure
+
+```text
+AutoDS-Agent/
+├── app.py
+├── config.py
+├── agents/
+├── api/
+├── data/
+├── reports/
+├── tests/
+├── utils/
+├── requirements.txt
+├── requirements-dev.txt
+└── README.md
 ```
-MIT License
 
-Copyright (c) YEAR OWNER
+## 7. Installation
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Clone the repository and install the required dependencies:
+
+```bash
+git clone <repo-url>
+cd AutoDS-Agent
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
-Replace `YEAR` and `OWNER` before committing.
+## 8. Usage
 
-## Usage notes
+Run the application locally using:
 
-- Inspect `agents/` to understand agent responsibilities. Start with `autonomous_data_scientist_agent.py` and `master_autonomous_pipeline.py` for pipeline flow.
-- Use `config.py` to set environment-specific options before launching long-running orchestrations.
+```bash
+streamlit run app.py
+```
 
-## Development
+Then upload your dataset through the web interface and follow the guided workflow to perform analysis, modeling, and reporting.
 
-- Follow the tests in the repository root (files prefixed with `test_` and `verification_`).
-- For adding an agent, place a new module under `agents/` and register it with the relevant orchestrator.
+## 9. Screenshots
 
-## Troubleshooting
+Screenshots will be added soon.
 
-- If activation fails on Windows PowerShell, ensure execution policy allows scripts: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` (run as administrator if required).
-- If dependencies fail to install, check Python version (3.8+ recommended) and re-run `pip install -r requirements.txt`.
+- Dashboard Preview: Coming Soon
+- Model Comparison View: Coming Soon
+- Report Generation View: Coming Soon
 
-## Contributing
+## 10. Machine Learning Pipeline
 
-- Open an issue or pull request describing the change and tests added.
-- Add unit tests or small integration tests under `tests/` or update verification JSONs used by the validation scripts.
+The platform supports a complete machine learning pipeline including:
 
-## License & Contact
+- Data ingestion and validation
+- Data cleaning and preprocessing
+- Exploratory data analysis
+- Feature engineering
+- Model training and evaluation
+- Model comparison and selection
+- Performance reporting and deployment analysis
 
-This repository does not include a license file by default; add a `LICENSE` if you intend to open-source it. For questions, open an issue or contact the repository owner.
+## 11. Explainable AI
 
----
+AutoDS Agent integrates explainability techniques to improve transparency and trust in model predictions. Feature importance and interpretability insights are generated using SHAP and related visualization methods.
 
-File: [README.md](README.md)
+## 12. AI Report Generation
+
+The system can generate automated reports that summarize:
+
+- Dataset characteristics
+- Data quality issues
+- Model performance
+- Feature importance
+- Trust and health scores
+- Executive summary for decision-making
+
+Reports are available in PDF and Excel formats.
+
+## 13. Deployment Readiness
+
+The platform evaluates whether a trained model is suitable for deployment by analyzing:
+
+- Model performance metrics
+- Data quality stability
+- Generalization potential
+- Interpretability and trust indicators
+
+## 14. Future Enhancements
+
+Planned improvements include:
+
+- Support for more advanced AutoML frameworks
+- Integration with cloud-based training services
+- Real-time monitoring and drift detection
+- User authentication and multi-user access
+- Enhanced dashboard customization
+
+## 15. Contributors
+
+This project was developed as part of an M.Sc. Data Science final year project.
+
+## 16. License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
