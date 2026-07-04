@@ -28,7 +28,7 @@ kiwisolver==1.5.0
 MarkupSafe==3.0.3
 matplotlib==3.10.9
 narwhals==2.22.1
-numba==0.65.1
+numba==0.62.1
 numpy==2.4.6
 openpyxl==3.1.5
 packaging==26.2
